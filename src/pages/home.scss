@@ -1,0 +1,147 @@
+@use "../assets/scss/variables" as*;
+@use "../assets/scss/mixin" as*;
+@use "../assets/scss/font" as*;
+.home{
+    width: 100vw;
+    height: 100vh;
+    @include font-face;
+    .track{
+        @include flex-layout(row,center,center,3rem);
+        height: 100vh;
+        .track-list{
+            @include flex-layout(row,center,center,5rem);
+            padding: 1rem;
+            width: 30%;
+            border-top: 2px solid #ababac;
+            border-bottom: 2px solid #ababac;
+            .album{
+                .turntable {
+                    position: relative;
+                    width: 200px;
+                    aspect-ratio: 1 / 1;
+                    display: grid;
+                    place-items: center;
+                    }
+
+                    /* LP 본체 */
+                    .lp {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    position: relative;
+
+                    /* 검정판 + 홈(그루브) 느낌 */
+                    // background: url(../assets/img/2967822_20250714154852_500.jpg);
+                    width: 150px;
+                    height: 150px;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+
+                    background-image: url("../assets/img/2967822_20250714154852_500.jpg");
+                    background-size: cover;      // 핵심
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    
+                        // radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 0 2px, transparent 3px),
+                        // repeating-radial-gradient(circle at 50% 50%,
+                        // rgba(255,255,255,0.06) 0 1px,
+                        // rgba(0,0,0,0) 2px 6px
+                        // ),
+                        // radial-gradient(circle at 50% 50%, #111 0 65%, #0b0b0b 100%);
+
+                    box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+                    }
+
+                    /* 가운데 라벨 */
+                    .label {
+                    width: 38%;
+                    height: 38%;
+                    border-radius: 50%;
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+
+                    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), rgba(0,0,0,0) 55%),
+                                linear-gradient(135deg, #7482ff, #cbcbfd);
+                    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.15);
+                    }
+
+                    /* 라벨 중앙 구멍 */
+                    .label-hole {
+                    width: 10%;
+                    height: 10%;
+                    border-radius: 50%;
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    background: #0a0a0a;
+                    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.1);
+                    }
+
+                    /* 회전 애니메이션 */
+                    .spinning {
+                    animation: spin 1.6s linear infinite;
+                    transform-origin: 50% 50%;
+                    }
+
+                    @keyframes spin {
+                    to { transform: rotate(360deg); }
+                    }
+
+                    /* 옵션: 톤암(바늘) */
+                    .tonearm {
+                    position: absolute;
+                    width: 55%;
+                    height: 10px;
+                    right: -8%;
+                    top: 18%;
+                    transform: rotate(18deg);
+                    transform-origin: left center;
+
+                    background: linear-gradient(90deg, #cfcfcf, #7a7a7a);
+                    border-radius: 999px;
+                    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: -10px;
+                        top: -10px;
+                        width: 26px;
+                        height: 26px;
+                        border-radius: 8px;
+                        background: #2a2a2a;
+                        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+                    }
+                    }
+
+                    /* 접근성: 모션 싫어하는 사람 배려 */
+                    @media (prefers-reduced-motion: reduce) {
+                    .spinning { animation: none; }
+                    }
+
+            }
+            .txt{
+                h1{
+                @include font-face();
+                font-weight: 900;
+                size: 96px;
+                cursor: pointer;
+                &:hover{
+                    border-bottom: 1px solid #7a7a7a;
+                }
+            }
+            }
+        .emoji{
+            width: 40px;
+            height: 40px;
+            color: #9FBFE5;
+            transition: 0.5s;
+            &:hover{
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    }
+}

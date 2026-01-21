@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Aritaburi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Aritaburi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@mixin font-face($weight:400){
+    font-family: "Welcome";
+    font-weight: $weight;
+}
+

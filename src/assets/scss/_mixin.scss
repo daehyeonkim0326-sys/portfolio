@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./font" as *;
+
+//반응형
+$mobile: 768px;
+@mixin mobile {
+@media add and (min-width:$mobile){
+    @content;
+}
+}
+@mixin flex-layout($dir:row,$justify:center,$align:center,$gap:1rem){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

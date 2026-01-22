@@ -1,6 +1,13 @@
 import "./home.scss";
 import { FaHeart } from "react-icons/fa6";
 const Home = () => {
+
+    const scrollTo = (id) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
   return (
     <div className='home'>
         <div className='track'>
@@ -18,7 +25,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='txt'>
-                        <h1>CREATOR</h1>
+                        <h1 onClick={() => scrollTo("me")}>CREATOR</h1>
                         <h3>김대현</h3>
                     </div>
                     <FaHeart className='emoji'/>

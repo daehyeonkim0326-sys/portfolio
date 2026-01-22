@@ -2,8 +2,7 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .home{
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     @include font-face;
     .track{
         @include flex-layout(row,center,center,3rem);

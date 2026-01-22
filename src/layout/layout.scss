@@ -5,6 +5,8 @@
     @include flex-layout(row);
     width: 100%;
     position: absolute;
+    z-index: 9999;
+    color: #182434;
     ul{
     @include flex-layout(row);
     top: 1%;
@@ -16,20 +18,22 @@
     box-shadow: 0 2px 2px #9BC0EB;
     background-color: rgba(143, 188, 248, 0.23);
     backdrop-filter: blur(0.14px);
-  -webkit-backdrop-filter: blur(0.14px);
+    -webkit-backdrop-filter: blur(0.14px);
     
-        text-decoration: none;
-        li.nav{
-            padding: 0.5rem;
+    li.nav{
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
             color: #182434;
             @include font-face;
+            cursor:  pointer;
             &:hover{
-            box-shadow: 0 4px 4px #9BC0EB;
-            border-radius: 25px;
-            background-color: rgba(15, 112, 240, 0.24);
-            backdrop-filter: blur(0.14px);
-            -webkit-backdrop-filter: blur(0.14px);
-        }
+                box-shadow: 0 4px 4px #9BC0EB;
+                border-radius: 25px;
+                background-color: rgba(15, 112, 240, 0.24);
+                backdrop-filter: blur(0.14px);
+                -webkit-backdrop-filter: blur(0.14px);
+                padding: 0.5rem 1.5rem;
+            }
     
 }
     li{

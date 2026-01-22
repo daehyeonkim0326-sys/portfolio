@@ -1,0 +1,51 @@
+@use "../assets/scss/variables" as*;
+@use "../assets/scss/mixin" as*;
+@use "../assets/scss/font" as*;
+.skill{
+    @include flex-layout(column,center,center,8rem);
+    color: #182434;
+    padding: 5rem;
+    height: 100vh;
+    
+    .comment{
+        padding: 1.5rem;
+        @include flex-layout(row,space-around,center);
+        width: 70%;
+        .profile{
+            @include flex-layout();
+        }
+        input{
+            border: none;
+            width: 20%;
+            padding: 1rem 5rem;
+            border-radius: 25px;
+            box-shadow: 0 2px 2px #9BC0EB;
+            background-color: rgba(91, 153, 235, 0.23);
+            backdrop-filter: blur(0.14px);
+            -webkit-backdrop-filter: blur(0.14px);
+            &::placeholder{
+                color: #182434;
+            }
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 16px;
+            border-radius: 25px;
+            box-shadow: 0 2px 2px #9BC0EB;
+            background-color: rgba(91, 153, 235, 0.23);
+            backdrop-filter: blur(0.14px);
+            -webkit-backdrop-filter: blur(0.14px);
+            &:hover{
+                background-color: rgba(15, 98, 207, 0.23);
+            }
+        }
+    }
+    .img{
+        z-index: 9998;
+        overflow-x: hidden;
+        // width: 100%;
+        
+    }
+}

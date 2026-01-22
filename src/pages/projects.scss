@@ -1,7 +1,38 @@
 @use "../assets/scss/variables"as*;
 @use "../assets/scss/mixin"as*;
 @use "../assets/scss/font"as*;
-.projecs{
-    width: 100vw;
-    height: 100vh;
+.projects{
+    padding: 2rem;
+    color: #182434;
+    font-size: 24px;
+    .tabs {
+        @include flex-layout(row,left);
+        list-style: none;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #34373a;
+        padding: 0 0.5rem;
+        z-index: 9999;
+        width: fit-content;
+        li{
+            button{
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.5;
+            border: none;
+            background: none;
+            &.active{
+                color: #182434;
+                opacity: 1;
+                border-bottom: 0.5px solid #3680D8;
+            }
+        }
+    }
+    }
+
+    .tabs.active {
+    opacity: 100;
+    font-weight: 700;
+    }
+
 }

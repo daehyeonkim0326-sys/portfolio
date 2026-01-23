@@ -6,24 +6,28 @@
     color: #182434;
     padding: 5rem;
     height: 100vh;
-    
+    overflow-x: hidden;
     .comment{
         padding: 1.5rem;
         @include flex-layout(row,space-around,center);
-        width: 70%;
+        width: 40%;
         .profile{
             @include flex-layout();
         }
         input{
             border: none;
-            width: 20%;
-            padding: 1rem 5rem;
+            width: fit-content;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 3rem;
             border-radius: 25px;
             box-shadow: 0 2px 2px #9BC0EB;
             background-color: rgba(91, 153, 235, 0.23);
             backdrop-filter: blur(0.14px);
             -webkit-backdrop-filter: blur(0.14px);
             &::placeholder{
+                @include flex-layout(row,left);
                 color: #182434;
             }
         }

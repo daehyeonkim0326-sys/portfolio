@@ -5,6 +5,7 @@
     padding: 2rem;
     color: #182434;
     font-size: 24px;
+    overflow-x: hidden;
     .tabs {
         @include flex-layout(row,left);
         list-style: none;

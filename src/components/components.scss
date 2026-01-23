@@ -3,9 +3,13 @@
 @use "../assets/scss/font"as*;
 .team {
     color: #182434;
+    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
     ul{
         @include flex-layout();
         list-style: none;
+        li{
+          @include flex-layout(column,center,center);
+        }
     img{
         transition: 1s;
         cursor: pointer;
@@ -28,21 +32,20 @@
 }
 .clone {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   color: #182434;
+  border-bottom: 1px solid rgba(110, 110, 110, 0.5);
 
   ul {
     @include flex-layout(row, flex-start, stretch);
     list-style: none;
-    padding: 0;
-    margin: 0;
 
     width: 878px;
     transition: transform 0.4s ease;
 
     li {
-    //   min-width: 100%;
-    width: 979px;
+      min-width: 100%;
+    
       text-align: center;
     }
 
@@ -74,13 +77,20 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    background: rgba(92, 131, 236, 0.6);
+    backdrop-filter: blur(0.65%);
+    -webkit-backdrop-filter: blur(0.65%);
     color: #fff;
     border: none;
     padding: 10px 14px;
     cursor: pointer;
     z-index: 10;
-
+    transition: 0.5s;
+    box-shadow: 0 4px 4px #182434;
+    &:hover{
+      background: rgba(36, 88, 231, 0.6);
+    }
     &.left {
       left: 10px;
     }
@@ -88,5 +98,55 @@
     &.right {
       right: 10px;
     }
+  }
+}
+.personal{
+    color: #182434;
+    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+    ul{
+        @include flex-layout();
+        list-style: none;
+        li{
+          @include flex-layout(column,center,center);
+        }
+    img{
+        transition: 1s;
+        cursor: pointer;
+        &:hover{
+            top:0;
+            transform: translateY(-3%);
+        }
+        
+        
+    }
+    h2{
+        cursor: pointer;
+        font-size: 24px;
+        &:hover{
+            border-bottom: 0.1px solid #182434;
+            width: fit-content;
+        }
+    } 
+  }
+}
+.practical{
+    color: #182434;
+    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+    ul{
+        @include flex-layout(row,space-between,center);
+        list-style: none;
+        li{
+          @include flex-layout(column,center,center);
+        }
+        img{
+        border-radius: 25px;
+        transition: 1s;
+        box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
+        
+        
+    }
+    h2{
+        font-size: 20px;
+    } 
   }
 }

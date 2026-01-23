@@ -27,7 +27,7 @@ const Skill = () => {
           if (i >= text.length) clearInterval(timer);
         }, 90);
 
-        // 시작했으면 옵저버는 꺼도 됨
+        // 시작했으면 옵저버는 꺼도 됨  
         io.disconnect();
       },
       { threshold: 0.4 } // 40% 들어오면 시작

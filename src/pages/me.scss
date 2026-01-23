@@ -2,7 +2,7 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .me{
-    @include flex-layout(column,center,left);
+    @include flex-layout(column,center,center);
     padding: 2rem;
     height: 100vh;
     color: #182434;
@@ -47,14 +47,11 @@
             
     }
     .track{
-        @include flex-layout(column,center);
-        .txt{
-            @include flex-layout(row,left);
-            width: 100%;
-        }
+        // @include flex-layout(column,center);
+        width: 35%;
         .track-list{
-            @include flex-layout(row,center,center,5rem);
-            width: 45%;
+            @include flex-layout(row,center,center,7rem);
+            width: 100%;
             border-top: 0.5px solid #182434;
             border-bottom: 0.5px solid #182434;
             .num{
@@ -62,7 +59,7 @@
                 color: #182434;
             }
             .txt{
-                @include flex-layout(row,left,center,3rem);
+                @include flex-layout(row,left,center);
                 width: 50%;
                 h2{
                 width: fit-content;

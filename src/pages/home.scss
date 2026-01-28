@@ -2,11 +2,11 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .home{
-    height: 100%;
+    height: 100vh;
     @include font-face;
     .track{
         @include flex-layout(row,center,center,3rem);
-        height: 100vh;
+        height: 100%;
         .track-list{
             @include flex-layout(row,center,center,5rem);
             padding: 1rem;

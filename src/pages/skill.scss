@@ -5,12 +5,12 @@
     @include flex-layout(column,center,center,8rem);
     color: #182434;
     padding: 5rem;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     .comment{
         padding: 1.5rem;
         @include flex-layout(row,space-around,center);
-        width: 40%;
+        width: 60%;
         .profile{
             @include flex-layout();
         }

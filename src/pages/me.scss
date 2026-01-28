@@ -4,7 +4,7 @@
 .me{
     @include flex-layout(column,center,center);
     padding: 2rem;
-    height: 100vh;
+    height: 100%;
     color: #182434;
     .txt{
         h1{
@@ -47,11 +47,22 @@
             
     }
     .track{
-        // @include flex-layout(column,center);
-        width: 35%;
+        @include flex-layout(column,left,center);
+        width: 100%;
+        .txt{
+                @include flex-layout(row,left,center);
+                width: 50%;
+                h2{
+                width: fit-content;
+                cursor: pointer;
+                &:hover{
+                    border-bottom: 2px solid #182434;
+                }
+            }
+        }
         .track-list{
             @include flex-layout(row,center,center,7rem);
-            width: 100%;
+            width: 50%;
             border-top: 0.5px solid #182434;
             border-bottom: 0.5px solid #182434;
             .num{
@@ -80,5 +91,8 @@
             }
         }
     }
+}
+.introducting{
+    width: 50%;
 }
 }

@@ -21,24 +21,48 @@
     -webkit-backdrop-filter: blur(0.14px);
     
     li.nav{
-            text-decoration: none;
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        color: #182434;
+        @include font-face;
+        cursor:  pointer;
+        &:hover{
+            box-shadow: 0 4px 4px #9BC0EB;
+            border-radius: 25px;
+            background-color: rgba(15, 112, 240, 0.24);
+            backdrop-filter: blur(0.14px);
+            -webkit-backdrop-filter: blur(0.14px);
             padding: 0.5rem 1.5rem;
-            color: #182434;
-            @include font-face;
-            cursor:  pointer;
-            &:hover{
-                box-shadow: 0 4px 4px #9BC0EB;
-                border-radius: 25px;
-                background-color: rgba(15, 112, 240, 0.24);
-                backdrop-filter: blur(0.14px);
-                -webkit-backdrop-filter: blur(0.14px);
-                padding: 0.5rem 1.5rem;
+            transition: 0.3s;
+            @keyframes hover {
+                0%{ opacity: 10%;}
+                50%{ opacity: 50%;}
+                100%{ opacity: 100%;}
             }
-    
-}
+        }
+        
+    }
     li{
         color: #0151ad;
     }
     
 }
+}
+@include mobile{
+    .header{
+        // width: 100%;
+        ul{
+    @include flex-layout(row);
+    top: 1%;
+    position: fixed;
+    width: 150px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    list-style: none;
+    box-shadow: 0 2px 2px #9BC0EB;
+    background-color: rgba(143, 188, 248, 0.23);
+    backdrop-filter: blur(0.14px);
+    -webkit-backdrop-filter: blur(0.14px);
+        }
+    }
 }

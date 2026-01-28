@@ -6,6 +6,7 @@
     color: #182434;
     font-size: 24px;
     overflow-x: hidden;
+    max-width: 1920px;
     .tabs {
         @include flex-layout(row,left);
         list-style: none;

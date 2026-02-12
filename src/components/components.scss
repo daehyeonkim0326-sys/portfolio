@@ -32,23 +32,76 @@
     } 
 }
 }
-.clone {
+.clone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   position: relative;
-  // overflow: hidden;
   color: #182434;
   border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+  overflow: hidden;
+  .card {
+    padding: 0;
+    margin: 1.5rem 0;
+    list-style: none;
+    width: 650px;
+    transition: transform 0.5s ease;
 
+    
+      min-width: 100%;
+      @include flex-layout(column,center,center);
+      text-align: center;
+      list-style: none;
+    
+
+    img {
+      width: 100%;
+      max-width: 650px;
+      height: auto;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.6s;
+
+      &:hover {
+        transform: translateY(-3%);
+      }
+    }
+
+    h2 {
+      margin-top: 12px;
+      font-size: 24px;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 0.1px solid #182434;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.clone-grid .card img {
+  width: 100%;
+  display: block;
+}
+.clone {
+  position: relative;
+  color: #182434;
+  border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+  overflow: hidden;
   ul {
     @include flex-layout(row, flex-start, stretch);
+    padding: 0;
+    margin: 1.5rem 0;
     list-style: none;
-
     width: 650px;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 
     li {
       min-width: 100%;
       @include flex-layout(column,center,center);
       text-align: center;
+      list-style: none;
     }
 
     img {
@@ -72,15 +125,14 @@
       &:hover {
         border-bottom: 0.1px solid #182434;
         width: fit-content;
-        margin: 12px auto 0;
       }
     }
   }
-
+  
   .nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     border-radius: 25px;
     background: rgba(92, 131, 236, 0.6);
     backdrop-filter: blur(0.65%);
@@ -96,12 +148,21 @@
       background: rgba(36, 88, 231, 0.6);
     }
     &.left {
-      left: 10px;
+      left: 8px;
     }
 
     &.right {
-      right: 10px;
+      right: 8px;
     }
+
+  @include mobile{
+    .clone-grid {
+    display: none;
+  }
+  .clone {
+    display: none;
+  }
+  }
   }
 }
 .personal{

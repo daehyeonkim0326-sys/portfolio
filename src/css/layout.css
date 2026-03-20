@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Aritaburi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aritaburi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  color: #182434;
+}
+.header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  top: 1%;
+  position: fixed;
+  width: auto;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  list-style: none;
+  box-shadow: 0 2px 2px #9BC0EB;
+  background-color: rgba(143, 188, 248, 0.23);
+  backdrop-filter: blur(0.14px);
+  -webkit-backdrop-filter: blur(0.14px);
+}
+.header ul li.nav {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  color: #182434;
+  font-family: "Welcome";
+  font-weight: 400;
+  cursor: pointer;
+}
+.header ul li.nav:hover {
+  box-shadow: 0 4px 4px #9BC0EB;
+  border-radius: 25px;
+  background-color: rgba(15, 112, 240, 0.24);
+  backdrop-filter: blur(0.14px);
+  -webkit-backdrop-filter: blur(0.14px);
+  padding: 0.5rem 1.5rem;
+  transition: 0.3s;
+}
+@keyframes hover {
+  0% {
+    opacity: 10%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.header ul li {
+  color: #0151ad;
+}
+
+@media add and (min-width: 768px) {
+  .header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: 1%;
+    position: fixed;
+    width: 150px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    list-style: none;
+    box-shadow: 0 2px 2px #9BC0EB;
+    background-color: rgba(143, 188, 248, 0.23);
+    backdrop-filter: blur(0.14px);
+    -webkit-backdrop-filter: blur(0.14px);
+  }
+}/*# sourceMappingURL=layout.css.map */

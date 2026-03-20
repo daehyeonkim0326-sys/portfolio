@@ -1,6 +1,6 @@
-@use "../assets/scss/variables" as*;
-@use "../assets/scss/mixin" as*;
-@use "../assets/scss/font" as*;
+@use "../assets/scss/variables.scss" as *;
+@use "../assets/scss/mixin.scss" as *;
+@use "../assets/scss/font.scss" as *;
 .home{
     height: 100vh;
     @include font-face;
@@ -8,11 +8,14 @@
         @include flex-layout(row,center,center,3rem);
         height: 100%;
         .track-list{
-            @include flex-layout(row,center,center,5rem);
-            padding: 1rem;
-            width: 30%;
+            @include flex-layout(row,center,center,3rem);
+            // padding: 0.5rem;
+            width: 60%;
             border-top: 2px solid #ababac;
             border-bottom: 2px solid #ababac;
+            @include respond(mobile){
+                gap: 1rem;
+            }
             .album{
                 .turntable {
                     position: relative;
@@ -20,7 +23,11 @@
                     aspect-ratio: 1 / 1;
                     display: grid;
                     place-items: center;
+                    @include respond(mobile){
+                        width: 120px;
+                        height: 120px;
                     }
+                }
 
                     /* LP 본체 */
                     .lp {
@@ -28,14 +35,17 @@
                     height: 100%;
                     border-radius: 50%;
                     position: relative;
-
                     /* 검정판 + 홈(그루브) 느낌 */
                     // background: url(../assets/img/2967822_20250714154852_500.jpg);
                     width: 150px;
                     height: 150px;
+                    @include respond(mobile){
+                        width: 50%;
+                        height: 50%;
+                    }
                     aspect-ratio: 1 / 1;
                     border-radius: 50%;
-
+                    
                     background-image: url("../assets/img/2967822_20250714154852_500.jpg");
                     background-size: cover;      // 핵심
                     background-position: center;
@@ -59,7 +69,6 @@
                     position: absolute;
                     inset: 0;
                     margin: auto;
-
                     background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), rgba(0,0,0,0) 55%),
                                 linear-gradient(135deg, #7482ff, #cbcbfd);
                     box-shadow: inset 0 0 0 2px rgba(255,255,255,0.15);
@@ -96,7 +105,11 @@
                     top: 18%;
                     transform: rotate(18deg);
                     transform-origin: left center;
-
+                    @include respond(mobile){
+                        width: 40%;
+                        top: 30%;
+                        right: 5%;
+                    }
                     background: linear-gradient(90deg, #cfcfcf, #7a7a7a);
                     border-radius: 999px;
                     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
@@ -121,16 +134,29 @@
 
             }
             .txt{
+           
                 h1{
                 @include font-face();
                 font-weight: 900;
-                size: 96px;
+                font-size: 40px;
                 cursor: pointer;
                 &:hover{
                     border-bottom: 1px solid #7a7a7a;
                 }
             }
+            @include respond(mobile){
+                h1{
+                    font-size: 20px;
+                }
+                h3{
+                    font-size: 8px;
+                }
+                .emoji{
+                    width: 20px;
+                    height: 20px;
+                }
             }
+        }
         .emoji{
             width: 40px;
             height: 40px;

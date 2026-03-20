@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Aritaburi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aritaburi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  color: #182434;
+  padding: 5rem;
+  height: 100%;
+  overflow-x: hidden;
+}
+.skill .comment {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  width: 60%;
+}
+.skill .comment .profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.skill .comment input {
+  border: none;
+  width: fit-content;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 2px #9BC0EB;
+  background-color: rgba(91, 153, 235, 0.23);
+  backdrop-filter: blur(0.14px);
+  -webkit-backdrop-filter: blur(0.14px);
+}
+.skill .comment input::placeholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  color: #182434;
+}
+.skill .comment button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border-radius: 25px;
+  box-shadow: 0 2px 2px #9BC0EB;
+  background-color: rgba(91, 153, 235, 0.23);
+  backdrop-filter: blur(0.14px);
+  -webkit-backdrop-filter: blur(0.14px);
+}
+.skill .comment button:hover {
+  background-color: rgba(15, 98, 207, 0.23);
+}
+.skill .img {
+  z-index: 9998;
+  overflow-x: hidden;
+}/*# sourceMappingURL=skill.css.map */

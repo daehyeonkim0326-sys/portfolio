@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Aritaburi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aritaburi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+.projects {
+  padding: 2rem;
+  color: #182434;
+  font-size: 24px;
+  overflow-x: hidden;
+  max-width: 1920px;
+}
+.projects .tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #34373a;
+  padding: 0 0.5rem;
+  z-index: 9999;
+  width: fit-content;
+}
+.projects .tabs li button {
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: none;
+  background: none;
+}
+.projects .tabs li button.active {
+  color: #182434;
+  opacity: 1;
+  border-bottom: 0.5px solid #3680D8;
+}
+.projects .tabs.active {
+  opacity: 100;
+  font-weight: 700;
+}/*# sourceMappingURL=projects.css.map */

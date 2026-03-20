@@ -8,7 +8,7 @@ const slides = [
   { img: wave, title: "Flow Motion : ConnectWave" },
   { img: myday, title: "MyDay" },
   { img: kakao, title: "Tech Week : if(kakao)" },
-  { img: airsound, title: "airsound : 에어비앤비" },
+  { img: airsound, title: "airsound : 에어비엔비 카피" },
 ];
 
 function useIsMobile(breakpoint = 768) {

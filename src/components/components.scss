@@ -65,8 +65,9 @@
       &:hover {
         transform: translateY(-3%);
       }
+      
     }
-
+      
     h2 {
       margin-top: 12px;
       font-size: 24px;
@@ -111,7 +112,9 @@
       display: block;
       cursor: pointer;
       transition: transform 0.6s;
-
+      @include respond(mobile){
+        width: 80%;
+      }
       &:hover {
         transform: translateY(-3%);
       }
@@ -155,7 +158,7 @@
       right: 8px;
     }
 
-  @include mobile{
+  @include respond(mobile){
     .clone-grid {
     display: none;
   }

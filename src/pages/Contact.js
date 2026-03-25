@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./contact.scss";
 const Contact = () => {
-  const emailText = "Email: daeheyon0326@gmail.com";
-  const phoneText = "Phone: 010-4607-3916";
-  const githubText = "Github: https://github.com/daehyeonkim0326-sys";
+  const emailText = "daeheyon0326@gmail.com";
+  const phoneText = "010-4607-3916";
+  const githubText = "https://github.com/daehyeonkim0326-sys";
 
   const [emailPh, setEmailPh] = useState("");
   const [phonePh, setPhonePh] = useState("");

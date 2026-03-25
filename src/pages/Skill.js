@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import svg from '../assets/img/Frame 38.svg';
 import skill from '../assets/img/Frame 37.jpg';
+import { IoSend } from "react-icons/io5";
 import './skill.scss';
 const Skill = () => {
   const text = "그래서 할 줄 아는게 뭐임?";
@@ -45,7 +46,7 @@ const Skill = () => {
             <h3>DH0326</h3>
           </div>
           <input type='text' placeholder={placeholder} reedOnly/>
-          <button onClick={() => scrollTo("projects")}>등록</button>
+          <button onClick={() => scrollTo("projects")}><IoSend/></button>
       </div>
         <img className='img' src={skill} alt='skill'/>
     </div>

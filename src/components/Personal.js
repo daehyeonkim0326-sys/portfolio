@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import quiz from "../assets/img/quiz.jpg";
 import blog from "../assets/img/blog.jpg";
 
@@ -8,38 +8,43 @@ const slides = [
   
 ];
 
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(() =>
+function useIsTablet(breakpoint = 1024) {
+  const [isTablet, setIsTablet] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < breakpoint : false
   );
 
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < breakpoint);
+    const onResize = () => setIsTablet(window.innerWidth < breakpoint);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, [breakpoint]);
 
-  return isMobile;
+  return isTablet;
 }
+
 const Personal = () => {
-  const isMobile = useIsMobile(768);
-    const [current, setCurrent] = useState(0);
-  
-    const prevSlide = () => {
-      setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-    };
-  
-    const nextSlide = () => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    };
-  
-    // 데스크탑이면 캐러셀 상태 의미 없으니 리셋(선택)
-    useEffect(() => {
-      if (!isMobile) setCurrent(0);
-    }, [isMobile]);
-  
-    // ✅ 데스크탑: 그리드
-    if (!isMobile) {
+  const isTablet = useIsTablet(1024);
+  const carouselRef = useRef(null);
+
+  const prevSlide = () => {
+    if (!carouselRef.current) return;
+
+    carouselRef.current.scrollBy({
+      left: -carouselRef.current.clientWidth,
+      behavior: "smooth",
+    });
+  };
+
+  const nextSlide = () => {
+    if (!carouselRef.current) return;
+
+    carouselRef.current.scrollBy({
+      left: carouselRef.current.clientWidth,
+      behavior: "smooth",
+    });
+  };
+
+  if (!isTablet) {
       return (
         <section className="clone-grid">
           {slides.map((slide, idx) => (
@@ -59,7 +64,7 @@ const Personal = () => {
 
       <ul
         className="carousel"
-        style={{ transform: `translateX(-${current * 100}%)` }}
+        ref={carouselRef}
       >
         {slides.map((slide, idx) => (
           <li key={idx} className="slide">

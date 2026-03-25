@@ -4,17 +4,21 @@
 .home{
     height: 100vh;
     @include font-face;
+    transition: 0.5s;
     .track{
         @include flex-layout(row,center,center,3rem);
         height: 100%;
         .track-list{
-            @include flex-layout(row,center,center,3rem);
+            @include flex-layout(row,center,center,5rem);
             // padding: 0.5rem;
             width: 60%;
             border-top: 2px solid #ababac;
             border-bottom: 2px solid #ababac;
-            @include respond(mobile){
-                gap: 1rem;
+            // @include respond(mobile){
+            //     gap: 1rem;
+            // }
+            @include respond(tablet){
+                @include flex-layout(row,center,center,3rem);
             }
             .album{
                 .turntable {
@@ -23,7 +27,8 @@
                     aspect-ratio: 1 / 1;
                     display: grid;
                     place-items: center;
-                    @include respond(mobile){
+                    transition: 0.5s;
+                    @include respond(tablet){
                         width: 120px;
                         height: 120px;
                     }
@@ -39,9 +44,9 @@
                     // background: url(../assets/img/2967822_20250714154852_500.jpg);
                     width: 150px;
                     height: 150px;
-                    @include respond(mobile){
-                        width: 50%;
-                        height: 50%;
+                    @include respond(tablet){
+                        width: 70%;
+                        height: 70%;
                     }
                     aspect-ratio: 1 / 1;
                     border-radius: 50%;
@@ -106,9 +111,9 @@
                     transform: rotate(18deg);
                     transform-origin: left center;
                     @include respond(mobile){
-                        width: 40%;
-                        top: 30%;
-                        right: 5%;
+                        width: 60px;
+                        height: 0.8vh;
+                        top: 23%;
                     }
                     background: linear-gradient(90deg, #cfcfcf, #7a7a7a);
                     border-radius: 999px;
@@ -134,37 +139,42 @@
 
             }
             .txt{
-           
                 h1{
-                @include font-face();
-                font-weight: 900;
-                font-size: 40px;
-                cursor: pointer;
+                    @include font-face();
+                    font-weight: 900;
+                    font-size: 40px;
+                    cursor: pointer;
+                    transition: 0.5s;
                 &:hover{
                     border-bottom: 1px solid #7a7a7a;
                 }
             }
-            @include respond(mobile){
+            @include respond(tablet){
                 h1{
-                    font-size: 20px;
+                    font-size: 16px;
                 }
                 h3{
                     font-size: 8px;
                 }
-                .emoji{
-                    width: 20px;
-                    height: 20px;
-                }
+                
             }
         }
         .emoji{
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             color: #9FBFE5;
             transition: 0.5s;
             &:hover{
                 width: 60px;
                 height: 60px;
+                @include respond(tablet){
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            @include respond(tablet){
+                width: 30px;
+                height: 30px;
             }
         }
     }

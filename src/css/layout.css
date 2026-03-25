@@ -42,18 +42,26 @@
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   color: #182434;
+}
+@media (max-width: 768px) {
+  .header ul li.nav {
+    padding: 0.1rem;
+    font-size: 12px;
+  }
+}
+.header ul li.nav {
   font-family: "Welcome";
   font-weight: 400;
   cursor: pointer;
+  transition: 0.5s;
+  border-radius: 25px;
 }
 .header ul li.nav:hover {
   box-shadow: 0 4px 4px #9BC0EB;
-  border-radius: 25px;
   background-color: rgba(15, 112, 240, 0.24);
   backdrop-filter: blur(0.14px);
   -webkit-backdrop-filter: blur(0.14px);
   padding: 0.5rem 1.5rem;
-  transition: 0.3s;
 }
 @keyframes hover {
   0% {
@@ -70,7 +78,7 @@
   color: #0151ad;
 }
 
-@media add and (min-width: 768px) {
+@media (max-width: 480px) {
   .header ul {
     display: flex;
     flex-direction: row;
@@ -79,7 +87,6 @@
     gap: 1rem;
     top: 1%;
     position: fixed;
-    width: 150px;
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
     list-style: none;

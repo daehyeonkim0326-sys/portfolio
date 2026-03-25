@@ -24,20 +24,20 @@
         text-decoration: none;
         padding: 0.5rem 1.5rem;
         color: #182434;
-        @include respond(mobile){
+        @include respond(tablet){
             padding: 0.1rem;
             font-size: 12px;
         }
         @include font-face;
         cursor:  pointer;
+        transition: 0.5s;
+        border-radius: 25px;
         &:hover{
             box-shadow: 0 4px 4px #9BC0EB;
-            border-radius: 25px;
             background-color: rgba(15, 112, 240, 0.24);
             backdrop-filter: blur(0.14px);
             -webkit-backdrop-filter: blur(0.14px);
             padding: 0.5rem 1.5rem;
-            transition: 0.3s;
             @keyframes hover {
                 0%{ opacity: 10%;}
                 50%{ opacity: 50%;}

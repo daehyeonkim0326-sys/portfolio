@@ -15,20 +15,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 6rem;
   color: #182434;
-  padding: 5rem;
+  padding: 5rem 0;
   height: 100%;
   overflow-x: hidden;
 }
 .skill .comment {
-  padding: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  width: 60%;
+  width: 70%;
 }
 .skill .comment .profile {
   display: flex;
@@ -36,6 +35,15 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .skill .comment .profile img {
+    width: 30px;
+    height: 30px;
+  }
+  .skill .comment .profile h3 {
+    font-size: 16px;
+  }
 }
 .skill .comment input {
   border: none;
@@ -49,6 +57,7 @@
   background-color: rgba(91, 153, 235, 0.23);
   backdrop-filter: blur(0.14px);
   -webkit-backdrop-filter: blur(0.14px);
+  transition: 0.5s;
 }
 .skill .comment input::placeholder {
   display: flex;
@@ -58,21 +67,41 @@
   gap: 1rem;
   color: #182434;
 }
+@media (max-width: 768px) {
+  .skill .comment input {
+    padding: 0.5rem 1rem;
+  }
+  .skill .comment input::placeholder {
+    font-size: 12px;
+  }
+}
 .skill .comment button {
   cursor: pointer;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.3rem;
   font-size: 16px;
   border-radius: 25px;
   box-shadow: 0 2px 2px #9BC0EB;
   background-color: rgba(91, 153, 235, 0.23);
   backdrop-filter: blur(0.14px);
   -webkit-backdrop-filter: blur(0.14px);
+  transition: 0.5s;
 }
 .skill .comment button:hover {
   background-color: rgba(15, 98, 207, 0.23);
 }
+@media (max-width: 768px) {
+  .skill .comment button {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+}
 .skill .img {
   z-index: 9998;
   overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .skill .img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=skill.css.map */

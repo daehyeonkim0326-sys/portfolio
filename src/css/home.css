@@ -15,6 +15,7 @@
   height: 100vh;
   font-family: "Welcome";
   font-weight: 400;
+  transition: 0.5s;
 }
 .home .track {
   display: flex;
@@ -30,10 +31,18 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  padding: 1rem;
-  width: 30%;
+  width: 60%;
   border-top: 2px solid #ababac;
   border-bottom: 2px solid #ababac;
+}
+@media (max-width: 768px) {
+  .home .track .track-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
 }
 .home .track .track-list .album .turntable {
   position: relative;
@@ -41,6 +50,13 @@
   aspect-ratio: 1/1;
   display: grid;
   place-items: center;
+  transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .home .track .track-list .album .turntable {
+    width: 120px;
+    height: 120px;
+  }
 }
 .home .track .track-list .album {
   /* LP 본체 */
@@ -53,6 +69,14 @@
   /* 검정판 + 홈(그루브) 느낌 */
   width: 150px;
   height: 150px;
+}
+@media (max-width: 768px) {
+  .home .track .track-list .album .lp {
+    width: 70%;
+    height: 70%;
+  }
+}
+.home .track .track-list .album .lp {
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-image: url("../assets/img/2967822_20250714154852_500.jpg");
@@ -110,6 +134,15 @@
   top: 18%;
   transform: rotate(18deg);
   transform-origin: left center;
+}
+@media (max-width: 480px) {
+  .home .track .track-list .album .tonearm {
+    width: 60px;
+    height: 0.8vh;
+    top: 23%;
+  }
+}
+.home .track .track-list .album .tonearm {
   background: linear-gradient(90deg, #cfcfcf, #7a7a7a);
   border-radius: 999px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -137,19 +170,40 @@
   font-family: "Welcome";
   font-weight: 400;
   font-weight: 900;
-  size: 96px;
+  font-size: 40px;
   cursor: pointer;
+  transition: 0.5s;
 }
 .home .track .track-list .txt h1:hover {
   border-bottom: 1px solid #7a7a7a;
 }
+@media (max-width: 768px) {
+  .home .track .track-list .txt h1 {
+    font-size: 16px;
+  }
+  .home .track .track-list .txt h3 {
+    font-size: 8px;
+  }
+}
 .home .track .track-list .emoji {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   color: #9FBFE5;
   transition: 0.5s;
 }
 .home .track .track-list .emoji:hover {
   width: 60px;
   height: 60px;
+}
+@media (max-width: 768px) {
+  .home .track .track-list .emoji:hover {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .home .track .track-list .emoji {
+    width: 30px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=home.css.map */

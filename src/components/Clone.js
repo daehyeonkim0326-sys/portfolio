@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import wave from "../assets/img/wave.jpg";
 import myday from "../assets/img/day.jpg";
 import kakao from "../assets/img/ifkakao.jpg";
@@ -11,39 +11,43 @@ const slides = [
   { img: airsound, title: "airsound : 에어비엔비 카피" },
 ];
 
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(() =>
+function useIsTablet(breakpoint = 1024) {
+  const [isTablet, setIsTablet] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < breakpoint : false
-  );
+);
 
-  useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < breakpoint);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [breakpoint]);
+useEffect(() => {
+  const onResize = () => setIsTablet(window.innerWidth < breakpoint);
+  window.addEventListener("resize", onResize);
+  return () => window.removeEventListener("resize", onResize);
+}, [breakpoint]);
 
-  return isMobile;
+  return isTablet;
 }
 
 export default function Clone() {
-  const isMobile = useIsMobile(768);
-  const [current, setCurrent] = useState(0);
+  const isTablet = useIsTablet(1024);
+  const carouselRef = useRef(null);
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    if (!carouselRef.current) return;
+
+    carouselRef.current.scrollBy({
+      left: -carouselRef.current.clientWidth,
+      behavior: "smooth",
+    });
   };
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    if (!carouselRef.current) return;
+
+    carouselRef.current.scrollBy({
+      left: carouselRef.current.clientWidth,
+      behavior: "smooth",
+    });
   };
 
-  // 데스크탑이면 캐러셀 상태 의미 없으니 리셋(선택)
-  useEffect(() => {
-    if (!isMobile) setCurrent(0);
-  }, [isMobile]);
-
-  // ✅ 데스크탑: 그리드
-  if (!isMobile) {
+  if (!isTablet) {
     return (
       <section className="clone-grid">
         {slides.map((slide, idx) => (
@@ -56,17 +60,13 @@ export default function Clone() {
     );
   }
 
-  // ✅ 모바일: 캐러셀
   return (
     <div className="clone">
       <button className="nav left" onClick={prevSlide} aria-label="prev">
         ◀
       </button>
 
-      <ul
-        className="carousel"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
+      <ul className="carousel" ref={carouselRef}>
         {slides.map((slide, idx) => (
           <li key={idx} className="slide">
             <img src={slide.img} alt={slide.title} />

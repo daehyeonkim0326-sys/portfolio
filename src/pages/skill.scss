@@ -2,17 +2,25 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .skill{
-    @include flex-layout(column,center,center,8rem);
+    @include flex-layout(column,center,center,6rem);
     color: #182434;
-    padding: 5rem;
+    padding: 5rem 0;
     height: 100%;
     overflow-x: hidden;
-    .comment{
-        padding: 1.5rem;
+    .comment{     
         @include flex-layout(row,space-around,center);
-        width: 60%;
+        width: 70%;
         .profile{
-            @include flex-layout();
+            @include flex-layout(row,center,center);
+            @include respond(tablet){
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+                h3{
+                    font-size: 16px;
+                }
+            }
         }
         input{
             border: none;
@@ -26,30 +34,43 @@
             background-color: rgba(91, 153, 235, 0.23);
             backdrop-filter: blur(0.14px);
             -webkit-backdrop-filter: blur(0.14px);
+            transition: 0.5s;
             &::placeholder{
                 @include flex-layout(row,left);
                 color: #182434;
+            }
+            @include respond(tablet){
+                padding: 0.5rem 1rem;
+                &::placeholder{
+                    font-size: 12px;
+                }
             }
         }
         button{
             cursor: pointer;
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 1rem 1.3rem;
             font-size: 16px;
             border-radius: 25px;
             box-shadow: 0 2px 2px #9BC0EB;
             background-color: rgba(91, 153, 235, 0.23);
             backdrop-filter: blur(0.14px);
             -webkit-backdrop-filter: blur(0.14px);
+            transition: 0.5s;
             &:hover{
                 background-color: rgba(15, 98, 207, 0.23);
+            }
+            @include respond(tablet){
+                padding: 0.5rem 1rem;
+                font-size: 12px;
             }
         }
     }
     .img{
         z-index: 9998;
         overflow-x: hidden;
-        // width: 100%;
-        
+        @include respond(tablet){
+            width: 100%;
+        }
     }
 }

@@ -11,7 +11,7 @@
   font-display: swap;
 }
 .projects {
-  padding: 2rem;
+  padding: 3.5rem 0;
   color: #182434;
   font-size: 24px;
   overflow-x: hidden;
@@ -31,14 +31,20 @@
   z-index: 9999;
   width: fit-content;
 }
-.projects .tabs li button {
+.projects .tabs button {
   font-size: 24px;
   cursor: pointer;
   opacity: 0.5;
   border: none;
   background: none;
+  transition: 0.5s;
 }
-.projects .tabs li button.active {
+@media (max-width: 768px) {
+  .projects .tabs button {
+    font-size: 18px;
+  }
+}
+.projects .tabs button.active {
   color: #182434;
   opacity: 1;
   border-bottom: 0.5px solid #3680D8;

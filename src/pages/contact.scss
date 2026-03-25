@@ -5,6 +5,7 @@
     @include flex-layout(row,space-between,center,2rem);
     padding: 4rem;
     overflow: hidden;
+    
     .info{
         @include flex-layout(column,space-between,center,2rem);
     }
@@ -16,10 +17,12 @@
         width: 150%;
         padding: 1rem ;
         border-radius: 25px;
+        font-size: 28px;
         box-shadow: 0 2px 2px #9BC0EB;
         background-color: rgba(91, 153, 235, 0.23);
         backdrop-filter: blur(0.14px);
         -webkit-backdrop-filter: blur(0.14px);
+        transition: 0.5s;
         cursor: pointer;
             &::placeholder{
                 @include flex-layout(row,left);
@@ -31,14 +34,13 @@
             }
         }
         .lp {
-            width: 100%;
-            height: 100%;
             border-radius: 50%;
             position: relative;
+            transition: 0.5s;
             
             /* 검정판 + 홈(그루브) 느낌 */
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
             
@@ -93,4 +95,23 @@
                     @keyframes spin {
                     to { transform: rotate(360deg); }
                     }
+}
+@include respond(tablet){
+    .contact{
+        @include flex-layout(row,center,center,2rem);
+        .lp{
+            width: 200px;
+            height: 200px;
+            bottom: 100px;
+            transition: 0.5s
+        }
+        .info{
+            @include flex-layout(column,center,center,1rem);
+        }
+        input{
+            
+        font-size: 12px;
+        }
+        
+    }
 }

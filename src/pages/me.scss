@@ -3,26 +3,28 @@
 @use "../assets/scss/font" as*;
 .me{
     @include flex-layout(column,center,center);
-    padding: 2rem;
+    padding: 3rem;
     height: 100%;
     color: #182434;
     .txt{
         h1{
             font-size: 48px;
+            @include respond(tablet){
+                font-size: 32px;
+            }
         }
     }
     .box{
         @include flex-layout(row,left,center,2rem);
         padding: 0 3rem;
-        height: 400px;
+        height: auto;
         background: rgba(97, 164, 250, 0.4);
         backdrop-filter: blur(1px);
         -webkit-backdrop-filter: blur(1px);
         border-radius: 25px;
         .img{
-            padding: 2rem;
+            padding:  0.5rem;
             img{
-                // width: 300px;
                 border-radius: 25px;
                 height: 300px;
                 cursor: pointer;
@@ -31,6 +33,9 @@
                 top: 10%;
                 transform: translateY(-10%);
             }
+            @include respond(tablet){
+                height: 18vh;
+            }
             }
         }
         .line{
@@ -38,48 +43,81 @@
             transform: scaleY(7);   // 세로 길이만 증가
             transform-origin: center;
             color: #182434;
+            @include respond(tablet){
+                font-size: 30px;
+                transform: scaleY(5);
+            }
         }
         .txt{
             h1{
                 font-size: 48px;
+                @include respond(tablet){
+                font-size: 20px;
+            }
+            }
+            h3{
+                @include respond(tablet){
+                    font-size: 10px;
+                }
             }
         }
             
     }
     .track{
-        @include flex-layout(column,left,center);
+        @include flex-layout(column,center,center);
         width: 100%;
         .txt{
                 @include flex-layout(row,left,center);
-                width: 50%;
+                width: 60%;
                 h2{
                 width: fit-content;
                 cursor: pointer;
                 &:hover{
                     border-bottom: 2px solid #182434;
                 }
+                @include respond(tablet){
+                    font-size: 20px;
+                }
+                
             }
         }
         .track-list{
-            @include flex-layout(row,center,center,7rem);
-            width: 50%;
+            @include flex-layout(row,center,center,5rem);
             border-top: 0.5px solid #182434;
             border-bottom: 0.5px solid #182434;
+            width: 60%;
+            @include respond(tablet){
+                @include flex-layout(row,center,center,2rem);
+            
+            }
             .num{
                 font-size: 48px;
                 color: #182434;
+                @include respond(tablet){
+                    font-size: 24px;
+                }
             }
             .txt{
                 @include flex-layout(row,left,center);
-                width: 50%;
+                width: 80%;
                 h2{
-                width: fit-content;
                 cursor: pointer;
                 &:hover{
                     border-bottom: 2px solid #182434;
                 }
             }
+            
+            @include respond(tablet){
+                h2{
+                    font-size: 18px;
+                
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
         }
+        
         .emoji{
             width: 40px;
             height: 40px;
@@ -89,10 +127,26 @@
                 width: 60px;
                 height: 60px;
             }
+            @include respond(tablet){
+                width: 20px;
+                height: 20px;
+                &:hover{
+                width: 30px;
+                height: 30px;
+            }
+            }
         }
     }
 }
 .introducting{
-    width: 50%;
+    width: 60%;
+    @include respond(tablet){
+        h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
+    }
 }
 }

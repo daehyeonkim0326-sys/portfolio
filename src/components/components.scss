@@ -226,6 +226,7 @@
         li{
           @include flex-layout(column,center);
           padding: 1rem;
+          width: 500px;
           img{
           border-radius: 25px;
           transition: 1s;

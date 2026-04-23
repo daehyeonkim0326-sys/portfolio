@@ -2,12 +2,10 @@ import React from 'react'
 import "./me.scss";
 import component from "../assets/img/Component.jpg";
 import { PiLineVerticalLight } from "react-icons/pi";
-import { useNavigate } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa6";
 const Me = () => {
-  const navigate = useNavigate();
   const handleClick=()=>{
-    navigate('https://github.com/daehyeonkim0326-sys')
+    window.location.href = 'https://github.com/daehyeonkim0326-sys';
   }
   return (
     <div className='me'>

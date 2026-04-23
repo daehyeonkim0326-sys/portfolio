@@ -13,15 +13,15 @@ const Home = () => {
         <div className='track'>
                 <div className='track-list'>
                     <div className='album'>
-                        <div class="turntable">
-                            <div class="lp spinning">
-                                <div class="label">
-                                <div class="label-hole"></div>
+                        <div className="turntable">
+                            <div className="lp spinning">
+                                <div className="label">
+                                <div className="label-hole"></div>
                                 </div>
                             </div>          
 
                         {/* <!-- 옵션: 바늘 --> */}
-                            <div class="tonearm"></div>
+                            <div className="tonearm"></div>
                         </div>
                     </div>
                     <div className='txt'>

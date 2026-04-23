@@ -2,37 +2,44 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .contact{
-    @include flex-layout(row,space-between,center,2rem);
-    padding: 4rem;
+    @include flex-layout(row,space-between,center,1rem);
     overflow: hidden;
-    
+    height: 100vh;
+    padding: 0 3rem;
     .info{
-        @include flex-layout(column,space-between,center,2rem);
+        @include flex-layout(column,space-between,center);
+            .contact-methods{
+                @include flex-layout(column,space-between,left,1rem);
+            }
     }
     h1{
         color: #9BC0EB;
     }
-    input{
-        border: none;
-        width: 150%;
-        padding: 1rem ;
-        border-radius: 25px;
-        font-size: 28px;
-        box-shadow: 0 2px 2px #9BC0EB;
-        background-color: rgba(91, 153, 235, 0.23);
-        backdrop-filter: blur(0.14px);
-        -webkit-backdrop-filter: blur(0.14px);
-        transition: 0.5s;
-        cursor: pointer;
-            &::placeholder{
-                @include flex-layout(row,left);
-                // color: #182434;
-                &:hover{
-                    font-weight: 700;
-                    border-bottom: #182434;
-                }
-            }
+    input {
+    border: none;
+    padding: 1rem;
+    border-radius: 25px;
+    font-size: 28px;
+    width: fit-content;
+    box-shadow: 0 2px 2px #9bc0eb;
+    background-color: rgba(91, 153, 235, 0.23);
+    backdrop-filter: blur(0.14px);
+    -webkit-backdrop-filter: blur(0.14px);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &::placeholder {
+        color: #182434;
+        opacity: 0.7;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 8px #9BC0EB;
+        &::placeholder {
+        font-weight: 700;
         }
+    }
+    }
         .lp {
             border-radius: 50%;
             position: relative;
@@ -43,7 +50,6 @@
             height: 300px;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
-            
             background-image: url("../assets/img/2967822_20250714154852_500.jpg");
             background-size: cover;      // 핵심
             background-position: center;
@@ -98,19 +104,40 @@
 }
 @include respond(tablet){
     .contact{
-        @include flex-layout(row,center,center,2rem);
+        @include flex-layout(row,center,center);
         .lp{
-            width: 200px;
-            height: 200px;
-            bottom: 100px;
-            transition: 0.5s
+            width: 100px;
+            height: 100px;
+            bottom: 180px;
+            transition: 0.5s;
         }
         .info{
-            @include flex-layout(column,center,center,1rem);
+            @include flex-layout(column,space-between,center);
+            
         }
         input{
-            
+        width: 150px;
         font-size: 12px;
+        }
+        
+    }
+}
+@include respond(mobile){
+    .contact{
+        @include flex-layout(column,center,center);
+        .lp{
+            width: 80px;
+            height: 80px;
+            bottom: 350px;
+            transition: 0.5s;
+        }
+        .info{
+            @include flex-layout(column,space-between,center);
+            
+        }
+        input{
+        width: 120px;
+        font-size: 10px;
         }
         
     }

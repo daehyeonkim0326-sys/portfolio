@@ -2,21 +2,22 @@
 @use "../assets/scss/mixin"as*;
 @use "../assets/scss/font"as*;
 .projects{
-    padding: 3.5rem 0;
+    @include flex-layout(column,center,center);
+    padding: 5rem 0;
     color: #182434;
     font-size: 24px;
     overflow-x: hidden;
     max-width: 1920px;
     .tabs {
-        @include flex-layout(row,left);
+        @include flex-layout(row,center,center);
         list-style: none;
         background: none;
         border: none;
         border-bottom: 1px solid #34373a;
-        padding: 0 0.5rem;
-        z-index: 9999;
+        // padding: 0 0.5rem;
         width: fit-content;
-        
+        margin: 0;
+        padding: 0;
         button{
         font-size: 24px;
         cursor: pointer;
@@ -27,6 +28,10 @@
         @include respond(tablet){
             font-size: 18px;
         }
+        @include respond(mobile){
+            font-size: 14px;
+        }
+        
         &.active{
             color: #182434;
             opacity: 1;
@@ -41,5 +46,28 @@
     opacity: 100;
     font-weight: 700;
     }
-
+    
+        .panel{
+            min-width: 100%;
+            img{
+                width: 100%;
+                max-width: 650px;
+            }
+        }
+    
+@include respond(mobile){
+    .tabs{
+        button{
+            font-size: 14px;
+        }
+        
+    }
+    .panel{
+        @include flex-layout(column,center,center);
+        img{
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+}
 }

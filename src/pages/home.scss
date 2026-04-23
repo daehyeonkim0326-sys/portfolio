@@ -11,14 +11,14 @@
         .track-list{
             @include flex-layout(row,center,center,5rem);
             // padding: 0.5rem;
-            width: 60%;
+            // width: 80%;
             border-top: 2px solid #ababac;
             border-bottom: 2px solid #ababac;
             // @include respond(mobile){
             //     gap: 1rem;
             // }
             @include respond(tablet){
-                @include flex-layout(row,center,center,3rem);
+                @include flex-layout(row,space-between,center,1rem);
             }
             .album{
                 .turntable {
@@ -28,6 +28,10 @@
                     display: grid;
                     place-items: center;
                     transition: 0.5s;
+                    @include respond(mobile){
+                        width: 100px;
+                        height: 100px;
+                    }
                     @include respond(tablet){
                         width: 120px;
                         height: 120px;
@@ -44,9 +48,14 @@
                     // background: url(../assets/img/2967822_20250714154852_500.jpg);
                     width: 150px;
                     height: 150px;
+                    transition: 0.5s;
                     @include respond(tablet){
                         width: 70%;
                         height: 70%;
+                    }
+                    @include respond(mobile){
+                        width: 50%;
+                        height: 50%;
                     }
                     aspect-ratio: 1 / 1;
                     border-radius: 50%;
@@ -104,16 +113,23 @@
                     /* 옵션: 톤암(바늘) */
                     .tonearm {
                     position: absolute;
-                    width: 55%;
+                    width: 50%;
                     height: 10px;
-                    right: -8%;
+                    right: -5%;
                     top: 18%;
                     transform: rotate(18deg);
                     transform-origin: left center;
-                    @include respond(mobile){
+                    @include respond(tablet){
                         width: 60px;
                         height: 0.8vh;
                         top: 23%;
+                    }
+                    @include respond(mobile){
+                        width: 40px;
+                        height: 0.6vh;
+                        top: 35%;
+                        right: 3%;
+
                     }
                     background: linear-gradient(90deg, #cfcfcf, #7a7a7a);
                     border-radius: 999px;
@@ -129,6 +145,12 @@
                         border-radius: 8px;
                         background: #2a2a2a;
                         box-shadow: inset 0 0 0 2px rgba(255,255,255,0.08);
+                        @include respond(tablet){
+                            width: 20px;
+                            height: 20px;
+                            right: -3px;
+                            top: -7px;
+                        }
                     }
                     }
 

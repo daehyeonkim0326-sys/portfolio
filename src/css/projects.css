@@ -11,6 +11,11 @@
   font-display: swap;
 }
 .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   padding: 3.5rem 0;
   color: #182434;
   font-size: 24px;
@@ -20,7 +25,7 @@
 .projects .tabs {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   list-style: none;
@@ -28,7 +33,6 @@
   border: none;
   border-bottom: 1px solid #34373a;
   padding: 0 0.5rem;
-  z-index: 9999;
   width: fit-content;
 }
 .projects .tabs button {
@@ -44,6 +48,11 @@
     font-size: 18px;
   }
 }
+@media (max-width: 480px) {
+  .projects .tabs button {
+    font-size: 14px;
+  }
+}
 .projects .tabs button.active {
   color: #182434;
   opacity: 1;
@@ -52,4 +61,11 @@
 .projects .tabs.active {
   opacity: 100;
   font-weight: 700;
+}
+.projects .panel {
+  min-width: 100%;
+}
+.projects .panel img {
+  width: 100%;
+  max-width: 650px;
 }/*# sourceMappingURL=projects.css.map */

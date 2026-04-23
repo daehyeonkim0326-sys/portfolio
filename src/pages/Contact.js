@@ -1,23 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./contact.scss";
 const Contact = () => {
-  const emailText = "daeheyon0326@gmail.com";
+  const emailText = "daeheyonkim0326@naver.com";
   const phoneText = "010-4607-3916";
   const githubText = "https://github.com/daehyeonkim0326-sys";
-
   const [emailPh, setEmailPh] = useState("");
   const [phonePh, setPhonePh] = useState("");
   const [githubPh, setGithubPh] = useState("");
-
+  
   const [copiedKey, setCopiedKey] = useState(null); // "email" | "phone" | "github" | null
-
+  
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
   const githubRef = useRef(null);
-
+  
   const started = useRef({ email: false, phone: false, github: false });
   const timersRef = useRef([]);
 
+  
   useEffect(() => {
     const runTyping = (key, text, setState) => {
       if (started.current[key]) return;
@@ -63,14 +63,14 @@ const Contact = () => {
 
   const copyText = async (key, text) => {
     // 타이핑 중일 수도 있으니, 복사는 "최종 텍스트" 기준으로 하는 게 보통 더 좋음
-    const toCopy = text;
+    // const toCopy = text;
 
     try {
-      await navigator.clipboard.writeText(toCopy);
+      await navigator.clipboard.writeText(text);
     } catch (e) {
       // 일부 환경 fallback
       const ta = document.createElement("textarea");
-      ta.value = toCopy;
+      ta.value = text;
       ta.style.position = "fixed";
       ta.style.left = "-9999px";
       document.body.appendChild(ta);
@@ -82,45 +82,70 @@ const Contact = () => {
     setCopiedKey(key);
     setTimeout(() => setCopiedKey(null), 900);
   };
+  
+  const getDisplayText = (key, text) => {
+    return copiedKey === key ? "Copied ✅" : text;
+  };
+
+  const getInputWidth = (text) => {
+    return `${Math.max(text.length + 1, 5)}ch`;
+  };
+  const getInputWidthNew = (text) => {
+    return `${Math.max(text.length + -4, 10)}ch`;
+  };
 
   return (
     <div className="contact">
 
       <div className="info">
       <h1>THANK YOU</h1>
+      <div className="contact-methods">
+          <div ref={phoneRef}>
+              <input
+                className="input"
+                readOnly
+                value=""
+                placeholder={copiedKey === "phone" ? "Copied ✅" : phonePh}
+                onClick={() => copyText("phone", phoneText)}
+              style={{
+                cursor: "pointer",
+                width: getInputWidth(getDisplayText("phone", phonePh)),
+            }}
+          />
+        </div>
         <div ref={emailRef}>
           <input
+            className="input"
             readOnly
             value="" // ✅ value 비워두고 placeholder만 보여주기
             placeholder={copiedKey === "email" ? "Copied ✅" : emailPh}
             onClick={() => copyText("email", emailText)}
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              width: getInputWidth(getDisplayText("email", emailPh)),
+            }}
           />
         </div>
 
-        <div ref={phoneRef}>
-          <input
-            readOnly
-            value=""
-            placeholder={copiedKey === "phone" ? "Copied ✅" : phonePh}
-            onClick={() => copyText("phone", phoneText)}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
 
         <div ref={githubRef}>
           <input
+            className="input"
             readOnly
             value=""
             placeholder={copiedKey === "github" ? "Copied ✅" : githubPh}
             onClick={() => copyText("github", githubText)}
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              width: getInputWidthNew(getDisplayText("github", githubPh)),
+            }}
           />
         </div>
       </div>
-      <div class="lp spinning">
-          <div class="label">
-          <div class="label-hole"></div>
+    </div>
+      <div className="lp spinning">
+          <div className="label">
+          <div className="label-hole"></div>
           </div>
       </div>  
     </div>

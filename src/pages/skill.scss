@@ -8,10 +8,17 @@
     height: 100%;
     overflow-x: hidden;
     .comment{     
-        @include flex-layout(row,space-around,center);
-        width: 70%;
+        @include flex-layout(row,space-around,center,4rem);
+        // width: 100%;
+        @include respond(tablet){
+            @include flex-layout(row,center,center,2rem);
+        }
+        @include respond(mobile){
+            @include flex-layout(row,center,center,1rem);
+        }
         .profile{
             @include flex-layout(row,center,center);
+
             @include respond(tablet){
                 img{
                     width: 30px;
@@ -21,10 +28,19 @@
                     font-size: 16px;
                 }
             }
+            @include respond(mobile){
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+                h3{
+                    font-size: 12px;
+                }
+            }
         }
         input{
             border: none;
-            width: fit-content;
+            width: 300px;
             padding-top: 1rem;
             padding-bottom: 1rem;
             padding-left: 1rem;
@@ -41,8 +57,17 @@
             }
             @include respond(tablet){
                 padding: 0.5rem 1rem;
+                width: 200px;
                 &::placeholder{
                     font-size: 12px;
+                }
+            }
+            @include respond(mobile){
+                padding: 0.5rem;
+                width: 150px;
+                
+                &::placeholder{
+                    font-size: 10px;
                 }
             }
         }
@@ -66,11 +91,52 @@
             }
         }
     }
-    .img{
-        z-index: 9998;
-        overflow-x: hidden;
-        @include respond(tablet){
-            width: 100%;
-        }
-    }
+    .skill {
+  position: relative;
+}
+
+.comment {
+  position: relative;
+  z-index: 1;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+  z-index: 9999;
+}
+
+.popup img {
+  width: min(90vw, 1000px);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+
+  transform: translateY(40px) scale(0.95);
+  transition: transform 0.35s ease;
+  
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.popup.show img {
+  transform: translateY(0) scale(1);
+  
+}
 }

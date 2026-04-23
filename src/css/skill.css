@@ -26,8 +26,25 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
-  width: 70%;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .skill .comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .skill .comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 .skill .comment .profile {
   display: flex;
@@ -45,9 +62,18 @@
     font-size: 16px;
   }
 }
+@media (max-width: 480px) {
+  .skill .comment .profile img {
+    width: 20px;
+    height: 20px;
+  }
+  .skill .comment .profile h3 {
+    font-size: 12px;
+  }
+}
 .skill .comment input {
   border: none;
-  width: fit-content;
+  width: 300px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -70,9 +96,19 @@
 @media (max-width: 768px) {
   .skill .comment input {
     padding: 0.5rem 1rem;
+    width: 200px;
   }
   .skill .comment input::placeholder {
     font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .skill .comment input {
+    padding: 0.5rem;
+    width: 150px;
+  }
+  .skill .comment input::placeholder {
+    font-size: 10px;
   }
 }
 .skill .comment button {
@@ -96,12 +132,38 @@
     font-size: 12px;
   }
 }
-.skill .img {
-  z-index: 9998;
-  overflow-x: hidden;
+.skill .skill {
+  position: relative;
 }
-@media (max-width: 768px) {
-  .skill .img {
-    width: 100%;
-  }
+.skill .comment {
+  position: relative;
+  z-index: 1;
+}
+.skill .popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 9999;
+}
+.skill .popup img {
+  width: min(90vw, 1000px);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(40px) scale(0.95);
+  transition: transform 0.35s ease;
+}
+.skill .popup.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.skill .popup.show img {
+  transform: translateY(0) scale(1);
 }/*# sourceMappingURL=skill.css.map */

@@ -6,16 +6,20 @@
     padding: 3rem;
     height: 100%;
     color: #182434;
+    // width: 80%;
     .txt{
         h1{
             font-size: 48px;
             @include respond(tablet){
                 font-size: 32px;
             }
+            @include respond(mobile){
+                font-size: 24px;
+            }
         }
     }
     .box{
-        @include flex-layout(row,left,center,2rem);
+        @include flex-layout(row,center,center,2rem);
         padding: 0 3rem;
         height: auto;
         background: rgba(97, 164, 250, 0.4);
@@ -36,9 +40,13 @@
             @include respond(tablet){
                 height: 18vh;
             }
+            @include respond(mobile){
+                height: 15vh;
+            }
             }
         }
         .line{
+            opacity: 0.5;
             font-size: 40px;        // 기본 굵기 결정
             transform: scaleY(7);   // 세로 길이만 증가
             transform-origin: center;
@@ -47,6 +55,10 @@
                 font-size: 30px;
                 transform: scaleY(5);
             }
+            @include respond(mobile){
+                font-size: 12px;
+                transform: scaleY(10);
+            }
         }
         .txt{
             h1{
@@ -54,10 +66,16 @@
                 @include respond(tablet){
                 font-size: 20px;
             }
+            @include respond(mobile){
+                font-size: 16px;
+            }
             }
             h3{
                 @include respond(tablet){
                     font-size: 10px;
+                }
+                @include respond(mobile){
+                    font-size: 8px;
                 }
             }
         }
@@ -69,6 +87,9 @@
         .txt{
                 @include flex-layout(row,left,center);
                 width: 60%;
+                @include respond(mobile){
+                    width: 80%;
+                }
                 h2{
                 width: fit-content;
                 cursor: pointer;
@@ -77,6 +98,9 @@
                 }
                 @include respond(tablet){
                     font-size: 20px;
+                }
+                @include respond(mobile){
+                    font-size: 14px;
                 }
                 
             }
@@ -90,11 +114,18 @@
                 @include flex-layout(row,center,center,2rem);
             
             }
+            @include respond(mobile){
+                @include flex-layout(row,center,center,0.5rem);
+                width: 100%;
+            }
             .num{
                 font-size: 48px;
                 color: #182434;
                 @include respond(tablet){
                     font-size: 24px;
+                }
+                @include respond(mobile){
+                    font-size: 16px;
                 }
             }
             .txt{
@@ -106,7 +137,16 @@
                     border-bottom: 2px solid #182434;
                 }
             }
-            
+            @include respond(mobile){
+                width: 70%;
+                    h2{
+                        font-size: 12px;
+                
+                    }
+                    p{
+                        font-size: 8px;
+                    }
+                }
             @include respond(tablet){
                 h2{
                     font-size: 18px;
@@ -116,6 +156,8 @@
                     font-size: 12px;
                 }
             }
+            
+            
         }
         
         .emoji{
@@ -135,6 +177,14 @@
                 height: 30px;
             }
             }
+            @include respond(mobile){
+                width: 15px;
+                height: 15px;
+                &:hover{
+                width: 20px;
+                height: 20px;
+            }
+            }
         }
     }
 }
@@ -148,5 +198,13 @@
         font-size: 12px;
     }
     }
+    @include respond(mobile){
+        width: 80%;
+        h2{
+        font-size: 14px;
+    }    p{
+        font-size: 8px;
+    }
+}
 }
 }

@@ -31,7 +31,6 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  width: 60%;
   border-top: 2px solid #ababac;
   border-bottom: 2px solid #ababac;
 }
@@ -39,9 +38,9 @@
   .home .track .track-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
   }
 }
 .home .track .track-list .album .turntable {
@@ -51,6 +50,12 @@
   display: grid;
   place-items: center;
   transition: 0.5s;
+}
+@media (max-width: 480px) {
+  .home .track .track-list .album .turntable {
+    width: 100px;
+    height: 100px;
+  }
 }
 @media (max-width: 768px) {
   .home .track .track-list .album .turntable {
@@ -69,11 +74,18 @@
   /* 검정판 + 홈(그루브) 느낌 */
   width: 150px;
   height: 150px;
+  transition: 0.5s;
 }
 @media (max-width: 768px) {
   .home .track .track-list .album .lp {
     width: 70%;
     height: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .home .track .track-list .album .lp {
+    width: 50%;
+    height: 50%;
   }
 }
 .home .track .track-list .album .lp {
@@ -128,18 +140,26 @@
 }
 .home .track .track-list .album .tonearm {
   position: absolute;
-  width: 55%;
+  width: 50%;
   height: 10px;
-  right: -8%;
+  right: -5%;
   top: 18%;
   transform: rotate(18deg);
   transform-origin: left center;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .home .track .track-list .album .tonearm {
     width: 60px;
     height: 0.8vh;
     top: 23%;
+  }
+}
+@media (max-width: 480px) {
+  .home .track .track-list .album .tonearm {
+    width: 40px;
+    height: 0.6vh;
+    top: 35%;
+    right: 3%;
   }
 }
 .home .track .track-list .album .tonearm {
@@ -157,6 +177,14 @@
   border-radius: 8px;
   background: #2a2a2a;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 768px) {
+  .home .track .track-list .album .tonearm::after {
+    width: 20px;
+    height: 20px;
+    right: -3px;
+    top: -7px;
+  }
 }
 .home .track .track-list .album {
   /* 접근성: 모션 싫어하는 사람 배려 */

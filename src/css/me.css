@@ -28,10 +28,15 @@
     font-size: 32px;
   }
 }
+@media (max-width: 480px) {
+  .me .txt h1 {
+    font-size: 24px;
+  }
+}
 .me .box {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 0 3rem;
@@ -59,7 +64,13 @@
     height: 18vh;
   }
 }
+@media (max-width: 480px) {
+  .me .box .img img {
+    height: 15vh;
+  }
+}
 .me .box .line {
+  opacity: 0.5;
   font-size: 40px;
   transform: scaleY(7);
   transform-origin: center;
@@ -71,6 +82,12 @@
     transform: scaleY(5);
   }
 }
+@media (max-width: 480px) {
+  .me .box .line {
+    font-size: 12px;
+    transform: scaleY(10);
+  }
+}
 .me .box .txt h1 {
   font-size: 48px;
 }
@@ -79,9 +96,19 @@
     font-size: 20px;
   }
 }
+@media (max-width: 480px) {
+  .me .box .txt h1 {
+    font-size: 16px;
+  }
+}
 @media (max-width: 768px) {
   .me .box .txt h3 {
     font-size: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .me .box .txt h3 {
+    font-size: 8px;
   }
 }
 .me .track {
@@ -100,6 +127,11 @@
   gap: 1rem;
   width: 60%;
 }
+@media (max-width: 480px) {
+  .me .track .txt {
+    width: 80%;
+  }
+}
 .me .track .txt h2 {
   width: fit-content;
   cursor: pointer;
@@ -110,6 +142,11 @@
 @media (max-width: 768px) {
   .me .track .txt h2 {
     font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .me .track .txt h2 {
+    font-size: 14px;
   }
 }
 .me .track .track-list {
@@ -131,6 +168,16 @@
     gap: 2rem;
   }
 }
+@media (max-width: 480px) {
+  .me .track .track-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+}
 .me .track .track-list .num {
   font-size: 48px;
   color: #182434;
@@ -138,6 +185,11 @@
 @media (max-width: 768px) {
   .me .track .track-list .num {
     font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .me .track .track-list .num {
+    font-size: 16px;
   }
 }
 .me .track .track-list .txt {
@@ -153,6 +205,17 @@
 }
 .me .track .track-list .txt h2:hover {
   border-bottom: 2px solid #182434;
+}
+@media (max-width: 480px) {
+  .me .track .track-list .txt {
+    width: 70%;
+  }
+  .me .track .track-list .txt h2 {
+    font-size: 12px;
+  }
+  .me .track .track-list .txt p {
+    font-size: 8px;
+  }
 }
 @media (max-width: 768px) {
   .me .track .track-list .txt h2 {
@@ -182,6 +245,16 @@
     height: 30px;
   }
 }
+@media (max-width: 480px) {
+  .me .track .track-list .emoji {
+    width: 15px;
+    height: 15px;
+  }
+  .me .track .track-list .emoji:hover {
+    width: 20px;
+    height: 20px;
+  }
+}
 .me .introducting {
   width: 60%;
 }
@@ -191,5 +264,16 @@
   }
   .me .introducting p {
     font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .me .introducting {
+    width: 80%;
+  }
+  .me .introducting h2 {
+    font-size: 14px;
+  }
+  .me .introducting p {
+    font-size: 8px;
   }
 }/*# sourceMappingURL=me.css.map */

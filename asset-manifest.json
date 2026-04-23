@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.13728189.css",
+    "main.js": "/portfolio/static/js/main.014e9538.js",
+    "static/media/book.gif": "/portfolio/static/media/book.d2211e3d6040d08adc2b.gif",
+    "static/media/map.jpg": "/portfolio/static/media/map.6931e42f8427068a41e0.jpg",
+    "static/media/day.jpg": "/portfolio/static/media/day.c642ca321cd267e53567.jpg",
+    "static/media/blog.jpg": "/portfolio/static/media/blog.a8df91d40ab557a8c48a.jpg",
+    "static/media/shopping.jpg": "/portfolio/static/media/shopping.6e11a86574b37e57cea8.jpg",
+    "static/media/quiz.jpg": "/portfolio/static/media/quiz.f65a2c0ddd809db25a0e.jpg",
+    "static/media/airsound.jpg": "/portfolio/static/media/airsound.aae171b512c242fbe485.jpg",
+    "static/media/wave.jpg": "/portfolio/static/media/wave.06cb26df571d54a7850a.jpg",
+    "static/media/Frame 37.jpg": "/portfolio/static/media/Frame 37.0e6c4033d98111593a54.jpg",
+    "static/media/gride.gif": "/portfolio/static/media/gride.0ec3a9115cf97083690d.gif",
+    "static/media/Component.jpg": "/portfolio/static/media/Component.08929c8e7da8282fbf48.jpg",
+    "static/media/ifkakao.jpg": "/portfolio/static/media/ifkakao.3c2d2ede9224fcb33d66.jpg",
+    "static/media/2967822_20250714154852_500.jpg": "/portfolio/static/media/2967822_20250714154852_500.0fb05a4d1811dd1d8c5a.jpg",
+    "index.html": "/portfolio/index.html",
+    "static/media/Frame 38.svg": "/portfolio/static/media/Frame 38.621eaab344ba229c3aa9efbadfbe9923.svg",
+    "main.13728189.css.map": "/portfolio/static/css/main.13728189.css.map",
+    "main.014e9538.js.map": "/portfolio/static/js/main.014e9538.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13728189.css",
+    "static/js/main.014e9538.js"
+  ]
+}

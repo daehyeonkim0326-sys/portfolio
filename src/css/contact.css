@@ -140,4 +140,30 @@
     width: 150px;
     font-size: 12px;
   }
+}
+@media (max-width: 480px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contact .lp {
+    width: 80px;
+    height: 80px;
+    bottom: 350px;
+    transition: 0.5s;
+  }
+  .contact .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contact input {
+    width: 120px;
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=contact.css.map */

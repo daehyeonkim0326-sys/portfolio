@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 3.5rem 0;
+  padding: 5rem 0;
   color: #182434;
   font-size: 24px;
   overflow-x: hidden;
@@ -32,8 +32,9 @@
   background: none;
   border: none;
   border-bottom: 1px solid #34373a;
-  padding: 0 0.5rem;
   width: fit-content;
+  margin: 0;
+  padding: 0;
 }
 .projects .tabs button {
   font-size: 24px;
@@ -68,4 +69,20 @@
 .projects .panel img {
   width: 100%;
   max-width: 650px;
+}
+@media (max-width: 480px) {
+  .projects .tabs button {
+    font-size: 14px;
+  }
+  .projects .panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .projects .panel img {
+    width: 100%;
+    max-width: 300px;
+  }
 }/*# sourceMappingURL=projects.css.map */

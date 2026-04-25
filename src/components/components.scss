@@ -41,7 +41,21 @@
   color: #182434;
   border-bottom: 1px solid rgba(110, 110, 110, 0.5);
   overflow: hidden;
-  
+  .modal {
+  @include flex-layout(column,center,center);
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  width: 100%;
+  transition: transform 1s;
+  .modal-popup {
+    @include flex-layout(column,center,center);
+    background-color: rgba(143, 188, 248, 0.35);
+    width: 500px;
+    height: 80vh;
+    border-radius: 2rem;
+  }
+}
   .card {
     padding: 0;
     margin: 1.5rem 0;
@@ -74,7 +88,7 @@
       margin-top: 12px;
       font-size: 24px;
       cursor: pointer;
-
+      width: fit-content;
       &:hover {
         border-bottom: 0.1px solid #182434;
         width: fit-content;
@@ -83,11 +97,7 @@
   }
 }
 
-.clone-grid .card img {
-  width: auto;
-  display: block;
-}
-.clone {
+.clone {  
   position: relative;
   color: #182434;
   border-bottom: 1px solid rgba(110, 110, 110, 0.5);
@@ -122,8 +132,6 @@
         }
       }
     }
-    
-
     h2 {
       margin-top: 12px;
       font-size: 24px;
@@ -135,7 +143,21 @@
       }
     }
   }
-  
+   .modal {
+  @include flex-layout(column,center,center);
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  width: 100%;
+  .modal-popup {
+    @include flex-layout(column,center,center);
+    background-color: rgba(143, 188, 248, 0.45);
+    width: 500px;
+    height: 30vh;
+    border-radius: 2rem;
+    transition: transform 0.5s;
+  }
+}
   .nav {
     position: absolute;
     top: 50%;
@@ -163,23 +185,18 @@
     }
 
   @include respond(tablet){
-    .clone-grid {
-    display: none;
-  }
-  .clone {
-    display: none;
     
-    ul {
-       
-      scroll-snap-type: none;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      
+  .clone {
+          display: none;
+        ul {
+          scroll-snap-type: none;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
     }
   }
-  }
   
-  }
 }
 .personal{
     color: #182434;
@@ -222,11 +239,12 @@
     ul{
         @include flex-layout(row,space-around,center);
         list-style: none;
-        
+        margin: 0;
+        padding: 0;
         li{
-          @include flex-layout(column,center);
+          @include flex-layout(column,space-around,center);
           padding: 1rem;
-          width: 500px;
+          width: 200px;
           img{
           border-radius: 25px;
           transition: 1s;

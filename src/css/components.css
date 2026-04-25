@@ -57,6 +57,29 @@
   border-bottom: 1px solid rgba(110, 110, 110, 0.5);
   overflow: hidden;
 }
+.clone-grid .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  width: 100%;
+  transition: transform 1s;
+}
+.clone-grid .modal .modal-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(143, 188, 248, 0.35);
+  width: 500px;
+  height: 80vh;
+  border-radius: 2rem;
+}
 .clone-grid .card {
   padding: 0;
   margin: 1.5rem 0;
@@ -87,15 +110,11 @@
   margin-top: 12px;
   font-size: 24px;
   cursor: pointer;
+  width: fit-content;
 }
 .clone-grid .card h2:hover {
   border-bottom: 0.1px solid #182434;
   width: fit-content;
-}
-
-.clone-grid .card img {
-  width: auto;
-  display: block;
 }
 
 .clone {
@@ -151,6 +170,29 @@
   border-bottom: 0.1px solid #182434;
   width: fit-content;
 }
+.clone .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  width: 100%;
+}
+.clone .modal .modal-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(143, 188, 248, 0.45);
+  width: 500px;
+  height: 30vh;
+  border-radius: 2rem;
+  transition: transform 0.5s;
+}
 .clone .nav {
   position: absolute;
   top: 50%;
@@ -177,9 +219,6 @@
   right: 8px;
 }
 @media (max-width: 768px) {
-  .clone .nav .clone-grid {
-    display: none;
-  }
   .clone .nav .clone {
     display: none;
   }
@@ -241,15 +280,17 @@
   align-items: center;
   gap: 1rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .practical ul li {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  width: 500px;
+  width: 200px;
 }
 .practical ul li img {
   border-radius: 25px;

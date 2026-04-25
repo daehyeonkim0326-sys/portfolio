@@ -9,7 +9,7 @@
     color: #182434;
     ul{
     @include flex-layout(row);
-    top: 1%;
+    top: 1%; 
     position: fixed;
     width: auto;
     padding: 0.5rem 0.5rem;

@@ -10,7 +10,8 @@ const slides = [
     img: wave,
     title: "Flow Motion : ConnectWave",
     popupTitle: "ConnectWave",
-    popupDesc: "물결과 연결성을 콘셉트로 제작한 프로젝트입니다.",
+    popupDesc: "connectwave 라는 기업의 홈페이지를 카피했습니다.",
+    
   },
   {
     img: myday,

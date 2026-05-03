@@ -3,7 +3,6 @@
 @use "../assets/scss/font.scss" as *;
 .home{
     height: 100vh;
-    @include font-face;
     transition: 0.5s;
     .track{
         @include flex-layout(row,center,center,3rem);
@@ -162,15 +161,19 @@
             }
             .txt{
                 h1{
-                    @include font-face();
-                    font-weight: 900;
-                    font-size: 40px;
+                    @include ko-Title;
+                    // font-weight: 900;
+                    // font-size: 40px;
                     cursor: pointer;
                     transition: 0.5s;
                 &:hover{
                     border-bottom: 1px solid #7a7a7a;
                 }
             }
+                h3{
+                    @include ko-Body-Medium;
+                    
+                }
             @include respond(tablet){
                 h1{
                     font-size: 16px;

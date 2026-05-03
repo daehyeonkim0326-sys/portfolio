@@ -1,18 +1,50 @@
+
 @font-face {
-    font-family: 'Aritaburi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Arita Buri KR SemiBold';
+    src: url('../fonts/AritaBuriKR-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Aritaburi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+    font-family: 'Arita Buri KR Medium';
+    src: url('../fonts/AritaBuriKR-Medium.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
     font-display: swap;
 }
 
-@mixin font-face($weight:400){
-    font-family: "Welcome";
-    font-weight: $weight;
+
+/*한글 폰트*/
+@mixin ko-Display {
+  font-family: "Arita Buri KR SemiBold";
+  font-weight: 600;
+  font-size: 56px;
 }
+
+@mixin ko-Heading {
+  font-family: "Arita Buri KR SemiBold";
+  font-weight: 600;
+  font-size: 40px;
+}
+
+@mixin ko-Title {
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 32px;
+}
+
+@mixin ko-Body-Large {
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 24px;
+}
+
+@mixin ko-Body-Medium {
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
 

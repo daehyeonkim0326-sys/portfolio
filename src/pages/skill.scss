@@ -4,9 +4,10 @@
 .skill{
     @include flex-layout(column,center,center,6rem);
     color: #182434;
-    padding: 5rem 0;
-    height: 100%;
-    overflow-x: hidden;
+    padding: 10rem 0;
+    min-height: 30vh;
+    scroll-margin-top: 80px;
+    overflow: visible;
     .comment{     
         @include flex-layout(row,space-around,center,4rem);
         // width: 100%;
@@ -18,7 +19,6 @@
         }
         .profile{
             @include flex-layout(row,center,center);
-
             @include respond(tablet){
                 img{
                     width: 30px;
@@ -53,6 +53,7 @@
             transition: 0.5s;
             &::placeholder{
                 @include flex-layout(row,left);
+                @include ko-Body-Medium;
                 color: #182434;
             }
             @include respond(tablet){

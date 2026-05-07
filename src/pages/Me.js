@@ -19,7 +19,7 @@ const Me = () => {
         <PiLineVerticalLight className='line' />
         <div className='txt'>
           <h1>CREATOR</h1>
-          <h3>김대현</h3>
+          <h3>이름:김대현</h3>
           <h3>작성일:2026.01.20</h3>
           <h3>장르:웹디자인</h3>
         </div>

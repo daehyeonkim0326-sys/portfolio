@@ -16,7 +16,7 @@ const Projects = () => {
     const [active, setActive] = useState("all");
 
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <ul className="tabs">
         {TABS.map((t) => (
           <li key={t.key}>

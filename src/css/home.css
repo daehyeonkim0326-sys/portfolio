@@ -1,20 +1,23 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @font-face {
-  font-family: "Aritaburi";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
-  font-weight: normal;
+  font-family: "Arita Buri KR SemiBold";
+  src: url("../fonts/AritaBuriKR-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Aritaburi";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-family: "Arita Buri KR Medium";
+  src: url("../fonts/AritaBuriKR-Medium.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
 }
+/*한글 폰트*/
+/*영문 폰트*/
 .home {
   height: 100vh;
-  font-family: "Welcome";
-  font-weight: 400;
   transition: 0.5s;
 }
 .home .track {
@@ -195,15 +198,19 @@
   }
 }
 .home .track .track-list .txt h1 {
-  font-family: "Welcome";
-  font-weight: 400;
-  font-weight: 900;
-  font-size: 40px;
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 32px;
   cursor: pointer;
   transition: 0.5s;
 }
 .home .track .track-list .txt h1:hover {
   border-bottom: 1px solid #7a7a7a;
+}
+.home .track .track-list .txt h3 {
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
   .home .track .track-list .txt h1 {

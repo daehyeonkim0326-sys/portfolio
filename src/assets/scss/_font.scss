@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
     font-family: 'Arita Buri KR SemiBold';
@@ -13,7 +14,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 
 /*한글 폰트*/
 @mixin ko-Display {
@@ -46,5 +46,33 @@
   font-size: 16px;
 }
 
+/*영문 폰트*/
+@mixin en-Display {
+  font-family: "Arvo", sans-serif;
+  font-weight: 500;
+  font-size: 56px;
+}
 
+@mixin en-Heading {
+  font-family: "Arvo", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+}
 
+@mixin en-Title {
+  font-family: "Arvo", sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+@mixin en-Body-Large {
+  font-family: "Arvo", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+@mixin en-Body-Medium {
+  font-family: "Arvo", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}

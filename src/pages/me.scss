@@ -9,12 +9,12 @@
     // width: 80%;
     .txt{
         h1{
-            font-size: 48px;
+            @include en-Heading;
             @include respond(tablet){
-                font-size: 32px;
+                @include en-Title;
             }
             @include respond(mobile){
-                font-size: 24px;
+                @include en-Body-Large;
             }
         }
     }
@@ -71,6 +71,7 @@
             }
             }
             h3{
+                @include ko-Body-Medium;
                 @include respond(tablet){
                     font-size: 10px;
                 }

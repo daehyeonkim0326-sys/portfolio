@@ -1,15 +1,21 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @font-face {
-  font-family: "Aritaburi";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
-  font-weight: normal;
+  font-family: "Arita Buri KR SemiBold";
+  src: url("../fonts/AritaBuriKR-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Aritaburi";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-family: "Arita Buri KR Medium";
+  src: url("../fonts/AritaBuriKR-Medium.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
   font-display: swap;
 }
+/*한글 폰트*/
+/*영문 폰트*/
 .me {
   display: flex;
   flex-direction: column;
@@ -21,15 +27,21 @@
   color: #182434;
 }
 .me .txt h1 {
-  font-size: 48px;
+  font-family: "Arvo", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
 }
 @media (max-width: 768px) {
   .me .txt h1 {
+    font-family: "Arvo", sans-serif;
+    font-weight: 300;
     font-size: 32px;
   }
 }
 @media (max-width: 480px) {
   .me .txt h1 {
+    font-family: "Arvo", sans-serif;
+    font-weight: 300;
     font-size: 24px;
   }
 }
@@ -100,6 +112,11 @@
   .me .box .txt h1 {
     font-size: 16px;
   }
+}
+.me .box .txt h3 {
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
   .me .box .txt h3 {

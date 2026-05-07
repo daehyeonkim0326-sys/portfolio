@@ -24,7 +24,7 @@
     }
     h2{
         cursor: pointer;
-        font-size: 24px;
+        @include ko-Body-Large;
         &:hover{
             border-bottom: 0.1px solid #182434;
             width: fit-content;
@@ -225,7 +225,7 @@
         }
     h2{
         cursor: pointer;
-        font-size: 24px;
+        @include ko-Body-Large;
         &:hover{
             border-bottom: 0.1px solid #182434;
             width: fit-content;

@@ -36,7 +36,7 @@
   top: 1%;
   position: fixed;
   width: auto;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   border-radius: 25px;
   list-style: none;
   box-shadow: 0 2px 2px #9BC0EB;
@@ -47,13 +47,52 @@
 .header ul li.nav {
   text-decoration: none;
   padding: 0.5rem 1.5rem;
-  color: #5d6c80;
   cursor: pointer;
   transition: 0.5s;
   border-radius: 25px;
   font-family: "Arvo", sans-serif;
   font-weight: 300;
   font-size: 24px;
+  cursor: pointer;
+}
+.header ul li.nav.active {
+  color: #5d6c80;
+  background-color: rgba(15, 112, 240, 0.24);
+  font-weight: bold;
+  transition: 0.1s;
+}
+@keyframes hover {
+  0% {
+    opacity: 10%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.header ul li.nav .menu-item {
+  text-decoration: none;
+  color: rgba(15, 112, 240, 0.24);
+}
+.header ul li.nav .menu-item.active {
+  box-shadow: 0 4px 4px #9BC0EB;
+  background-color: rgba(15, 112, 240, 0.24);
+  backdrop-filter: blur(0.14px);
+  -webkit-backdrop-filter: blur(0.14px);
+  padding: 0.5rem 1.5rem;
+}
+@keyframes hover {
+  0% {
+    opacity: 10%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 .header ul li.nav:hover {
   box-shadow: 0 4px 4px #9BC0EB;
@@ -129,6 +168,6 @@
     font-size: 8px;
   }
   .header ul li.nav:hover {
-    padding: 0.5rem;
+    padding: 0.1rem 0.5rem;
   }
 }/*# sourceMappingURL=layout.css.map */

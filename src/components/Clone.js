@@ -10,29 +10,32 @@ const slides = [
     img: wave,
     title: "Flow Motion : ConnectWave",
     popupTitle: "ConnectWave",
-    popupDesc: "connectwave 라는 기업의 홈페이지를 카피했습니다.",
+    URL:"https://daehyeonkim0326-sys.github.io/wave/",
+    popupDesc: "",
     
   },
   {
     img: myday,
     title: "MyDay",
     popupTitle: "MyDay",
+    URL:"https://daehyeonkim0326-sys.github.io/myday/",
     popupDesc: "하루 일정과 감정을 기록하는 UI 프로젝트입니다.",
   },
   {
     img: kakao,
     title: "Tech Week : if(kakao)",
     popupTitle: "if(kakao) Clone",
+    URL:"https://daehyeonkim0326-sys.github.io/if-kakao-25-clone/",
     popupDesc: "카카오 테크 컨퍼런스 페이지를 참고한 클론 코딩입니다.",
   },
   {
     img: airsound,
     title: "airsound : 에어비엔비 카피",
     popupTitle: "airsound",
+    URL:"https://daehyeonkim0326-sys.github.io/airbnb_clone/",
     popupDesc: "에어비앤비 스타일을 참고한 숙소 예약 UI 카피 프로젝트입니다.",
   },
 ];
-
 function useIsTablet(breakpoint = 1024) {
   const [isTablet, setIsTablet] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < breakpoint : false
@@ -51,7 +54,9 @@ export default function Clone() {
   const isTablet = useIsTablet(1024);
   const carouselRef = useRef(null);
    const [selectedSlide, setSelectedSlide] = useState(null);
-
+  const openLink = (url) => {
+    window.open(url, "_blank");
+  };
   const prevSlide = () => {
     if (!carouselRef.current) return;
 
@@ -81,7 +86,7 @@ export default function Clone() {
     
             <div className="modal" onClick={() => setSelectedSlide(null)}>
               <div className="modal-popup">
-                <h2>{selectedSlide.popupTitle}</h2>
+                <h2 onClick={()=> openLink(selectedSlide.URL)}>{selectedSlide.popupTitle}</h2>
                 <p>{selectedSlide.popupDesc}</p>
               </div>
             </div>
@@ -116,7 +121,7 @@ export default function Clone() {
 
         <div className="modal" onClick={() => setSelectedSlide(null)}>
           <div className="modal-popup">
-            <h3>{selectedSlide.popupTitle}</h3>
+            <h3 onClick={() => openLink(selectedSlide.URL)}>{selectedSlide.popupTitle}</h3>
             <p>{selectedSlide.popupDesc}</p>
           </div>
         </div>

@@ -4,8 +4,18 @@ import map from "../assets/img/map.jpg";
 import "./components.scss";
 
 const slides = [
-  { img: shopping, title: "Reste : 쇼핑 홈페이지" },
-  { img: map, title: "ZIO : 공영주차장 관리 시스템" },
+  { img: shopping, 
+    title: "Reste : 쇼핑 홈페이지",
+    popupTitle: "Reste",
+    URL:"https://daehyeonkim0326-sys.github.io/reste/",
+    popupDesc: "쇼핑몰 스타일을 참고한 UI 카피 프로젝트입니다.",
+   },
+  { img: map, 
+    title: "ZIO : 공영주차장 관리 시스템",
+    popupTitle: "ZIO",
+    URL:"https://daehyeonkim0326-sys.github.io/ZIO/",
+    popupDesc: "공영주차장 관리 시스템입니다.",
+   },
 ];
 
 function useIsMobile(breakpoint = 1024) {
@@ -24,7 +34,7 @@ function useIsMobile(breakpoint = 1024) {
 const Team = () => {
     const isMobile = useIsMobile(1024);
      const carouselRef = useRef(null);
-      
+    const [selectedSlide, setSelectedSlide] = useState(null);
     
       const prevSlide = () => {
     if (!carouselRef.current) return;
@@ -43,19 +53,31 @@ const Team = () => {
       behavior: "smooth",
     });
   };
-    
+    const openLink = (url) => {
+    window.open(url, "_blank");
+  };
       
 
       if (!isMobile) {
         return (
           <section className="clone-grid">
-            {slides.map((slide, idx) => (
-              <article className="card" key={idx}>
-                <img src={slide.img} alt={slide.title} />
-                <h2>{slide.title}</h2>
-              </article>
-            ))}
-          </section>
+        {slides.map((slide, idx) => (
+          <article className="card" key={idx}>
+            <img src={slide.img} alt={slide.title} onClick={() => setSelectedSlide(slide)}/>
+            <h2 onClick={() => setSelectedSlide(slide)}>{slide.title}</h2>
+            {selectedSlide && (
+    
+            <div className="modal" onClick={() => setSelectedSlide(null)}>
+              <div className="modal-popup">
+                <h2 onClick={()=> openLink(selectedSlide.URL)}>{selectedSlide.popupTitle}</h2>
+                <p>{selectedSlide.popupDesc}</p>
+              </div>
+            </div>
+    
+          )}
+          </article>
+        ))}
+      </section>
         );
       }
   return (
@@ -64,21 +86,30 @@ const Team = () => {
         ◀
       </button>
 
-      <ul
-        className="carousel"
-        ref={carouselRef}
-      >
+      <ul className="carousel" ref={carouselRef}>
         {slides.map((slide, idx) => (
           <li key={idx} className="slide">
-            <img src={slide.img} alt={slide.title} />
-            <h2>{slide.title}</h2>
+            <img src={slide.img} alt={slide.title} onClick={() => setSelectedSlide(slide)}/>
+            <h2 onClick={() => setSelectedSlide(slide)}>{slide.title}</h2>
           </li>
         ))}
       </ul>
-
+        
       <button className="nav right" onClick={nextSlide} aria-label="next">
         ▶
       </button>
+
+      {selectedSlide && (
+
+        <div className="modal" onClick={() => setSelectedSlide(null)}>
+          <div className="modal-popup">
+            <h3 onClick={() => openLink(selectedSlide.URL)}>{selectedSlide.popupTitle}</h3>
+            <p>{selectedSlide.popupDesc}</p>
+          </div>
+        </div>
+
+      )}
+
     </div>
   )
 }

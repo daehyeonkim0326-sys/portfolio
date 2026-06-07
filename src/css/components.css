@@ -88,6 +88,9 @@
   height: 80vh;
   border-radius: 2rem;
 }
+.clone-grid .modal .modal-popup h2 {
+  cursor: pointer;
+}
 .clone-grid .card {
   padding: 0;
   margin: 1.5rem 0;
@@ -104,12 +107,14 @@
   list-style: none;
 }
 .clone-grid .card img {
+  border-radius: 2rem;
   width: 100%;
   max-width: 650px;
   height: auto;
   display: block;
   cursor: pointer;
   transition: transform 0.6s;
+  box-shadow: #848587 0px 4px 4px;
 }
 .clone-grid .card img:hover {
   transform: translateY(-3%);
@@ -196,10 +201,18 @@
   align-items: center;
   gap: 1rem;
   background-color: rgba(143, 188, 248, 0.45);
-  width: 500px;
+  padding: 2rem;
+  width: auto;
   height: 30vh;
   border-radius: 2rem;
   transition: transform 0.5s;
+}
+.clone .modal .modal-popup h3 {
+  cursor: pointer;
+}
+.clone .modal .modal-popup h3:hover {
+  border-bottom: 0.1px solid #182434;
+  width: fit-content;
 }
 .clone .nav {
   position: absolute;
@@ -303,12 +316,17 @@
   width: 200px;
 }
 .practical ul li img {
-  border-radius: 25px;
+  overflow: hidden;
+  border-radius: 2rem;
   transition: 1s;
   box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
 }
 .practical ul h2 {
   font-size: 20px;
+}
+.practical ul h2:hover {
+  border-bottom: 0.1px solid #182434;
+  width: fit-content;
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .contact{
-    @include flex-layout(row,space-between,center,1rem);
+    @include flex-layout(row,center,center,1rem);
     overflow: hidden;
     height: 100vh;
     padding: 0 3rem;
@@ -35,9 +35,6 @@
 
     &:hover {
         box-shadow: 0 4px 8px #9BC0EB;
-        &::placeholder {
-        font-weight: 700;
-        }
     }
     }
         .lp {

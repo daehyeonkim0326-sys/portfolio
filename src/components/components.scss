@@ -54,6 +54,9 @@
     width: 500px;
     height: 80vh;
     border-radius: 2rem;
+    h2{
+      cursor: pointer;
+    }
   }
 }
   .card {
@@ -71,13 +74,14 @@
     
 
     img {
+      border-radius: 2rem;
       width: 100%;
       max-width: 650px;
       height: auto;
       display: block;
       cursor: pointer;
       transition: transform 0.6s;
-
+      box-shadow: #848587 0px 4px 4px;
       &:hover {
         transform: translateY(-3%);
       }
@@ -119,7 +123,6 @@
       text-align: center;
       list-style: none;
       padding: 1rem 0;
-      
       img {
         width: 100%;
         max-width: 650px;
@@ -152,10 +155,18 @@
   .modal-popup {
     @include flex-layout(column,center,center);
     background-color: rgba(143, 188, 248, 0.45);
-    width: 500px;
+    padding: 2rem;
+    width: auto;
     height: 30vh;
     border-radius: 2rem;
     transition: transform 0.5s;
+    h3{
+      cursor: pointer;
+      &:hover {
+        border-bottom: 0.1px solid #182434;
+        width: fit-content;
+      }
+    }
   }
 }
   .nav {
@@ -219,9 +230,8 @@
                   top:0;
                   transform: translateY(-3%);
               }
-              
-              
           }
+          
         }
     h2{
         cursor: pointer;
@@ -246,7 +256,8 @@
           padding: 1rem;
           width: 200px;
           img{
-          border-radius: 25px;
+          overflow: hidden;
+          border-radius: 2rem;
           transition: 1s;
           box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
           
@@ -255,6 +266,10 @@
         }
     h2{
         font-size: 20px;
+        &:hover{
+            border-bottom: 0.1px solid #182434;
+            width: fit-content;
+        }
     } 
   }
 }

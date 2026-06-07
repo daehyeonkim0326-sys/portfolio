@@ -3,6 +3,7 @@
 @use "../assets/scss/font"as*;
 .projects{
     @include flex-layout(column,center,center);
+    @include ko-Display;
     padding: 5rem 0;
     color: #182434;
     font-size: 24px;
@@ -18,13 +19,14 @@
         border-bottom: 1px solid #34373a;
         padding: 0 0.5rem;
         width: fit-content;
+        transition: 0.5s;
         button{
+            transition: 0.5s;
         font-size: 24px;
         cursor: pointer;
         opacity: 0.5;
         border: none;
         background: none;
-        transition: 0.5s;
         @include en-Body-Large;
         @include respond(tablet){
             font-size: 18px;
@@ -32,7 +34,9 @@
         @include respond(mobile){
             font-size: 14px;
         }
-        
+        &:hover{
+            color: #646b73;
+        }
         &.active{
             color: #182434;
             opacity: 1;

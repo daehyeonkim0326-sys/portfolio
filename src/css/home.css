@@ -221,6 +221,7 @@
   }
 }
 .home .track .track-list .emoji {
+  cursor: pointer;
   width: 50px;
   height: 50px;
   color: #9FBFE5;

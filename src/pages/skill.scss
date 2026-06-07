@@ -141,3 +141,14 @@
   
 }
 }
+@include respond(mobile){
+    .skill{
+        position: relative;
+        .comment{
+            position: absolute;
+            top: 0;
+
+        }
+        padding: 0.5rem;
+    }
+}

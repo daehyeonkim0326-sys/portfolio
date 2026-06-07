@@ -22,6 +22,9 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 24px;
   padding: 3rem;
   height: 100%;
   color: #182434;
@@ -151,10 +154,6 @@
 }
 .me .track .txt h2 {
   width: fit-content;
-  cursor: pointer;
-}
-.me .track .txt h2:hover {
-  border-bottom: 2px solid #182434;
 }
 @media (max-width: 768px) {
   .me .track .txt h2 {
@@ -217,12 +216,6 @@
   gap: 1rem;
   width: 80%;
 }
-.me .track .track-list .txt h2 {
-  cursor: pointer;
-}
-.me .track .track-list .txt h2:hover {
-  border-bottom: 2px solid #182434;
-}
 @media (max-width: 480px) {
   .me .track .track-list .txt {
     width: 70%;
@@ -243,6 +236,7 @@
   }
 }
 .me .track .track-list .emoji {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   color: #9FBFE5;

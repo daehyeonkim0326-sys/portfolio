@@ -3,6 +3,7 @@
 @use "../assets/scss/font" as*;
 .me{
     @include flex-layout(column,center,center);
+    @include ko-Body-Large;
     padding: 3rem;
     height: 100%;
     color: #182434;
@@ -93,10 +94,6 @@
                 }
                 h2{
                 width: fit-content;
-                cursor: pointer;
-                &:hover{
-                    border-bottom: 2px solid #182434;
-                }
                 @include respond(tablet){
                     font-size: 20px;
                 }
@@ -132,12 +129,7 @@
             .txt{
                 @include flex-layout(row,left,center);
                 width: 80%;
-                h2{
-                cursor: pointer;
-                &:hover{
-                    border-bottom: 2px solid #182434;
-                }
-            }
+                
             @include respond(mobile){
                 width: 70%;
                     h2{
@@ -162,6 +154,7 @@
         }
         
         .emoji{
+            cursor: pointer;
             width: 40px;
             height: 40px;
             color: #9FBFE5;

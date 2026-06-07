@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.fc60b5fd.css",
-    "main.js": "/static/js/main.b72916ef.js",
-    "static/media/AritaBuriKR-Medium.ttf": "/static/media/AritaBuriKR-Medium.2a9636f150ad224d6c88.ttf",
-    "static/media/AritaBuriKR-SemiBold.ttf": "/static/media/AritaBuriKR-SemiBold.3993ef1b29c4be2a39fc.ttf",
-    "static/media/book.gif": "/static/media/book.d2211e3d6040d08adc2b.gif",
-    "static/media/day.jpg": "/static/media/day.5b5fc4804e690d1469a7.jpg",
-    "static/media/map.jpg": "/static/media/map.6931e42f8427068a41e0.jpg",
-    "static/media/quiz.jpg": "/static/media/quiz.d99b7dd19693fd5d29b3.jpg",
-    "static/media/shopping.jpg": "/static/media/shopping.6e11a86574b37e57cea8.jpg",
-    "static/media/airsound.jpg": "/static/media/airsound.aae171b512c242fbe485.jpg",
-    "static/media/wave.jpg": "/static/media/wave.06cb26df571d54a7850a.jpg",
-    "static/media/Luckydori.jpg": "/static/media/Luckydori.8daff225e7e4ec919211.jpg",
-    "static/media/Frame 37.jpg": "/static/media/Frame 37.0e6c4033d98111593a54.jpg",
-    "static/media/gride.gif": "/static/media/gride.0ec3a9115cf97083690d.gif",
-    "static/media/Component.jpg": "/static/media/Component.08929c8e7da8282fbf48.jpg",
-    "static/media/ifkakao.jpg": "/static/media/ifkakao.3c2d2ede9224fcb33d66.jpg",
-    "static/media/2967822_20250714154852_500.jpg": "/static/media/2967822_20250714154852_500.0fb05a4d1811dd1d8c5a.jpg",
-    "index.html": "/index.html",
-    "static/media/Frame 38.svg": "/static/media/Frame 38.621eaab344ba229c3aa9efbadfbe9923.svg",
-    "main.fc60b5fd.css.map": "/static/css/main.fc60b5fd.css.map",
-    "main.b72916ef.js.map": "/static/js/main.b72916ef.js.map"
+    "main.css": "/portfolio/static/css/main.e05d62ef.css",
+    "main.js": "/portfolio/static/js/main.8bed1cb6.js",
+    "static/media/AritaBuriKR-Medium.ttf": "/portfolio/static/media/AritaBuriKR-Medium.2a9636f150ad224d6c88.ttf",
+    "static/media/AritaBuriKR-SemiBold.ttf": "/portfolio/static/media/AritaBuriKR-SemiBold.3993ef1b29c4be2a39fc.ttf",
+    "static/media/book.gif": "/portfolio/static/media/book.d2211e3d6040d08adc2b.gif",
+    "static/media/day.jpg": "/portfolio/static/media/day.5b5fc4804e690d1469a7.jpg",
+    "static/media/map.jpg": "/portfolio/static/media/map.6931e42f8427068a41e0.jpg",
+    "static/media/quiz.jpg": "/portfolio/static/media/quiz.d99b7dd19693fd5d29b3.jpg",
+    "static/media/shopping.jpg": "/portfolio/static/media/shopping.6e11a86574b37e57cea8.jpg",
+    "static/media/airsound.jpg": "/portfolio/static/media/airsound.aae171b512c242fbe485.jpg",
+    "static/media/wave.jpg": "/portfolio/static/media/wave.06cb26df571d54a7850a.jpg",
+    "static/media/Luckydori.jpg": "/portfolio/static/media/Luckydori.8daff225e7e4ec919211.jpg",
+    "static/media/Frame 37.jpg": "/portfolio/static/media/Frame 37.0e6c4033d98111593a54.jpg",
+    "static/media/gride.gif": "/portfolio/static/media/gride.0ec3a9115cf97083690d.gif",
+    "static/media/Component.jpg": "/portfolio/static/media/Component.08929c8e7da8282fbf48.jpg",
+    "static/media/ifkakao.jpg": "/portfolio/static/media/ifkakao.3c2d2ede9224fcb33d66.jpg",
+    "static/media/2967822_20250714154852_500.jpg": "/portfolio/static/media/2967822_20250714154852_500.0fb05a4d1811dd1d8c5a.jpg",
+    "index.html": "/portfolio/index.html",
+    "static/media/Frame 38.svg": "/portfolio/static/media/Frame 38.621eaab344ba229c3aa9efbadfbe9923.svg",
+    "main.e05d62ef.css.map": "/portfolio/static/css/main.e05d62ef.css.map",
+    "main.8bed1cb6.js.map": "/portfolio/static/js/main.8bed1cb6.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc60b5fd.css",
-    "static/js/main.b72916ef.js"
+    "static/css/main.e05d62ef.css",
+    "static/js/main.8bed1cb6.js"
   ]
 }

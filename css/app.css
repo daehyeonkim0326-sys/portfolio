@@ -22,14 +22,10 @@
 }
 
 #layout {
-  display: flex;
-  flex-direction: space-around;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 #layout::before {
   content: "";

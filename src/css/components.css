@@ -16,76 +16,34 @@
 }
 /*한글 폰트*/
 /*영문 폰트*/
-.team {
-  border-bottom: 1px solid rgba(58, 61, 235, 0.5);
-}
-.team ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-}
-.team ul li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.team ul li img {
-  transition: 1s;
-  max-width: 650px;
-  height: auto;
-  cursor: pointer;
-}
-.team ul li img:hover {
-  top: 0;
-  transform: translateY(-3%);
-}
-.team ul li h2 {
-  cursor: pointer;
-  font-family: "Arita Buri KR Medium";
-  font-weight: 500;
-  font-size: 24px;
-}
-.team ul li h2:hover {
-  border-bottom: 0.1px solid #182434;
-  width: fit-content;
-}
-
+/* Desktop Grid */
 .clone-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  position: relative;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
   color: #d3e4fa;
   overflow: hidden;
 }
 .clone-grid .card {
-  margin: 1.5rem 0;
-  list-style: none;
-  width: 650px;
-  transition: transform 0.5s ease;
-  min-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  text-align: center;
+  width: 100%;
+  margin: 1.5rem 0;
   list-style: none;
+  text-align: center;
 }
 .clone-grid .card img {
-  border-radius: 1rem;
   width: 100%;
   max-width: 650px;
   height: auto;
   display: block;
+  border-radius: 1rem;
   cursor: pointer;
   transition: transform 0.6s;
-  box-shadow: #848587 0px 4px 4px;
+  box-shadow: #848587 0 4px 4px;
 }
 .clone-grid .card img:hover {
   transform: translateY(-3%);
@@ -98,146 +56,8 @@
 }
 .clone-grid .card h2:hover {
   border-bottom: 0.1px solid #d3e4fa;
-  width: fit-content;
 }
 
-.clone {
-  position: relative;
-  color: #d3e4fa;
-  overflow: hidden;
-}
-.clone ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  transition: transform 0.5s ease;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.clone ul::-webkit-scrollbar {
-  display: none;
-}
-.clone ul {
-  cursor: grab;
-}
-.clone ul li {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-  list-style: none;
-  padding: 1rem 0;
-}
-.clone ul li img {
-  width: 100%;
-  max-width: 650px;
-  height: auto;
-  display: block;
-  cursor: pointer;
-  border-radius: 1rem;
-  transition: transform 0.6s;
-}
-.clone ul li img:hover {
-  transform: translateY(-3%);
-}
-.clone ul h2 {
-  margin-top: 12px;
-  font-size: 24px;
-  cursor: pointer;
-}
-.clone ul h2:hover {
-  border-bottom: 0.1px solid #182434;
-  width: fit-content;
-}
-.clone .nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-100%);
-  border-radius: 25px;
-  background: rgba(92, 131, 236, 0.6);
-  backdrop-filter: blur(0.65%);
-  -webkit-backdrop-filter: blur(0.65%);
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-  z-index: 10;
-  transition: 0.5s;
-  box-shadow: 0 4px 4px #182434;
-}
-.clone .nav:hover {
-  background: rgba(36, 88, 231, 0.6);
-}
-.clone .nav.left {
-  left: 8px;
-}
-.clone .nav.right {
-  right: 8px;
-}
-@media (max-width: 1024px) {
-  .clone .nav .clone {
-    display: none;
-  }
-  .clone .nav .clone ul {
-    overflow-x: auto;
-    scroll-snap-type: none;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-.personal ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.personal ul li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.personal ul li img {
-  transition: 1s;
-  cursor: pointer;
-  max-width: 650px;
-  height: auto;
-}
-.personal ul li img:hover {
-  top: 0;
-  transform: translateY(-3%);
-}
-.personal ul h2 {
-  cursor: pointer;
-  font-family: "Arita Buri KR Medium";
-  font-weight: 500;
-  font-size: 24px;
-}
-.personal ul h2:hover {
-  border-bottom: 0.1px solid #182434;
-  width: fit-content;
-}
-
-.practical {
-  color: #d3e4fa;
-}
 .practical ul {
   display: flex;
   flex-direction: row;
@@ -255,53 +75,108 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  width: 200px;
 }
 .practical ul li img {
   overflow: hidden;
   border-radius: 2rem;
   transition: 1s;
   box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
 }
-.practical ul h2 {
+.practical ul li h2 {
   font-size: 20px;
-}
-.practical ul h2:hover {
-  border-bottom: 0.1px solid #182434;
-  width: fit-content;
+  color: #d3e4fa;
 }
 
-@media (max-width: 1024px) {
-  .practical ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
+.clone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+  color: #d3e4fa;
+  overflow: hidden;
 }
-@media (max-width: 480px) {
-  .clone {
-    width: 370px;
-    color: #d3e4fa;
-  }
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    overflow-x: hidden;
-  }
-  ul img {
-    width: 100%;
-    max-width: 300px;
-  }
+.clone .carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.clone .carousel .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  list-style: none;
+  text-align: center;
+  padding: 1rem 0;
+}
+.clone .carousel .slide img {
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.6s;
+}
+.clone .carousel .slide img:hover {
+  transform: translateY(-3%);
+}
+.clone .carousel .slide h2 {
+  margin-top: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  width: fit-content;
+}
+.clone .carousel .slide h2:hover {
+  border-bottom: 0.1px solid #d3e4fa;
+}
+.clone .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 25px;
+  background: rgba(92, 131, 236, 0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.5s;
+  box-shadow: 0 4px 4px #182434;
+}
+
+.nav:hover {
+  background: rgba(36, 88, 231, 0.6);
+}
+
+.nav.left {
+  left: 100px;
+}
+
+.nav.right {
+  right: 100px;
 }/*# sourceMappingURL=components.css.map */

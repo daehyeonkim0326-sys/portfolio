@@ -2,16 +2,16 @@
 @use "../assets/scss/mixin" as*;
 @use "../assets/scss/font" as*;
 .header{
-    @include flex-layout(row);
+    @include flex-layout(row, space-around, center);
     width: 100%;
     position: absolute;
     z-index: 9999;
     ul{
-    @include flex-layout(row);
+    @include flex-layout(row,space-around,center);
     top: 1%; 
     position: fixed;
-    width: 60%;
-    padding: 0.3rem 2rem;
+    width: 70%;
+    padding: 0 1rem;
     border-radius: 25px;
     list-style: none;
     box-shadow: 1px 2px 2px #9BC0EB;
@@ -19,10 +19,9 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(0.5px);
     background-image: none;
-    li.nav{
-        @include flex-layout(center,center);
+    .menu-item{
         text-decoration: none;
-        padding: 0.5rem;
+        padding: 0;
         cursor:  pointer;
         transition: 0.5s;
         border-radius: 25px;
@@ -31,31 +30,18 @@
         background-image: none;
     &.active {
             color:#97c2f9;
-            background-color: rgba(1, 72, 164, 0.419);
+            background-color: rgba(8, 0, 72, 0.5);
+            backdrop-filter: blur(5px);
+            box-shadow: 1px 3px 3px #97c2f9;
             font-weight: bold;
-            transition: 0.1s;
+            transition: 0.5s;
+            padding: 0.5rem 1rem;
             @keyframes hover {
                 0%{ opacity: 10%;}
                 50%{ opacity: 50%;}
                 100%{ opacity: 100%;}
             }
         }
-        .menu-item{
-            text-decoration: none;
-            color:rgba(7, 75, 164, 0.24);
-        }
-        .menu-item.active {
-            box-shadow: 0 4px 4px #9BC0EB;
-            background-color: rgba(15, 112, 240, 0.24);
-            backdrop-filter: blur(0.14px);
-            -webkit-backdrop-filter: blur(0.14px);
-            padding: 0.5rem 1.5rem;
-            @keyframes hover {
-                0%{ opacity: 10%;}
-                50%{ opacity: 50%;}
-                100%{ opacity: 100%;}
-            }
-            }
         &:hover{
             box-shadow: 0 4px 4px #9BC0EB;
             background-color: rgba(15, 112, 240, 0.24);
@@ -79,29 +65,26 @@
 @include respond(tablet){
     .header{
         ul{
-            // @include flex-layout(row,space-around);
-            width: 80%;
-    // padding: 0.5rem;
-    li.nav{
-        padding: 1rem;
+            width: 65%;
+    .menu-item{
         @include en-Body-Medium;
+        
         }}
     }
 }
 @include respond(mobile){
     .header{
         ul{
-            li.nav{
-        padding: 0.5rem;
+            width: 85%;
+            .menu-item{
         font-size: 8px;
-    // padding: 1rem;
 }
 }
     }
 }
 
 .main{
-    @include flex-layout(column);
+    @include flex-layout(column,center,center);
     .playbar{
     @include flex-layout(row,space-around,center);
     position: fixed;
@@ -126,6 +109,9 @@
             cursor: pointer;
             padding: 0.5rem;
         }
+    }
+    @include respond(tablet){
+        height: 5%;
     }
     @include respond(mobile){
         height: 5%;

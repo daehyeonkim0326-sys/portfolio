@@ -55,23 +55,30 @@ function useIsMobile(breakpoint = 1030) {
 const Team = ({onOpen}) => {
     const isMobile = useIsMobile(1030);
      const carouselRef = useRef(null);
-    
-      const prevSlide = () => {
+    const infiniteSlides = [...slides, ...slides, ...slides];
+  const slideCount = slides.length;
+  const getSlideWidth = () => {
+  const slide = carouselRef.current?.querySelector(".slide");
+  return slide ? slide.offsetWidth : 0;
+};
+  const prevSlide = () => {
     if (!carouselRef.current) return;
-
-    carouselRef.current.scrollBy({
-      left: -carouselRef.current.clientWidth,
-      behavior: "smooth",
-    });
+    const carousel = carouselRef.current;
+    const slideWidth = getSlideWidth();
+    carousel.scrollBy({
+    left: -slideWidth,
+    behavior: "smooth",
+  });
   };
-
+  
   const nextSlide = () => {
     if (!carouselRef.current) return;
-
-    carouselRef.current.scrollBy({
-      left: carouselRef.current.clientWidth,
-      behavior: "smooth",
-    });
+    const carousel = carouselRef.current;
+    const slideWidth = getSlideWidth();
+    carousel.scrollBy({
+    left: slideWidth,
+    behavior: "smooth",
+  });
   };
     
       
@@ -79,10 +86,10 @@ const Team = ({onOpen}) => {
       if (!isMobile) {
         return (
           <section className="clone-grid">
-        {slides.map((slides, idx) => (
+        {slides.map((slide, idx) => (
           <article className="card" key={idx}>
-            <img src={slides.img} alt={slides.title} onClick={() => onOpen(slides)}/>
-            <h2 onClick={() => onOpen(slides)}>{slides.title}</h2>
+            <img src={slide.img} alt={slide.title} onClick={() => onOpen(slide)}/>
+            <h2 onClick={() => onOpen(slide)}>{slide.title}</h2>
           </article>
         ))}
       </section>
@@ -95,10 +102,10 @@ const Team = ({onOpen}) => {
       </button>
 
       <ul className="carousel" ref={carouselRef}>
-        {slides.map((slides, idx) => (
+        {infiniteSlides.map((slide, idx) => (
           <li key={idx} className="slide">
-            <img src={slides.img} alt={slides.title} onClick={() => onOpen(slides)}/>
-            <h2 onClick={() => onOpen(slides)}>{slides.title}</h2>
+            <img src={slide.img} alt={slide.title} onClick={() => onOpen(slide)}/>
+            <h2 onClick={() => onOpen(slide)}>{slide.title}</h2>
           </li>
         ))}
       </ul>

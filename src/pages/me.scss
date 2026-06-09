@@ -4,14 +4,14 @@
 .me{
     @include flex-layout(column,center,center);
     @include ko-Body-Large;
-    padding: 3rem;
+    padding: 0;
     height: 100%;
     color:#fff;
     .blur{
          @include flex-layout(column,center,center);
         height: auto;
         width: 70%;
-        padding: 2rem 0;
+        padding: 1rem 0;
         border: 0.5px solid #accefa;
         border-radius: 2rem;
         z-index: 2;
@@ -19,7 +19,7 @@
         backdrop-filter: blur(5px);
         box-shadow: 0 10px 10px #97c2f9;
         @include respond(mobile){
-            width: 90%;
+            width: 60%;
         }
     }
     .txt{

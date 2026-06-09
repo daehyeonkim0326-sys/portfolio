@@ -3,11 +3,10 @@
 @use "./assets/scss/font" as*;
 *{padding: 0; margin: 0;}
 #layout{
-    @include flex-layout(space-around,center);
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-
+    width: 100%;
     &::before{
         content: "";
         position: absolute;

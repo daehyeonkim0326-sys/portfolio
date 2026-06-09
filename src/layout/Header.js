@@ -49,35 +49,35 @@ const Header = () => {
       <ul>
         {/* NavLink 대신 일반 li와 activeNav 상태를 활용합니다 */}
         <li 
-          className={`nav menu-item ${activeNav === "home" ? "active" : ""}`} 
+          className={`menu-item ${activeNav === "home" ? "active" : ""}`} 
           onClick={() => scrollTo("home")}
         >
           Home
         </li>
         <li>|</li>
         <li 
-          className={`nav menu-item ${activeNav === "me" ? "active" : ""}`} 
+          className={`menu-item ${activeNav === "me" ? "active" : ""}`} 
           onClick={() => scrollTo("me")}
         >
           ME
         </li>
         <li>|</li>
         <li 
-          className={`nav menu-item ${activeNav === "skill" ? "active" : ""}`} 
+          className={`menu-item ${activeNav === "skill" ? "active" : ""}`} 
           onClick={() => scrollTo("skill")}
         >
           SKILL
         </li>
         <li>|</li>
         <li 
-          className={`nav menu-item ${activeNav === "projects" ? "active" : ""}`} 
+          className={`menu-item ${activeNav === "projects" ? "active" : ""}`} 
           onClick={() => scrollTo("projects")}
         >
           PROJECTS
         </li>
         <li>|</li>
         <li 
-          className={`nav menu-item ${activeNav === "contact" ? "active" : ""}`} 
+          className={`menu-item ${activeNav === "contact" ? "active" : ""}`} 
           onClick={() => scrollTo("contact")}
         >
           CONTACT

@@ -29,13 +29,13 @@
 .header ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
   top: 1%;
   position: fixed;
-  width: 60%;
-  padding: 0.3rem 2rem;
+  width: 45%;
+  padding: 0 1rem;
   border-radius: 25px;
   list-style: none;
   box-shadow: 1px 2px 2px #9BC0EB;
@@ -46,8 +46,8 @@
 }
 .header ul li.nav {
   display: flex;
-  flex-direction: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
   text-decoration: none;
@@ -63,9 +63,11 @@
 }
 .header ul li.nav.active {
   color: #97c2f9;
-  background-color: rgba(1, 72, 164, 0.419);
+  background-color: rgba(8, 0, 72, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 3px 3px #97c2f9;
   font-weight: bold;
-  transition: 0.1s;
+  transition: 0.5s;
 }
 @keyframes hover {
   0% {
@@ -84,10 +86,9 @@
 }
 .header ul li.nav .menu-item.active {
   box-shadow: 0 4px 4px #9BC0EB;
-  background-color: rgba(15, 112, 240, 0.24);
-  backdrop-filter: blur(0.14px);
-  -webkit-backdrop-filter: blur(0.14px);
-  padding: 0.5rem 1.5rem;
+  background-color: rgba(15, 112, 240, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(14px);
 }
 @keyframes hover {
   0% {
@@ -123,18 +124,19 @@
 
 @media (max-width: 1024px) {
   .header ul {
-    width: 80%;
+    width: 65%;
   }
   .header ul li.nav {
-    padding: 1rem;
     font-family: "Arvo", sans-serif;
     font-weight: 300;
     font-size: 16px;
   }
 }
 @media (max-width: 480px) {
+  .header ul {
+    width: 85%;
+  }
   .header ul li.nav {
-    padding: 0.5rem;
     font-size: 8px;
   }
 }
@@ -174,6 +176,11 @@
 .main .playbar .playbar-btn .btn {
   cursor: pointer;
   padding: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .main .playbar {
+    height: 5%;
+  }
 }
 @media (max-width: 480px) {
   .main .playbar {

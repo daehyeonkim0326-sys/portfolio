@@ -81,7 +81,6 @@
   border-radius: 2rem;
   transition: 1s;
   box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
-  width: 300px;
   height: 500px;
   object-fit: cover;
 }
@@ -98,6 +97,7 @@
   gap: 1rem;
   position: relative;
   width: 100%;
+  max-width: 1024px;
   color: #d3e4fa;
   overflow: hidden;
 }
@@ -132,6 +132,7 @@
   padding: 1rem 0;
 }
 .clone .carousel .slide img {
+  width: 400px;
   height: auto;
   display: block;
   border-radius: 1rem;
@@ -179,4 +180,24 @@
 
 .nav.right {
   right: 100px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .practical ul li h2 {
+    font-size: 12px;
+  }
+}
+/* Mobile */
+@media (max-width: 480px) {
+  .practical ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .slide h2 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=components.css.map */

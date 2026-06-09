@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="32" viewBox="0 0 64 32" role="img" aria-label="React and GSAP icons">
+  <g id="react">
+    <rect width="32" height="32" rx="8" fill="#20232A"/>
+    <circle cx="16" cy="16" r="2.3" fill="#61DAFB"/>
+    <g fill="none" stroke="#61DAFB" stroke-width="1.35">
+      <ellipse cx="16" cy="16" rx="11.5" ry="4.4"/>
+      <ellipse cx="16" cy="16" rx="11.5" ry="4.4" transform="rotate(60 16 16)"/>
+      <ellipse cx="16" cy="16" rx="11.5" ry="4.4" transform="rotate(120 16 16)"/>
+    </g>
+  </g>
+  <g id="gsap" transform="translate(32 0)">
+    <rect width="32" height="32" rx="8" fill="#0E100F"/>
+    <path d="M8 20.6c2.2-6.8 6.7-10.4 13.7-11.2-2.6 2.1-4.5 4.6-5.5 7.6 2.2-.7 4.6-.7 7.4.2-4.8 1.4-8.4 3.5-10.9 6.6 1.6-4.1 3.7-6.7 6.4-8-3.9.6-7.1 2.2-11.1 4.8z" fill="#88CE02"/>
+    <text x="16" y="27" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="6" font-weight="700" fill="#88CE02">GSAP</text>
+  </g>
+</svg>

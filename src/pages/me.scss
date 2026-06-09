@@ -6,9 +6,24 @@
     @include ko-Body-Large;
     padding: 3rem;
     height: 100%;
-    color: #182434;
-    // width: 80%;
+    color:#fff;
+    .blur{
+         @include flex-layout(column,center,center);
+        height: auto;
+        width: 70%;
+        padding: 2rem 0;
+        border: 0.5px solid #accefa;
+        border-radius: 2rem;
+        z-index: 2;
+        background-color: rgba(41, 72, 212, 0.2);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 10px 10px #97c2f9;
+        @include respond(mobile){
+            width: 90%;
+        }
+    }
     .txt{
+        padding: 1rem;
         h1{
             @include en-Heading;
             @include respond(tablet){
@@ -20,13 +35,16 @@
         }
     }
     .box{
-        @include flex-layout(row,center,center,2rem);
-        padding: 0 3rem;
+        @include flex-layout(row,center,center,1rem);
+        padding: 1rem;
+        width: 80%;
         height: auto;
-        background: rgba(97, 164, 250, 0.4);
+        background: rgba(194, 217, 246, 0.2);
         backdrop-filter: blur(1px);
         -webkit-backdrop-filter: blur(1px);
+        box-shadow: 1px 2px 2px #182434;
         border-radius: 25px;
+        aspect-ratio: 3/1;
         .img{
             padding:  0.5rem;
             img{
@@ -51,7 +69,7 @@
             font-size: 40px;        // 기본 굵기 결정
             transform: scaleY(7);   // 세로 길이만 증가
             transform-origin: center;
-            color: #182434;
+            color: #d8dcff;
             @include respond(tablet){
                 font-size: 30px;
                 transform: scaleY(5);
@@ -64,6 +82,7 @@
         .txt{
             h1{
                 font-size: 48px;
+                color: #accefa;
                 @include respond(tablet){
                 font-size: 20px;
             }
@@ -85,6 +104,7 @@
     }
     .track{
         @include flex-layout(column,center,center);
+        padding: 1rem;
         width: 100%;
         .txt{
                 @include flex-layout(row,left,center);
@@ -105,20 +125,23 @@
         }
         .track-list{
             @include flex-layout(row,center,center,5rem);
-            border-top: 0.5px solid #182434;
-            border-bottom: 0.5px solid #182434;
-            width: 60%;
+            border-bottom: 0.5px solid rgb(255, 255, 255);
+            border-top: 0.5px solid rgb(255, 255, 255);
+            width: 80%;
+            height: 15vh;
+            z-index: 2;
             @include respond(tablet){
                 @include flex-layout(row,center,center,2rem);
-            
+                height: 8vh;
             }
             @include respond(mobile){
-                @include flex-layout(row,center,center,0.5rem);
-                width: 100%;
+                @include flex-layout(row,center,center,0.3rem);
+                width: 80%;
+                height: 8vh;
             }
             .num{
                 font-size: 48px;
-                color: #182434;
+                color: #accefa;
                 @include respond(tablet){
                     font-size: 24px;
                 }
@@ -157,7 +180,7 @@
             cursor: pointer;
             width: 40px;
             height: 40px;
-            color: #9FBFE5;
+            color: rgba(114, 175, 255, 0.876);
             transition: 0.5s;
             &:hover{
                 width: 60px;
@@ -184,6 +207,8 @@
 }
 .introducting{
     width: 60%;
+    z-index: 10;
+    padding: 1rem;
     @include respond(tablet){
         h2{
         font-size: 20px;

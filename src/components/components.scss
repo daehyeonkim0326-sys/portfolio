@@ -2,8 +2,7 @@
 @use "../assets/scss/variables"as*;
 @use "../assets/scss/font"as*;
 .team {
-    color: #182434;
-    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+    border-bottom: 1px solid rgba(58, 61, 235, 0.5);
     ul{
         @include flex-layout();
         list-style: none;
@@ -38,29 +37,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   position: relative;
-  color: #182434;
-  border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+  color: #d3e4fa;
   overflow: hidden;
-  .modal {
-  @include flex-layout(column,center,center);
-  position: absolute;
-  inset: 0;
-  z-index: 9999;
-  width: 100%;
-  transition: transform 1s;
-  .modal-popup {
-    @include flex-layout(column,center,center);
-    background-color: rgba(143, 188, 248, 0.35);
-    width: 500px;
-    height: 80vh;
-    border-radius: 2rem;
-    h2{
-      cursor: pointer;
-    }
-  }
-}
+  
   .card {
-    padding: 0;
     margin: 1.5rem 0;
     list-style: none;
     width: 650px;
@@ -74,7 +54,7 @@
     
 
     img {
-      border-radius: 2rem;
+      border-radius: 1rem;
       width: 100%;
       max-width: 650px;
       height: auto;
@@ -94,7 +74,7 @@
       cursor: pointer;
       width: fit-content;
       &:hover {
-        border-bottom: 0.1px solid #182434;
+        border-bottom: 0.1px solid #d3e4fa;
         width: fit-content;
       }
     }
@@ -103,9 +83,9 @@
 
 .clone {  
   position: relative;
-  color: #182434;
-  border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+  color: #d3e4fa;
   overflow: hidden;
+  
   ul {
     @include flex-layout(row, flex-start, stretch);
     padding: 0;
@@ -116,6 +96,14 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    // Firefox
+    scrollbar-width: none;
+    // IE / old Edge
+    -ms-overflow-style: none;
+    // Chrome / Safari / Edge
+    &::-webkit-scrollbar {
+        display: none;
+      }
     cursor: grab;
     li {
       min-width: 100%;
@@ -129,6 +117,7 @@
         height: auto;
         display: block;
         cursor: pointer;
+        border-radius: 1rem;
         transition: transform 0.6s;
         &:hover {
           transform: translateY(-3%);
@@ -146,29 +135,6 @@
       }
     }
   }
-   .modal {
-  @include flex-layout(column,center,center);
-  position: absolute;
-  inset: 0;
-  z-index: 9999;
-  width: 100%;
-  .modal-popup {
-    @include flex-layout(column,center,center);
-    background-color: rgba(143, 188, 248, 0.45);
-    padding: 2rem;
-    width: auto;
-    height: 30vh;
-    border-radius: 2rem;
-    transition: transform 0.5s;
-    h3{
-      cursor: pointer;
-      &:hover {
-        border-bottom: 0.1px solid #182434;
-        width: fit-content;
-      }
-    }
-  }
-}
   .nav {
     position: absolute;
     top: 50%;
@@ -200,8 +166,8 @@
   .clone {
           display: none;
         ul {
-          scroll-snap-type: none;
           overflow-x: auto;
+          scroll-snap-type: none;
           -webkit-overflow-scrolling: touch;
         }
       }
@@ -210,14 +176,11 @@
   
 }
 .personal{
-    color: #182434;
-    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
     ul{
         @include flex-layout();
         list-style: none;
         padding: 0;
         margin: 0;
-        
         li{
           @include flex-layout(column,center,center);
           
@@ -244,8 +207,7 @@
   }
 }
 .practical{
-    color: #182434;
-    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+    color: #d3e4fa;
     ul{
         @include flex-layout(row,space-around,center);
         list-style: none;
@@ -284,7 +246,7 @@
 @include respond(mobile){
     .clone{
       width: 370px;
-      
+      color: #d3e4fa;
      
     }
         ul{
@@ -293,7 +255,7 @@
             li{
                 @include flex-layout(column,center,center);
               overflow-x: hidden;
-    
+              
               }
               img{
                   width: 100%;

@@ -3,40 +3,77 @@ import wave from "../assets/img/wave.jpg";
 import myday from "../assets/img/day.jpg";
 import kakao from "../assets/img/ifkakao.jpg";
 import airsound from "../assets/img/airsound.jpg";
-
-
+import wave1 from "../assets/img/wave1.jpg";
+import wave2 from "../assets/img/wave2.jpg";
+import myday1 from "../assets/img/myday1.jpg"
+import myday2 from "../assets/img/myday2.jpg"
+import ifkakao1 from "../assets/img/ifkakao251.jpg"
+import ifkakao2 from "../assets/img/ifkakao252.jpg"
+import airsound1 from "../assets/img/airsound1.jpg"
+import airsound2 from "../assets/img/airsound2.jpg"
 const slides = [
   {
     img: wave,
     title: "Flow Motion : ConnectWave",
-    popupTitle: "ConnectWave",
+    category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/wave/",
-    popupDesc: "",
-    
+    description: "Flow Motion을 활용한 ConnectWave 회사의 홈페이지를 카피했습니다.",
+    dday:"1.진행 기간:2025.10.15~ 2025.10.17 (3일)",
+    people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
+    techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nFramework: React.js\nStyling: SCSS\nDesign & Tool: Figma, Git, GitHub, photoshop",
+    concept:"4.Concept: 플로우 모션을 이용한 다양한 사용자 경험 제공",
+    directory:"5.디렉토리 구조\nsrc\nassets=이미지\ncomponents=재사용 가능한 컴포넌트\nstyles=각 페이지별 scss\npages=라우터로 연결되는 실제 화면(페이지)들\nlayout=레이아웃 전체 공통 구조\nApp.js=라우터+전체 앱 구조",
+    charge:"6.제작 과정\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\nreact library를 활용하여 각 라우트 페이지 생성\njs에서 ScrollTrigger를 활용하여 스크롤을 내릴때에 맞춰 반응형 페이지 구현",
+    major:"7.주요 기능\nScrollTrigger를 활용한 다양한 반응형 페이지",
+    trouble:"8.트러블 슈팅\n문제 1.스크롤을 해도 글자가 나오지 않음 \n상황:스크롤을 내려도 ScrollTrigger 설정한 컴포넌트의 텍스트가 나오지 않는 상황\n해결:video-txt에 opacity값을 줌으로써 서서히 글자가 등장하게 함\n과정:스크롤 하는 과정에서 글자가 등장하지 않음 -> scss에서 처음에 글자가 보이지 않게 opacity가 0으로 설정되어 있었음 -> gsap라이브러리의 timeline을 활용하여 스크롤에 맞춰 글자가 서서히 나오게끔 opacity를 설정",
+    images: [wave1,wave2],
   },
   {
     img: myday,
     title: "MyDay",
-    popupTitle: "MyDay",
+    category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/myday/",
-    popupDesc: "하루 일정과 감정을 기록하는 UI 프로젝트입니다.",
+    description: "로그인 데이터를 저장하고 입력한 텍스트를 기록하는 todolist 입니다.",
+    dday:"1.진행 기간:2025.10.02~ 2025.10.3 (2일)",
+    people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
+    techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nFramework: React.js\nStyling: CSS\nData Handling: JSON\nDesign & Tool: Figma, Git, GitHub, photoshop",
+    concept:"4.Concept: 직관적인 메모장 겸 일기장",
+    directory:"5.디렉토리 구조\nsrc\ndata=quoteData.json\nimg=이미지\nfont=적용한 한글 폰트\nday1=컴포넌트 파일",
+    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[개발:  기능]\n날씨 api를 가져와 실시간 날씨 표시\n로그인 정보를 json데이터로 만들고 로그인\n등록 버튼을 클릭하면 입력한 텍스트가 화면에 기록이 되는 props를 자식 컴포넌트에 전달",
+    major:"7.주요 기능\n로그인 정보 처리: json에 저장한 모의 데이터를 바탕으로 계정 로그인\ntodolist 등록: props를 전달하여 등록 버튼을 클릭하면 텍스트 기록\n날씨 표시: 날씨 api를 불러와 화면에 날씨 온도 표시",
+    images: [myday1,myday2],
   },
   {
     img: kakao,
-    title: "Tech Week : if(kakao)",
-    popupTitle: "if(kakao) Clone",
+    title: "Tech Week : if(kakao)25",
+    category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/if-kakao-25-clone/",
-    popupDesc: "카카오 테크 컨퍼런스 페이지를 참고한 클론 코딩입니다.",
+    description: "이미지 슬라이딩 배너를 중점으로 if(kakao)25 홈페이지를 카피했습니다.",
+    dday:"1.진행 기간:2026.09.20~ 2025.09.23 (4일)",
+    people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
+    techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nStyling: SCSS\nDesign & Tool: Figma, Git, GitHub, photoshop",
+    concept:"4.Concept: 이미지 슬라이딩을 활용한 화려한 광고",
+    directory:"5.디렉토리 구조\nCSS=scss파일과 연결된 css파일\nmedia=영상과 사진을 포함한 미디어 파일\nscript=jacascript 파일\nscss=css와 연결된 scss 파일\nindex.html=기본적인 뼈대",
+    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\nQuerySelecter를 이용한 이미지 슬라이더 구현 \nkeyfream을 활용한 자동으로 움직이는 텍스트 marpuee 구현",
+    major:"7.주요 기능\n슬라이딩 되는 배너 이미지 \n자동으로 움직이는 txt",
+    images: [ifkakao1,ifkakao2],
   },
   {
     img: airsound,
     title: "airsound : 에어비엔비 카피",
-    popupTitle: "airsound",
+    category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/airbnb_clone/",
-    popupDesc: "에어비앤비 스타일을 참고한 숙소 예약 UI 카피 프로젝트입니다.",
+    description: "airbnb 레이아웃을 활용한 음악 사이트 입니다.",
+    dday:"1.진행 기간:2026.09.15~ 2025.09.18 (4일)",
+    people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
+    techstack:"3.사용 기술 스택:\nStyling: CSS\nDesign & Tool: Figma, Git, GitHub, photoshop",
+    concept:"4.Concept: 여행을 하는 듯한 음악감상",
+    directory:"5.디렉토리 구조\ncss=scss와 연결된 각종 css파일\nimage=이미지 파일\nscss=각종 스타일 처리\nindex.html=기본적인 뼈대",
+    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\ncss hover 기능을 이용한 버튼 hover처리",
+    images:[airsound1,airsound2],
   },
 ];
-function useIsTablet(breakpoint = 1024) {
+function useIsTablet(breakpoint = 1030) {
   const [isTablet, setIsTablet] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < breakpoint : false
 );
@@ -50,13 +87,10 @@ useEffect(() => {
   return isTablet;
 }
 
-export default function Clone() {
-  const isTablet = useIsTablet(1024);
+export default function Clone({onOpen}) {
+  const isTablet = useIsTablet(1030);
   const carouselRef = useRef(null);
-   const [selectedSlide, setSelectedSlide] = useState(null);
-  const openLink = (url) => {
-    window.open(url, "_blank");
-  };
+
   const prevSlide = () => {
     if (!carouselRef.current) return;
 
@@ -78,20 +112,10 @@ export default function Clone() {
   if (!isTablet) {
     return (
       <section className="clone-grid">
-        {slides.map((slide, idx) => (
+        {slides.map((slides, idx) => (
           <article className="card" key={idx}>
-            <img src={slide.img} alt={slide.title} onClick={() => setSelectedSlide(slide)}/>
-            <h2 onClick={() => setSelectedSlide(slide)}>{slide.title}</h2>
-            {selectedSlide && (
-    
-            <div className="modal" onClick={() => setSelectedSlide(null)}>
-              <div className="modal-popup">
-                <h2 onClick={()=> openLink(selectedSlide.URL)}>{selectedSlide.popupTitle}</h2>
-                <p>{selectedSlide.popupDesc}</p>
-              </div>
-            </div>
-    
-          )}
+            <img src={slides.img} alt={slides.title} onClick={() => onOpen(slides)}/>
+            <h2 onClick={() => onOpen(slides)}>{slides.title}</h2>
           </article>
         ))}
       </section>
@@ -105,10 +129,10 @@ export default function Clone() {
       </button>
 
       <ul className="carousel" ref={carouselRef}>
-        {slides.map((slide, idx) => (
+        {slides.map((slides, idx) => (
           <li key={idx} className="slide">
-            <img src={slide.img} alt={slide.title} onClick={() => setSelectedSlide(slide)}/>
-            <h2 onClick={() => setSelectedSlide(slide)}>{slide.title}</h2>
+            <img src={slides.img} alt={slides.title} onClick={() => onOpen(slides)}/>
+            <h2 onClick={() => onOpen(slides)}>{slides.title}</h2>
           </li>
         ))}
       </ul>
@@ -116,18 +140,6 @@ export default function Clone() {
       <button className="nav right" onClick={nextSlide} aria-label="next">
         ▶
       </button>
-
-      {selectedSlide && (
-
-        <div className="modal" onClick={() => setSelectedSlide(null)}>
-          <div className="modal-popup">
-            <h3 onClick={() => openLink(selectedSlide.URL)}>{selectedSlide.popupTitle}</h3>
-            <p>{selectedSlide.popupDesc}</p>
-          </div>
-        </div>
-
-      )}
-
     </div>
   );
 }

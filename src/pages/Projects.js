@@ -3,6 +3,7 @@ import Clone from "../components/Clone.js"
 import Personal from "../components/Personal.js"
 import Practical from "../components/Practical.js"
 import Team from "../components/Team.js"
+import Popup from "../components/Popup.js";
 import "./projects.scss";
 
 const TABS = [
@@ -14,8 +15,21 @@ const TABS = [
 ];
 const Projects = () => {
     const [active, setActive] = useState("all");
+    const [selectedSlide, setSelectedSlide] = useState(null);
+    const [isClosing, setIsClosing] = useState(false);
+    const openPopup = (projectData)=>{
+      setSelectedSlide(projectData);
+      setIsClosing(false);
+    }
+    const closePopup = ()=>{
+     setIsClosing(true);
 
-  return (
+    setTimeout(() => {
+      setSelectedSlide(null);
+      setIsClosing(false);
+    }, 450);
+    }
+    return (
     <div className="projects" id="projects">
       <ul className="tabs">
         {TABS.map((t) => (
@@ -34,18 +48,20 @@ const Projects = () => {
       <div className="panel">
         {active === "all" && (
           <>
-            <Team />
-            <Clone />
-            <Personal />
-            <Practical />
+            <Team onOpen={openPopup}/>
+            <Clone onOpen={openPopup}/>
+            <Personal onOpen={openPopup}/>
+            <Practical onOpen={openPopup}/>
           </>
         )}
-
-        {active === "team" && <Team />}
-        {active === "clone" && <Clone />}
-        {active === "personal" && <Personal />}
-        {active === "practical" && <Practical />}
+        {active === "team" && <Team onOpen={openPopup}/>}
+        {active === "clone" && <Clone onOpen={openPopup}/>}
+        {active === "personal" && <Personal onOpen={openPopup}/>}
+        {active === "practical" && <Practical onOpen={openPopup}/>}
       </div>
+         {selectedSlide && (
+        <Popup data={selectedSlide} onClose={closePopup} isClosing={isClosing}/>
+      )}
     </div>
   )
 }

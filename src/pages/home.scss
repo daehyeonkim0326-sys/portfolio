@@ -7,20 +7,26 @@
     .track{
         @include flex-layout(row,center,center,3rem);
         height: 100%;
+        cursor: pointer;
+        
         .track-list{
             @include flex-layout(row,center,center,5rem);
-            // padding: 0.5rem;
-            // width: 80%;
-            border-top: 2px solid #ababac;
-            border-bottom: 2px solid #ababac;
-            // @include respond(mobile){
-            //     gap: 1rem;
-            // }
+            background-color: rgba(41, 72, 212, 0.2);
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+            z-index: 10;
+            border: 0.2px solid #97c2f9;
+            border-radius: 2rem;
+            box-shadow: 2px 15px 15px #345a86;
+            transition: 0.5s;
+            &:hover{
+            box-shadow: 5px 10px 10px #abcefc;
+        }
             @include respond(tablet){
                 @include flex-layout(row,space-between,center,1rem);
             }
             .album{
-                .turntable {
+                .turntable { 
                     position: relative;
                     width: 200px;
                     aspect-ratio: 1 / 1;
@@ -38,9 +44,8 @@
                 }
 
                     /* LP 본체 */
-                    .lp {
-                    width: 100%;
-                    height: 100%;
+                    .lp {        
+                    background: none;
                     border-radius: 50%;
                     position: relative;
                     /* 검정판 + 홈(그루브) 느낌 */
@@ -49,12 +54,13 @@
                     height: 150px;
                     transition: 0.5s;
                     @include respond(tablet){
-                        width: 70%;
-                        height: 70%;
+                        width: 80%;
+                        height: 80%;
                     }
                     @include respond(mobile){
-                        width: 50%;
-                        height: 50%;
+                        position: absolute;
+                        width: 70%;
+                        height: 70%;
                     }
                     aspect-ratio: 1 / 1;
                     border-radius: 50%;
@@ -160,15 +166,11 @@
 
             }
             .txt{
+                z-index: 9999;
+                color: #accefa;
                 h1{
                     @include ko-Title;
-                    // font-weight: 900;
-                    // font-size: 40px;
-                    cursor: pointer;
                     transition: 0.5s;
-                &:hover{
-                    border-bottom: 1px solid #7a7a7a;
-                }
             }
                 h3{
                     @include ko-Body-Medium;
@@ -190,6 +192,7 @@
             height: 50px;
             color: #9FBFE5;
             transition: 0.5s;
+            padding: 1rem;
             &:hover{
                 width: 60px;
                 height: 60px;

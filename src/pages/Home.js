@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <div className='home'>
-        <div className='track'>
+        <div className='track' onClick={() => scrollTo("me")}>
                 <div className='track-list'>
                     <div className='album'>
                         <div className="turntable">
@@ -25,7 +25,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='txt'>
-                        <h1 onClick={() => scrollTo("me")}>CREATOR</h1>
+                        <h1>CREATOR</h1>
                         <h3>김대현</h3>
                     </div>
                     <FaHeart className='emoji'/>

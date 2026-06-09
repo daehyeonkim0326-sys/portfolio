@@ -21,10 +21,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
-  color: #182434;
-  padding: 10rem 0;
-  min-height: 30vh;
+  gap: 1rem;
+  color: #ffffff;
+  padding: 1rem 0;
+  min-height: 60vh;
   scroll-margin-top: 80px;
   overflow: visible;
 }
@@ -34,8 +34,10 @@
   justify-content: space-around;
   align-items: center;
   gap: 4rem;
+  position: relative;
+  z-index: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .skill .comment {
     display: flex;
     flex-direction: row;
@@ -60,7 +62,7 @@
   align-items: center;
   gap: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .skill .comment .profile img {
     width: 30px;
     height: 30px;
@@ -81,29 +83,21 @@
 .skill .comment input {
   border: none;
   width: 300px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 3rem;
+  padding: 1rem 3rem 1rem 1rem;
   border-radius: 25px;
-  box-shadow: 0 2px 2px #9BC0EB;
-  background-color: rgba(91, 153, 235, 0.23);
-  backdrop-filter: blur(0.14px);
-  -webkit-backdrop-filter: blur(0.14px);
+  box-shadow: 1px 2px 2px #97c2f9;
+  background-color: rgba(104, 94, 253, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(14px);
   transition: 0.5s;
 }
 .skill .comment input::placeholder {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  gap: 1rem;
   font-family: "Arita Buri KR Medium";
   font-weight: 500;
   font-size: 16px;
-  color: #182434;
+  color: #ffffff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .skill .comment input {
     padding: 0.5rem 1rem;
     width: 200px;
@@ -125,68 +119,60 @@
   cursor: pointer;
   border: none;
   padding: 1rem 1.3rem;
+  color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
-  box-shadow: 0 2px 2px #9BC0EB;
-  background-color: rgba(91, 153, 235, 0.23);
-  backdrop-filter: blur(0.14px);
-  -webkit-backdrop-filter: blur(0.14px);
+  box-shadow: 1px 2px 2px #97c2f9;
+  background-color: rgba(104, 94, 253, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(14px);
   transition: 0.5s;
 }
 .skill .comment button:hover {
   background-color: rgba(15, 98, 207, 0.23);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .skill .comment button {
     padding: 0.5rem 1rem;
     font-size: 12px;
   }
 }
-.skill .skill {
-  position: relative;
-}
-.skill .comment {
-  position: relative;
-  z-index: 1;
-}
-.skill .popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.skill .image-slide {
+  width: min(90%, 1000px);
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
-  z-index: 9999;
+  transform: translateY(-16px);
+  transition: max-height 0.8s ease, opacity 0.4s ease, transform 0.5s ease;
 }
-.skill .popup img {
-  width: min(90vw, 1000px);
-  border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  transform: translateY(40px) scale(0.95);
-  transition: transform 0.35s ease;
-}
-.skill .popup.show {
+.skill .image-slide.show {
+  max-height: 1200px;
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  transform: translateY(0);
 }
-.skill .popup.show img {
-  transform: translateY(0) scale(1);
+.skill .image-slide.show img {
+  border-radius: 2rem;
+  width: 30px;
+  height: 30px;
 }
-
+.skill .image-slide.show .nick {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (max-width: 480px) {
+  .skill .image-slide.show .nick {
+    font-size: 12px;
+  }
+}
 @media (max-width: 480px) {
   .skill {
-    position: relative;
+    padding: 0.5rem;
   }
   .skill .comment {
-    position: absolute;
-    top: 0;
-  }
-  .skill {
-    padding: 0.5rem;
+    gap: 1rem;
   }
 }/*# sourceMappingURL=skill.css.map */

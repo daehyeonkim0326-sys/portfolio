@@ -26,7 +26,6 @@
   font-weight: 600;
   font-size: 56px;
   padding: 5rem 0;
-  color: #182434;
   font-size: 24px;
   min-height: 100vh;
   padding: 5rem 0;
@@ -39,10 +38,12 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  z-index: 2;
   list-style: none;
   background: none;
   border: none;
-  border-bottom: 1px solid #34373a;
+  border-bottom: 5px solid rgba(104, 94, 253, 0.2);
+  box-shadow: 0 2px 0 #9BC0EB;
   padding: 0 0.5rem;
   width: fit-content;
   transition: 0.5s;
@@ -50,15 +51,16 @@
 .projects .tabs button {
   transition: 0.5s;
   font-size: 24px;
+  color: #ffffff;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
   border: none;
   background: none;
   font-family: "Arvo", sans-serif;
   font-weight: 300;
   font-size: 24px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .projects .tabs button {
     font-size: 18px;
   }
@@ -69,12 +71,12 @@
   }
 }
 .projects .tabs button:hover {
-  color: #646b73;
+  color: #006ce7;
 }
 .projects .tabs button.active {
-  color: #182434;
+  color: #76b0fc;
   opacity: 1;
-  border-bottom: 0.5px solid #3680D8;
+  border-bottom: 3px solid #76b0fc;
 }
 .projects .tabs.active {
   opacity: 100;
@@ -82,6 +84,7 @@
 }
 .projects .panel {
   min-width: 100%;
+  z-index: 2;
 }
 .projects .panel img {
   width: 100%;

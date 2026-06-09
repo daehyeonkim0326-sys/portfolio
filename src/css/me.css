@@ -27,14 +27,38 @@
   font-size: 24px;
   padding: 3rem;
   height: 100%;
-  color: #182434;
+  color: #fff;
+}
+.me .blur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: auto;
+  width: 70%;
+  padding: 2rem 0;
+  border: 0.5px solid #accefa;
+  border-radius: 2rem;
+  z-index: 2;
+  background-color: rgba(41, 72, 212, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 10px #97c2f9;
+}
+@media (max-width: 480px) {
+  .me .blur {
+    width: 90%;
+  }
+}
+.me .txt {
+  padding: 1rem;
 }
 .me .txt h1 {
   font-family: "Arvo", sans-serif;
   font-weight: 500;
   font-size: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .txt h1 {
     font-family: "Arvo", sans-serif;
     font-weight: 300;
@@ -53,13 +77,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 0 3rem;
+  gap: 1rem;
+  padding: 1rem;
+  width: 80%;
   height: auto;
-  background: rgba(97, 164, 250, 0.4);
+  background: rgba(194, 217, 246, 0.2);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  box-shadow: 1px 2px 2px #182434;
   border-radius: 25px;
+  aspect-ratio: 3/1;
 }
 .me .box .img {
   padding: 0.5rem;
@@ -74,7 +101,7 @@
   top: 10%;
   transform: translateY(-10%);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .box .img img {
     height: 18vh;
   }
@@ -89,9 +116,9 @@
   font-size: 40px;
   transform: scaleY(7);
   transform-origin: center;
-  color: #182434;
+  color: #d8dcff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .box .line {
     font-size: 30px;
     transform: scaleY(5);
@@ -105,8 +132,9 @@
 }
 .me .box .txt h1 {
   font-size: 48px;
+  color: #accefa;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .box .txt h1 {
     font-size: 20px;
   }
@@ -121,7 +149,7 @@
   font-weight: 500;
   font-size: 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .box .txt h3 {
     font-size: 10px;
   }
@@ -137,6 +165,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
   width: 100%;
 }
 .me .track .txt {
@@ -155,7 +184,7 @@
 .me .track .txt h2 {
   width: fit-content;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .track .txt h2 {
     font-size: 20px;
   }
@@ -171,17 +200,20 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  border-top: 0.5px solid #182434;
-  border-bottom: 0.5px solid #182434;
-  width: 60%;
+  border-bottom: 0.5px solid rgb(255, 255, 255);
+  border-top: 0.5px solid rgb(255, 255, 255);
+  width: 80%;
+  height: 15vh;
+  z-index: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .track .track-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    height: 8vh;
   }
 }
 @media (max-width: 480px) {
@@ -190,15 +222,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    width: 100%;
+    gap: 0.3rem;
+    width: 80%;
+    height: 8vh;
   }
 }
 .me .track .track-list .num {
   font-size: 48px;
-  color: #182434;
+  color: #accefa;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .track .track-list .num {
     font-size: 24px;
   }
@@ -227,7 +260,7 @@
     font-size: 8px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .track .track-list .txt h2 {
     font-size: 18px;
   }
@@ -239,14 +272,14 @@
   cursor: pointer;
   width: 40px;
   height: 40px;
-  color: #9FBFE5;
+  color: rgba(114, 175, 255, 0.876);
   transition: 0.5s;
 }
 .me .track .track-list .emoji:hover {
   width: 60px;
   height: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .track .track-list .emoji {
     width: 20px;
     height: 20px;
@@ -268,8 +301,10 @@
 }
 .me .introducting {
   width: 60%;
+  z-index: 10;
+  padding: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .me .introducting h2 {
     font-size: 20px;
   }

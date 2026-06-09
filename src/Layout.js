@@ -2,8 +2,9 @@ import React from 'react'
 import Header from './layout/Header'
 import Main from './layout/Main'
 import Footer from './layout/Footer'
-
+import"./app.scss"
 const Layout = () => {
+    
   return (
     <div id='layout'>
         <div className='header'>
@@ -16,7 +17,7 @@ const Layout = () => {
             <Footer/>
         </div>
     </div>
-  )
+    )
 }
 
 export default Layout

@@ -15,4 +15,37 @@
   font-display: swap;
 }
 /*한글 폰트*/
-/*영문 폰트*//*# sourceMappingURL=app.css.map */
+/*영문 폰트*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#layout {
+  display: flex;
+  flex-direction: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/img/background.png");
+  background-color: rgba(110, 154, 255, 0.579);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  filter: blur(4px);
+}
+#layout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}/*# sourceMappingURL=app.css.map */

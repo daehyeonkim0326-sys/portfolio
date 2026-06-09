@@ -9,6 +9,7 @@ const Me = () => {
   }
   return (
     <div className='me'>
+      <div className='blur'>
       <div className='txt'>
         <h1>About Me</h1>
       </div>
@@ -45,6 +46,7 @@ const Me = () => {
           처음에는 쉽지 않았지만, 하나씩 배워가며 직접 화면을 구성하고 완성해 나가는 과정에서 큰 성취감과 재미를 느꼈습니다.<br></br>
           저는 무언가를 만들고 설계하는 과정에서 삶의 목표를 찾아가는 사람입니다.<br></br>
           아직 부족한 점도 많지만, 꾸준히 배우고 개선하며 변화하는 시대에 필요한 퍼블리셔로 성장하고 싶습니다.</p>
+      </div>
       </div>
     </div>
   )

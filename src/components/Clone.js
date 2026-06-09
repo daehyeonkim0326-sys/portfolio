@@ -91,7 +91,6 @@ export default function Clone({onOpen}) {
   const isTablet = useIsTablet(1030);
   const carouselRef = useRef(null);
   const infiniteSlides = [...slides, ...slides, ...slides];
-  const slideCount = slides.length;
   const getSlideWidth = () => {
   const slide = carouselRef.current?.querySelector(".slide");
   return slide ? slide.offsetWidth : 0;

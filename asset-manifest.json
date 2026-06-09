@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.57dcc19f.css",
+    "main.css": "/portfolio/static/css/main.a226e06a.css",
     "main.js": "/portfolio/static/js/main.1b8867c8.js",
     "static/media/AritaBuriKR-Medium.ttf": "/portfolio/static/media/AritaBuriKR-Medium.2a9636f150ad224d6c88.ttf",
     "static/media/AritaBuriKR-SemiBold.ttf": "/portfolio/static/media/AritaBuriKR-SemiBold.3993ef1b29c4be2a39fc.ttf",
@@ -43,11 +43,11 @@
     "static/media/javascript.svg": "/portfolio/static/media/javascript.330e3621041a58e609f60a6e9379e1e8.svg",
     "static/media/html.svg": "/portfolio/static/media/html.798c0c60dd6acf2c00dc5ac7ae9a8a96.svg",
     "static/media/css.svg": "/portfolio/static/media/css.29ecc85ea27bb5cd2b5a5713e500d095.svg",
-    "main.57dcc19f.css.map": "/portfolio/static/css/main.57dcc19f.css.map",
+    "main.a226e06a.css.map": "/portfolio/static/css/main.a226e06a.css.map",
     "main.1b8867c8.js.map": "/portfolio/static/js/main.1b8867c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.57dcc19f.css",
+    "static/css/main.a226e06a.css",
     "static/js/main.1b8867c8.js"
   ]
 }

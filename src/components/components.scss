@@ -42,24 +42,28 @@
 
 .practical {
   ul {
-  @include flex-layout(row, space-around, center);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  // @include flex-layout(row, space-around, center);
   list-style: none;
-  // margin: 0;
-  // padding: 0;
+  width: 100%;
   li {
-    @include flex-layout(column, space-around, center);
-    padding: 1rem;
-    width: 500px;
+    @include flex-layout(column, space-around ,center);
+    // padding: 1rem;
+    // width: 0%;
     img {
       overflow: hidden;
       border-radius: 2rem;
+      width: 300px !important;
       transition: 1s;
       box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
-      height: 500px;
       object-fit: cover;
     }
     h2 {
-      font-size: 20px;
+      padding: 1rem;
+      height: 2vh;
+      // width: 100%;
+      // font-size: 20px;
       color: #d3e4fa;
     }
   }
@@ -79,7 +83,8 @@
   .carousel {
     @include flex-layout(row,space-around,center);
     width: 100%;
-    // padding: 0;
+    padding: 0;
+    gap: 0;
     margin: 0;
     list-style: none;
     overflow-x: auto;
@@ -98,8 +103,7 @@
       text-align: center;
       padding: 1rem 0;
       img {
-        width: 400px;
-        // max-width: 1024px;
+        width: 600px;
         height: auto;
         display: block;
         border-radius: 1rem;
@@ -107,6 +111,9 @@
         transition: transform 0.6s;
         &:hover {
           transform: translateY(-3%);
+        }
+        @include respond(mobile){
+          width: 350px;
         }
       }
       h2 {
@@ -154,17 +161,11 @@
   background: rgba(36, 88, 231, 0.6);
 }
 
-.nav.left {
-  left:300px;
-}
 
-.nav.right {
-  right: 300px;
-}
 
 @include respond(tablet){
   .nav.left {
-  left:100px;
+  left: 100px;
 }
 
 .nav.right {
@@ -181,24 +182,35 @@
 /* Tablet */
 @include respond(tablet) {
 
-  .practical ul {
-    
+  .practical { 
+    ul {
     li{
-      width: 300px;
       h2{
-        font-size: 12px;
+        font-size: 24px;
       }
     }
   }
 }
+}
 
 /* Mobile */
 @include respond(mobile) {
-  .practical ul{
-  @include flex-layout(column, center, center);
+  .practical {
+    width: 80%;
+    ul{
+      li{
+    img{
+      width: 150px !important;
+    }
+    h2{
+      font-size: 12px;
+    }
+    }
+  // @include flex-layout(column, center, center);
 }
 
   .slide h2 {
     font-size: 20px;
   }
+}
 }

@@ -50,11 +50,6 @@
 .popup-backdrop .popup-content::-webkit-scrollbar {
   display: none;
 }
-@media (max-width: 480px) {
-  .popup-backdrop .popup-content {
-    font-size: 12px;
-  }
-}
 .popup-backdrop .popup-content .popup-images {
   display: grid;
   gap: 1rem;
@@ -94,13 +89,27 @@
   padding: 2rem;
   white-space: pre-line;
 }
+.popup-backdrop .popup-content .popup-info h2 {
+  border-bottom: 0.5px solid #5b99eb;
+  width: 100%;
+}
 .popup-backdrop .popup-content .popup-info p {
   padding: 1rem 0;
+}
+@media (max-width: 480px) {
+  .popup-backdrop .popup-content .popup-info {
+    font-size: 12px;
+  }
 }
 .popup-backdrop .popup-content .popup-info .popup-category {
   font-size: 24px;
   color: #6da8f4;
   font-weight: 700;
+}
+@media (max-width: 480px) {
+  .popup-backdrop .popup-content .popup-info .popup-category {
+    font-size: 12px;
+  }
 }
 .popup-backdrop .popup-content .popup-info .popup-skills {
   display: flex;

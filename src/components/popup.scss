@@ -12,6 +12,7 @@
     &.closing {
     animation: backdropFadeOut 0.45s ease forwards;
     }
+    
     .popup-content{
         position: relative;
         width: min(90vw, 900px);
@@ -33,9 +34,7 @@
         &::-webkit-scrollbar {
             display: none;
         }
-        @include respond(mobile){
-            font-size: 12px;
-        }
+    
         .popup-images {
             display: grid;
             gap: 1rem;
@@ -76,13 +75,23 @@
 .popup-info {
     padding: 2rem;
     white-space: pre-line;
+    h2{
+        border-bottom: 0.5px solid #5b99eb;
+        width: 100%;
+    }
     p{
         padding: 1rem 0;
     }   
+    @include respond(mobile){
+        font-size: 12px;
+    }
     .popup-category {
         font-size: 24px;
         color: #6da8f4;
         font-weight: 700;
+        @include respond(mobile){
+            font-size: 12px;
+        }
 }
 .popup-skills {
     display: flex;

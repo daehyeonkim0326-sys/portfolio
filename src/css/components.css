@@ -59,12 +59,10 @@
 }
 
 .practical ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   list-style: none;
+  width: 100%;
 }
 .practical ul li {
   display: flex;
@@ -72,19 +70,18 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  width: 500px;
 }
 .practical ul li img {
   overflow: hidden;
   border-radius: 2rem;
+  width: 300px !important;
   transition: 1s;
   box-shadow: 0 4px 4px rgba(36, 88, 231, 0.6);
-  height: 500px;
   object-fit: cover;
 }
 .practical ul li h2 {
-  font-size: 20px;
+  padding: 1rem;
+  height: 2vh;
   color: #d3e4fa;
 }
 
@@ -107,6 +104,8 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
+  padding: 0;
+  gap: 0;
   margin: 0;
   list-style: none;
   overflow-x: auto;
@@ -131,7 +130,7 @@
   padding: 1rem 0;
 }
 .clone .carousel .slide img {
-  width: 400px;
+  width: 600px;
   height: auto;
   display: block;
   border-radius: 1rem;
@@ -140,6 +139,11 @@
 }
 .clone .carousel .slide img:hover {
   transform: translateY(-3%);
+}
+@media (max-width: 480px) {
+  .clone .carousel .slide img {
+    width: 350px;
+  }
 }
 .clone .carousel .slide h2 {
   margin-top: 12px;
@@ -173,14 +177,6 @@
   background: rgba(36, 88, 231, 0.6);
 }
 
-.nav.left {
-  left: 300px;
-}
-
-.nav.right {
-  right: 300px;
-}
-
 @media (max-width: 1024px) {
   .nav.left {
     left: 100px;
@@ -191,23 +187,22 @@
 }
 /* Tablet */
 @media (max-width: 1024px) {
-  .practical ul li {
-    width: 300px;
-  }
   .practical ul li h2 {
-    font-size: 12px;
+    font-size: 24px;
   }
 }
 /* Mobile */
 @media (max-width: 480px) {
-  .practical ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  .practical {
+    width: 80%;
   }
-  .slide h2 {
+  .practical ul li img {
+    width: 150px !important;
+  }
+  .practical ul li h2 {
+    font-size: 12px;
+  }
+  .practical .slide h2 {
     font-size: 20px;
   }
 }/*# sourceMappingURL=components.css.map */

@@ -27,6 +27,7 @@
   font-size: 56px;
   padding: 5rem 0;
   font-size: 24px;
+  width: 100%;
   overflow-x: hidden;
 }
 .projects .tabs {
@@ -84,13 +85,9 @@
   z-index: 2;
   padding: 2rem;
 }
-.projects .panel img {
-  width: 100%;
-  max-width: 650px;
-}
 @media (max-width: 1024px) {
   .projects .panel {
-    width: 80%;
+    width: 800px;
   }
 }
 @media (max-width: 480px) {
@@ -103,10 +100,6 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 50%;
-  }
-  .projects .panel img {
-    width: 100%;
-    max-width: 300px;
+    width: 500px;
   }
 }/*# sourceMappingURL=projects.css.map */

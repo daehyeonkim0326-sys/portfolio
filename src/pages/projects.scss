@@ -6,6 +6,7 @@
     @include ko-Display;
     padding: 5rem 0;
     font-size: 24px;
+    width: 100%;
     // gap: 1rem;
     // min-height: 100vh;
     // padding: 5rem 0;
@@ -59,15 +60,15 @@
             width: 100%; 
             z-index: 2;
             padding: 2rem;
-            img{
-                width: 100%;
-                max-width: 650px;
-            }
+            // img{
+            //     width: 100%;
+            //     max-width: 650px;
+            // }
         }
     
 @include respond(tablet){
     .panel{
-        width: 80%;
+        width: 800px;
     }
 }
 @include respond(mobile){
@@ -79,11 +80,11 @@
     }
     .panel{
         @include flex-layout(column,center,center);
-        width: 50%; 
-        img{
-            width: 100%;
-            max-width: 300px;
-        }
+        width: 500px; 
+        // img{
+        //     width: 100%;
+        //     max-width: 300px;
+        // }
     }
 }
 }

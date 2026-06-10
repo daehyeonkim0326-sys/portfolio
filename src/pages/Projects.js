@@ -30,7 +30,7 @@ const Projects = () => {
     }, 450);
     }
     return (
-    <div className="projects" id="projects">
+    <div className="projects">
       <ul className="tabs">
         {TABS.map((t) => (
           <li key={t.key}>

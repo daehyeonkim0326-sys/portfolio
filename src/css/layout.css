@@ -40,8 +40,7 @@
   list-style: none;
   box-shadow: 1px 2px 2px #9BC0EB;
   background-color: rgba(104, 94, 253, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(3px);
   background-image: none;
 }
 .header ul .menu-item {
@@ -77,10 +76,10 @@
   }
 }
 .header ul .menu-item:hover {
-  box-shadow: 0 4px 4px #9BC0EB;
-  background-color: rgba(15, 112, 240, 0.24);
-  backdrop-filter: blur(0.14px);
-  -webkit-backdrop-filter: blur(0.14px);
+  background-color: rgba(15, 112, 240, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 1px 4px 4px #97c2f9;
+  padding: 0.5rem 1.5rem;
 }
 @keyframes hover {
   0% {
@@ -132,7 +131,7 @@
   z-index: 999;
   width: 40%;
   background-color: rgba(104, 94, 253, 0.2);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(0.5px);
   bottom: 2%;
   box-shadow: 1px 2px 2px #97c2f9;
   border-radius: 2rem;
@@ -145,12 +144,14 @@
   transition: 0.5s;
 }
 .main .playbar .playbar-btn:hover {
-  border: 0.5px solid #97c2f9;
-  border-radius: 0.5rem;
+  background-color: rgba(8, 0, 72, 0.5);
+  border-radius: 0.8rem;
+  box-shadow: 1px 4px 4px #60a8f5;
+  backdrop-filter: blur(10px);
+  padding: 1rem;
 }
 .main .playbar .playbar-btn .btn {
   cursor: pointer;
-  padding: 0.5rem;
 }
 @media (max-width: 1024px) {
   .main .playbar {
@@ -159,6 +160,6 @@
 }
 @media (max-width: 480px) {
   .main .playbar {
-    height: 5%;
+    height: 7%;
   }
 }/*# sourceMappingURL=layout.css.map */

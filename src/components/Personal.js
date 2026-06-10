@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import quiz from "../assets/img/quiz.jpg";
 import shopping from "../assets/img/Luckydori.jpg";
 import quiz1 from "../assets/img/quiz1.jpg"
@@ -52,10 +52,52 @@ const Personal = ({onOpen}) => {
   const isTablet = useIsTablet(1030);
   const carouselRef = useRef(null);
   const infiniteSlides = [...slides, ...slides, ...slides];
-  const getSlideWidth = () => {
-  const slide = carouselRef.current?.querySelector(".slide");
-  return slide ? slide.offsetWidth : 0;
-};
+  const getSlideWidth = useCallback(() => {
+    const slide = carouselRef.current?.querySelector(".slide");
+    return slide ? slide.offsetWidth : 0;
+  }, []);
+
+  const jumpToScrollLeft = useCallback((left) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    carousel.style.scrollBehavior = "auto";
+    carousel.scrollLeft = left;
+
+    requestAnimationFrame(() => {
+      carousel.style.scrollBehavior = "";
+    });
+  }, []);
+
+  const keepInfinitePosition = useCallback(() => {
+    const carousel = carouselRef.current;
+    const slideWidth = getSlideWidth();
+    if (!carousel || !slideWidth) return;
+
+    const middleStart = slideWidth * slides.length;
+    const middleEnd = slideWidth * (slides.length * 2);
+
+    if (carousel.scrollLeft < middleStart) {
+      jumpToScrollLeft(carousel.scrollLeft + middleStart);
+    }
+
+    if (carousel.scrollLeft >= middleEnd) {
+      jumpToScrollLeft(carousel.scrollLeft - middleStart);
+    }
+  }, [getSlideWidth, jumpToScrollLeft]);
+
+  useEffect(() => {
+    if (!isTablet) return;
+
+    requestAnimationFrame(() => {
+      const carousel = carouselRef.current;
+      const slideWidth = getSlideWidth();
+      if (!carousel || !slideWidth) return;
+
+      jumpToScrollLeft(slideWidth * slides.length);
+    });
+  }, [getSlideWidth, isTablet, jumpToScrollLeft]);
+
   const prevSlide = () => {
     if (!carouselRef.current) return;
     const carousel = carouselRef.current;
@@ -64,6 +106,7 @@ const Personal = ({onOpen}) => {
     left: -slideWidth,
     behavior: "smooth",
   });
+    setTimeout(keepInfinitePosition, 450);
   };
   
   const nextSlide = () => {
@@ -74,6 +117,7 @@ const Personal = ({onOpen}) => {
     left: slideWidth,
     behavior: "smooth",
   });
+    setTimeout(keepInfinitePosition, 450);
   };
 
 //   useEffect(() => {

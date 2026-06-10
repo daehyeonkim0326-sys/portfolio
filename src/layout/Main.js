@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import "./layout.scss";
 
 import Home from '../pages/Home';
@@ -16,39 +16,55 @@ const Main = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const sections = sectionOrder
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
+    let animationId = null;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = sectionOrder.indexOf(entry.target.id);
-            setCurrentIndex(index);
-          }
-        });
-      },
-      {
-        threshold: 0.5,
+    const updateCurrentIndex = () => {
+      const checkPoint = window.innerHeight * 0.35;
+      const sections = sectionOrder
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      const activeSection = sections.find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= checkPoint && rect.bottom > checkPoint;
+      });
+
+      if (activeSection) {
+        setCurrentIndex(sectionOrder.indexOf(activeSection.id));
       }
-    );
+    };
 
-    sections.forEach((section) => observer.observe(section));
+    const handleScroll = () => {
+      if (animationId) return;
 
-    return () => observer.disconnect();
+      animationId = requestAnimationFrame(() => {
+        updateCurrentIndex();
+        animationId = null;
+      });
+    };
+
+    updateCurrentIndex();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", updateCurrentIndex);
+
+    return () => {
+      if (animationId) cancelAnimationFrame(animationId);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateCurrentIndex);
+    };
   }, []);
 
-  const moveToSection = (index) => {
+  const moveToSection = useCallback((index) => {
     const target = document.getElementById(sectionOrder[index]);
 
     if (!target) return;
 
+    setCurrentIndex(index);
     target.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-  };
+  }, []);
   const goBottom = () => {
   moveToSection(sectionOrder.length - 1);
 };

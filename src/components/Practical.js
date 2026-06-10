@@ -7,7 +7,7 @@ const Practical = () => {
       <ul>
         <li>
           <img src={gride} alt='gride'/>
-          <h2>CSS애니메이션을 활용한 프로그래스바 구현</h2>
+          <h2>CSS애니메이션을 활용한 <br/>프로그래스바 구현</h2>
         </li>
         <li>
           <img src={book} alt='book'/>

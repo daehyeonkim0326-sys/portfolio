@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import wave from "../assets/img/wave.jpg";
 import myday from "../assets/img/day.jpg";
 import kakao from "../assets/img/ifkakao.jpg";
@@ -49,12 +49,12 @@ const slides = [
     category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/if-kakao-25-clone/",
     description: "이미지 슬라이딩 배너를 중점으로 if(kakao)25 홈페이지를 카피했습니다.",
-    dday:"1.진행 기간:2026.09.20~ 2025.09.23 (4일)",
+    dday:"1.진행 기간:2025.09.20~ 2025.09.23 (4일)",
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
     techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nStyling: SCSS\nDesign & Tool: Figma, Git, GitHub, photoshop",
     concept:"4.Concept: 이미지 슬라이딩을 활용한 화려한 광고",
-    directory:"5.디렉토리 구조\nCSS=scss파일과 연결된 css파일\nmedia=영상과 사진을 포함한 미디어 파일\nscript=jacascript 파일\nscss=css와 연결된 scss 파일\nindex.html=기본적인 뼈대",
-    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\nQuerySelecter를 이용한 이미지 슬라이더 구현 \nkeyfream을 활용한 자동으로 움직이는 텍스트 marpuee 구현",
+    directory:"5.디렉토리 구조\nCSS=scss파일과 연결된 css파일\nmedia=영상과 사진을 포함한 미디어 파일\nscript=javascript 파일\nscss=css와 연결된 scss 파일\nindex.html=기본적인 뼈대",
+    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\nquerySelector를 이용한 이미지 슬라이더 구현 \nkeyframes을 활용한 자동으로 움직이는 텍스트 marquee 구현",
     major:"7.주요 기능\n슬라이딩 되는 배너 이미지 \n자동으로 움직이는 txt",
     images: [ifkakao1,ifkakao2],
   },
@@ -64,7 +64,7 @@ const slides = [
     category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/airbnb_clone/",
     description: "airbnb 레이아웃을 활용한 음악 사이트 입니다.",
-    dday:"1.진행 기간:2026.09.15~ 2025.09.18 (4일)",
+    dday:"1.진행 기간:2025.09.15~ 2025.09.18 (4일)",
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
     techstack:"3.사용 기술 스택:\nStyling: CSS\nDesign & Tool: Figma, Git, GitHub, photoshop",
     concept:"4.Concept: 여행을 하는 듯한 음악감상",
@@ -91,10 +91,52 @@ export default function Clone({onOpen}) {
   const isTablet = useIsTablet(1030);
   const carouselRef = useRef(null);
   const infiniteSlides = [...slides, ...slides, ...slides];
-  const getSlideWidth = () => {
-  const slide = carouselRef.current?.querySelector(".slide");
-  return slide ? slide.offsetWidth : 0;
-};
+  const getSlideWidth = useCallback(() => {
+    const slide = carouselRef.current?.querySelector(".slide");
+    return slide ? slide.offsetWidth : 0;
+  }, []);
+
+  const jumpToScrollLeft = useCallback((left) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    carousel.style.scrollBehavior = "auto";
+    carousel.scrollLeft = left;
+
+    requestAnimationFrame(() => {
+      carousel.style.scrollBehavior = "";
+    });
+  }, []);
+
+  const keepInfinitePosition = useCallback(() => {
+    const carousel = carouselRef.current;
+    const slideWidth = getSlideWidth();
+    if (!carousel || !slideWidth) return;
+
+    const middleStart = slideWidth * slides.length;
+    const middleEnd = slideWidth * (slides.length * 2);
+
+    if (carousel.scrollLeft < middleStart) {
+      jumpToScrollLeft(carousel.scrollLeft + middleStart);
+    }
+
+    if (carousel.scrollLeft >= middleEnd) {
+      jumpToScrollLeft(carousel.scrollLeft - middleStart);
+    }
+  }, [getSlideWidth, jumpToScrollLeft]);
+
+  useEffect(() => {
+    if (!isTablet) return;
+
+    requestAnimationFrame(() => {
+      const carousel = carouselRef.current;
+      const slideWidth = getSlideWidth();
+      if (!carousel || !slideWidth) return;
+
+      jumpToScrollLeft(slideWidth * slides.length);
+    });
+  }, [getSlideWidth, isTablet, jumpToScrollLeft]);
+
   const prevSlide = () => {
     if (!carouselRef.current) return;
     const carousel = carouselRef.current;
@@ -103,6 +145,7 @@ export default function Clone({onOpen}) {
     left: -slideWidth,
     behavior: "smooth",
   });
+    setTimeout(keepInfinitePosition, 450);
   };
   
   const nextSlide = () => {
@@ -113,6 +156,7 @@ export default function Clone({onOpen}) {
     left: slideWidth,
     behavior: "smooth",
   });
+    setTimeout(keepInfinitePosition, 450);
   };
   // useEffect(() => {
   //   if (!carouselRef.current || !isTablet) return;

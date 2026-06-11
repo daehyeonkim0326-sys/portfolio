@@ -27,6 +27,17 @@ const Popup = ({ data, onClose, isClosing }) => {
           ) : (
             <h2>{data.title}</h2>
           )}
+          {data.figma ? (
+          <a  href={data.figma}
+              target="_blank"
+              rel="noreferrer"
+              className="popup-title-link"
+            >
+              <h2>Figma</h2>
+          </a>
+          ) : (
+            <p></p>
+          )}
           <p>{data.description}</p>
           <p>{data.dday}</p>
           <p>{data.people}</p>

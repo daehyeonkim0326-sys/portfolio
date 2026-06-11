@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import wave from "../assets/img/wave.jpg";
-import myday from "../assets/img/day.jpg";
+import one from "../assets/img/grove.jpg";
 import kakao from "../assets/img/ifkakao.jpg";
 import airsound from "../assets/img/airsound.jpg";
 import wave1 from "../assets/img/wave1.jpg";
 import wave2 from "../assets/img/wave2.jpg";
-import myday1 from "../assets/img/myday1.jpg"
-import myday2 from "../assets/img/myday2.jpg"
+import one1 from "../assets/img/grove1.jpg"
+import one2 from "../assets/img/grove2.jpg"
+import one3 from "../assets/img/grove3.jpg"
 import ifkakao1 from "../assets/img/ifkakao251.jpg"
 import ifkakao2 from "../assets/img/ifkakao252.jpg"
 import airsound1 from "../assets/img/airsound1.jpg"
@@ -29,25 +30,26 @@ const slides = [
     images: [wave1,wave2],
   },
   {
-    img: myday,
-    title: "MyDay",
+    img: one,
+    title: "One Grove",
     category: "Clone",
-    URL:"https://daehyeonkim0326-sys.github.io/myday/",
-    description: "json data()",
+    URL:"https://daehyeonkim0326-sys.github.io/glove_clone/",
+    figma: "https://www.figma.com/design/8di0v94cM8Oi66uz2UKUQB/one-groveclone?node-id=8-107&t=xYhfgP4B36wIqqSu-1",
+    description: "SCSS 미디어쿼리 믹스인을 활용해 Desktop, Tablet, Mobile 환경에 최적화된 반응형 레이아웃을 구현했습니다. ",
     dday:"1.진행 기간:2025.10.02~ 2025.10.3 (2일)",
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
-    techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nFramework: React.js\nStyling: CSS\nData Handling: JSON\nDesign & Tool: Figma, Git, GitHub, photoshop",
-    concept:"4.Concept: 직관적인 메모장 겸 일기장",
-    directory:"5.디렉토리 구조\nsrc\ndata=quoteData.json\nimg=이미지\nfont=적용한 한글 폰트\nday1=컴포넌트 파일",
-    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[개발:  기능]\n날씨 api를 가져와 실시간 날씨 표시\n로그인 정보를 json데이터로 만들고 로그인\n등록 버튼을 클릭하면 입력한 텍스트가 화면에 기록이 되는 props를 자식 컴포넌트에 전달",
-    major:"7.주요 기능\n로그인 정보 처리: json에 저장한 모의 데이터를 바탕으로 계정 로그인\ntodolist 등록: props를 전달하여 등록 버튼을 클릭하면 텍스트 기록\n날씨 표시: 날씨 api를 불러와 화면에 날씨 온도 표시",
-    images: [myday1,myday2],
+    techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nStyling: CSS\nDesign & Tool: Figma, Git, GitHub, photoshop",
+    concept:"4.Concept: 사이즈 별로 반응하는 웹사이트",
+    directory:"5.디렉토리 구조\nscssn=font,mixin,variation 같은 variables 파일\nimg=이미지\ncss=scss파일과 연결된 css파일",
+    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[개발:  기능]\n이미지 슬라이더를 활용한 무한 캐러셀",
+    images: [one1,one2,one3],
   },
   {
     img: kakao,
     title: "Tech Week : if(kakao)25",
     category: "Clone",
     URL:"https://daehyeonkim0326-sys.github.io/if-kakao-25-clone/",
+    figma:"https://www.figma.com/design/biEqgcdyxv7DPqeeZ1FM7h/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%81%B4%EB%A1%A0?node-id=31-1254&t=tErp5LfuSvETOm2h-1",
     description: "useState와 useEffect를 활용하여 자동 전환 및 인디케이터 클릭 이동이 가능한 이미지 슬라이드 배너를 활용하여 if(kakao)25 사이트를 구현하였습니다.",
     dday:"1.진행 기간:2025.09.20~ 2025.09.23 (4일)",
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",

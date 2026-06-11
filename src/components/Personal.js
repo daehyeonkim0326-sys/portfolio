@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import quiz from "../assets/img/quiz.jpg";
-import shopping from "../assets/img/Luckydori.jpg";
+import shopping from "../assets/img/Casestudio.jpg";
 import quiz1 from "../assets/img/quiz1.jpg"
 import quiz2 from "../assets/img/quiz2.jpg"
-import lucky1 from "../assets/img/luckydori1.jpg"
-import lucky2 from "../assets/img/luckydori2.jpg"
+import shop1 from "../assets/img/Caststudio1.jpg"
+import shop2 from "../assets/img/Casestudio2.jpg"
 const slides = [
   { img: quiz, 
     title: "Quiz",
@@ -20,17 +20,17 @@ const slides = [
     images:[quiz1,quiz2],
   },
   { img: shopping, 
-    title: "Luckydori",
+    title: "Case studio",
     category:"Personal",
-    URL:"https://daehyeonkim0326-sys.github.io/Lucky-dori/",
+    URL:"https://daehyeonkim0326-sys.github.io/Casestudio/",
     description: "json data를 활용하여 카테고리 리스트를 만들고 useEffect를 통해 물건이 장바구니에 담기는 기능을 구현하였습니다.",
     dday:"1.진행 기간:2026.11.10~ 2025.11.14 (4일)",
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
     techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nFramework: React.js\nStyling: SCSS\nData Handling: Supabase\nDesign & Tool: Figma, Git, GitHub, photoshop",
-    concept:"4.Concept: 젊은층을 겨냥한 문구 온라인샵",
+    concept:"4.Concept: 다양한 감성을 지닌 휴대폰 케이스샵",
     directory:"5.디렉토리 구조\nsrc\nassets=이미지, 폰트, 공통scss 같은 정적 리소스\ncomponents=재사용 가능한 컴포넌트\npages=라우터로 연결되는 실제 화면(페이지)들\nlayout=레이아웃 전체 공통 구조\nApp.js=라우터+전체 앱 구조",
     charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[개발 기능]\njson data에 있는 상품리스트를 useEffect를 사용하여 mainpage에서 장바구니 페이지로 데이터 넘기기",
-    images:[lucky1,lucky2],
+    images:[shop1,shop2],
     },
 ];
 

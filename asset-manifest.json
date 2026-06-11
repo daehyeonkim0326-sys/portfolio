@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.7e974ad9.css",
-    "main.js": "/portfolio/static/js/main.1fbf8a69.js",
+    "main.js": "/portfolio/static/js/main.739a5f29.js",
     "static/media/AritaBuriKR-Medium.ttf": "/portfolio/static/media/AritaBuriKR-Medium.2a9636f150ad224d6c88.ttf",
     "static/media/AritaBuriKR-SemiBold.ttf": "/portfolio/static/media/AritaBuriKR-SemiBold.3993ef1b29c4be2a39fc.ttf",
     "static/media/background.png": "/portfolio/static/media/background.d84d6dd729cbd00541ce.png",
@@ -9,9 +9,7 @@
     "static/media/map2.jpg": "/portfolio/static/media/map2.1640ad0fec9edf938a58.jpg",
     "static/media/map1.jpg": "/portfolio/static/media/map1.d59fd12c5f915fe35f7d.jpg",
     "static/media/wave2.jpg": "/portfolio/static/media/wave2.6147116847fd20f87f61.jpg",
-    "static/media/day.jpg": "/portfolio/static/media/day.b20f9e40c8be483ab886.jpg",
-    "static/media/myday2.jpg": "/portfolio/static/media/myday2.c595a6c386e8df0f9879.jpg",
-    "static/media/myday1.jpg": "/portfolio/static/media/myday1.071b2e48a9ed2227c541.jpg",
+    "static/media/grove.jpg": "/portfolio/static/media/grove.e978e05a49801432370c.jpg",
     "static/media/wave1.jpg": "/portfolio/static/media/wave1.562e20d5a68fe8d720df.jpg",
     "static/media/quiz1.jpg": "/portfolio/static/media/quiz1.01be2ffa7fcd812c3591.jpg",
     "static/media/quiz2.jpg": "/portfolio/static/media/quiz2.55722ed5dab579168cf5.jpg",
@@ -21,10 +19,13 @@
     "static/media/ifkakao251.jpg": "/portfolio/static/media/ifkakao251.d111ccc1c92bb34d3f52.jpg",
     "static/media/Caststudio1.jpg": "/portfolio/static/media/Caststudio1.ea222981d17c1912e6fc.jpg",
     "static/media/Casestudio.jpg": "/portfolio/static/media/Casestudio.5477ac6dccba0bbefbb6.jpg",
+    "static/media/grove2.jpg": "/portfolio/static/media/grove2.7502a22efe9b3dad04f5.jpg",
     "static/media/airsound2.jpg": "/portfolio/static/media/airsound2.08e97a5a328163111c6b.jpg",
+    "static/media/grove3.jpg": "/portfolio/static/media/grove3.a68d6607470444f97958.jpg",
     "static/media/airsound.jpg": "/portfolio/static/media/airsound.4a74a6e2095e99e7a9cc.jpg",
     "static/media/airsound1.jpg": "/portfolio/static/media/airsound1.00f0280362e3fb9fab26.jpg",
     "static/media/wave.jpg": "/portfolio/static/media/wave.4ebd27761b68dda5fef3.jpg",
+    "static/media/grove1.jpg": "/portfolio/static/media/grove1.9aad7e8d01bf7054d8cd.jpg",
     "static/media/ifkakao252.jpg": "/portfolio/static/media/ifkakao252.25a3cfcd3d43b3056b85.jpg",
     "static/media/gride.gif": "/portfolio/static/media/gride.0ec3a9115cf97083690d.gif",
     "static/media/Casestudio2.jpg": "/portfolio/static/media/Casestudio2.bf82717f4d34ab784fd5.jpg",
@@ -44,10 +45,10 @@
     "static/media/html.svg": "/portfolio/static/media/html.798c0c60dd6acf2c00dc5ac7ae9a8a96.svg",
     "static/media/css.svg": "/portfolio/static/media/css.29ecc85ea27bb5cd2b5a5713e500d095.svg",
     "main.7e974ad9.css.map": "/portfolio/static/css/main.7e974ad9.css.map",
-    "main.1fbf8a69.js.map": "/portfolio/static/js/main.1fbf8a69.js.map"
+    "main.739a5f29.js.map": "/portfolio/static/js/main.739a5f29.js.map"
   },
   "entrypoints": [
     "static/css/main.7e974ad9.css",
-    "static/js/main.1fbf8a69.js"
+    "static/js/main.739a5f29.js"
   ]
 }

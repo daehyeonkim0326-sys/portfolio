@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+1. 웹 사이트 소개
+설명: 디자인 부터 기능 개발까지 직접 설계하고 디자인한 포트폴리오 웹사이트 입니다.
+진행 기간: 2025.12.30 ~ 2026.01.11 (13일)
+개발 인원: FrontEnd 1인 (Solo Project)
+배포 링크: https://daehyeonkim0326-sys.github.io/portfolio/
+피그마 링크:https://www.figma.com/design/8OLpyAMcRPVnAK7Yh5pt3t/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=2238-343&t=rsNWV6vxBWDlcsx4-1
+3. 사용 기술 스택 (Tech Stack)
+Language: JavaScript (ES6+)
+Framework: React.js
+Styling: SCSS
+Design & Tool: Figma, Git, GitHub, VScode,GSAP,reactbits,photoshop
+4. 기획 및 디자인 (Planning & Design)
+Tool: Figma,photoshop
+Concept: 나를 표현하기 위한 개성 넘치는 포트폴리오
+5. 디렉토리 구조
+src
+├── assets        # 이미지, 폰트, scss
+├── components    # 이미지 카드,팝업 등 재사용 가능한 공통 UI 컴포넌트
+├── pages         # 라우팅 페이지와 style scss (MainPage, DetailPage, CartPage,ProductPage...)
+└── layout        # Header,Main,Footer 레이아웃
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 5. 담당 역할
 
-## Available Scripts
+[기획 및 디자인]
+* Figma를 활용한 전체 와이어프레임 정립과 UI설계
 
-In the project directory, you can run:
+[개발:  기능]
+*useState,useEffect 등을 사용하여
+react로 각 섹션 별 컴포넌트를 만들고 scss를 활용하여 전체적인 UX 디자인  
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 6. 주요 기능
+각 컴포넌트에 나만의 프로젝트를 팝업으로 띄워서 정보를 제공
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 7. 트러블 슈팅
+문제 1.좌우 버튼을 클릭하여 이미지 슬라이드를 했지만 위치가 맞지않는 문제가 발생
+상황: Project.scss에서 width 설정이 강제되어 있어서 슬라이딩 될 수록 이미지가 틀어짐
+해결: !important를 활용하여 각 컴포넌트 scss 에 width 값을 강제함

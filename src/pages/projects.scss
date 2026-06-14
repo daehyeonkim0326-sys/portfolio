@@ -4,14 +4,11 @@
 .projects{
     @include flex-layout(column,center,center);
     @include ko-Display;
-    padding: 5rem 0;
+    // padding: 5rem 0;
     font-size: 24px;
     width: 100%;
-    // gap: 1rem;
-    // min-height: 100vh;
-    // padding: 5rem 0;
+    overflow-y: hidden;
     overflow-x: hidden;
-    // max-width: 1920px;
     .tabs {
         @include flex-layout(row,center,center);
         z-index: 2;

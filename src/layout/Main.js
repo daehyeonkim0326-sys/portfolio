@@ -1,37 +1,51 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./layout.scss";
 
-import Home from '../pages/Home';
-import Me from '../pages/Me';
-import Skill from '../pages/Skill';
-import Projects from '../pages/Projects';
-import Contact from '../pages/Contact';
+import Home from "../pages/Home";
+import Me from "../pages/Me";
+import Skill from "../pages/Skill";
+import Projects from "../pages/Projects";
+import Contact from "../pages/Contact";
 
 import { FaPlay } from "react-icons/fa";
 import { GiPreviousButton, GiNextButton } from "react-icons/gi";
 
 const sectionOrder = ["home", "me", "skill", "projects", "contact"];
 
+const getSections = () =>
+  sectionOrder.map((id) => document.getElementById(id)).filter(Boolean);
+
+const getClosestSectionIndex = () => {
+  const sections = getSections();
+
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.top);
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = sectionOrder.indexOf(section.id);
+    }
+  });
+
+  return closestIndex;
+};
+
 const Main = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const currentIndexRef = useRef(0);
 
   useEffect(() => {
     let animationId = null;
 
     const updateCurrentIndex = () => {
-      const checkPoint = window.innerHeight * 0.35;
-      const sections = sectionOrder
-        .map((id) => document.getElementById(id))
-        .filter(Boolean);
+      const activeIndex = getClosestSectionIndex();
 
-      const activeSection = sections.find((section) => {
-        const rect = section.getBoundingClientRect();
-        return rect.top <= checkPoint && rect.bottom > checkPoint;
-      });
-
-      if (activeSection) {
-        setCurrentIndex(sectionOrder.indexOf(activeSection.id));
-      }
+      currentIndexRef.current = activeIndex;
+      setCurrentIndex(activeIndex);
     };
 
     const handleScroll = () => {
@@ -44,6 +58,7 @@ const Main = () => {
     };
 
     updateCurrentIndex();
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", updateCurrentIndex);
 
@@ -59,23 +74,37 @@ const Main = () => {
 
     if (!target) return;
 
+    currentIndexRef.current = index;
     setCurrentIndex(index);
+
     target.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   }, []);
+
+  const moveBySection = useCallback(
+    (step) => {
+      const current = getClosestSectionIndex();
+      const nextIndex = current + step;
+
+      if (nextIndex < 0 || nextIndex >= sectionOrder.length) return;
+
+      moveToSection(nextIndex);
+    },
+    [moveToSection]
+  );
+
   const goBottom = () => {
-  moveToSection(sectionOrder.length - 1);
-};
+    moveToSection(sectionOrder.length - 1);
+  };
+
   const goPrev = () => {
-    if (currentIndex <= 0) return;
-    moveToSection(currentIndex - 1);
+    moveBySection(-1);
   };
 
   const goNext = () => {
-    if (currentIndex >= sectionOrder.length - 1) return;
-    moveToSection(currentIndex + 1);
+    moveBySection(1);
   };
 
   return (

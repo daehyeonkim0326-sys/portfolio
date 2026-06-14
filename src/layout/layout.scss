@@ -64,10 +64,10 @@
 @include respond(tablet){
     .header{
         ul{
-            width: 65%;
+            width: 80%;
     .menu-item{
         @include en-Body-Medium;
-        
+        font-size: 12px;
         }}
     }
 }

@@ -4,7 +4,7 @@
 .projects{
     @include flex-layout(column,center,center);
     @include ko-Display;
-    // padding: 5rem 0;
+    padding: 2rem 0;
     font-size: 24px;
     width: 100%;
     overflow-y: hidden;

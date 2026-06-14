@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7e974ad9.css",
-    "main.js": "/portfolio/static/js/main.739a5f29.js",
+    "main.css": "/portfolio/static/css/main.955b7f87.css",
+    "main.js": "/portfolio/static/js/main.65b44109.js",
     "static/media/AritaBuriKR-Medium.ttf": "/portfolio/static/media/AritaBuriKR-Medium.2a9636f150ad224d6c88.ttf",
     "static/media/AritaBuriKR-SemiBold.ttf": "/portfolio/static/media/AritaBuriKR-SemiBold.3993ef1b29c4be2a39fc.ttf",
     "static/media/background.png": "/portfolio/static/media/background.d84d6dd729cbd00541ce.png",
@@ -44,11 +44,11 @@
     "static/media/javascript.svg": "/portfolio/static/media/javascript.330e3621041a58e609f60a6e9379e1e8.svg",
     "static/media/html.svg": "/portfolio/static/media/html.798c0c60dd6acf2c00dc5ac7ae9a8a96.svg",
     "static/media/css.svg": "/portfolio/static/media/css.29ecc85ea27bb5cd2b5a5713e500d095.svg",
-    "main.7e974ad9.css.map": "/portfolio/static/css/main.7e974ad9.css.map",
-    "main.739a5f29.js.map": "/portfolio/static/js/main.739a5f29.js.map"
+    "main.955b7f87.css.map": "/portfolio/static/css/main.955b7f87.css.map",
+    "main.65b44109.js.map": "/portfolio/static/js/main.65b44109.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e974ad9.css",
-    "static/js/main.739a5f29.js"
+    "static/css/main.955b7f87.css",
+    "static/js/main.65b44109.js"
   ]
 }

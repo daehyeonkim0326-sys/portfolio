@@ -1,7 +1,7 @@
 1. 웹 사이트 소개: 디자인 부터 기능 개발까지 직접 설계하고 디자인한 포트폴리오 웹사이트 입니다.
 
 2.설명
-진행 기간: 2025.12.30 ~ 2026.01.11 (13일)
+진행 기간: 2025.12.30 ~ 2026.01.11 (13일)   
 개발 인원: FrontEnd 1인 (Solo Project)
 배포 링크: https://daehyeonkim0326-sys.github.io/portfolio/
 피그마 링크:https://www.figma.com/design/8OLpyAMcRPVnAK7Yh5pt3t/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=2238-343&t=rsNWV6vxBWDlcsx4-1

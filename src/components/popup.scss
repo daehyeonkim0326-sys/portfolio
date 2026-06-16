@@ -3,7 +3,7 @@
 @use "../assets/scss/font" as*;
 .popup-backdrop{
     @include flex-layout();
-    position: fixed;
+    position: fixed; 
     inset: 0;
     z-index: 9999;
     padding: 1rem;
@@ -79,7 +79,7 @@
         border-bottom: 0.5px solid #5b99eb;
         width: 100%;
     }
-    p{
+    p{ 
         padding: 1rem 0;
     }   
     @include respond(mobile){

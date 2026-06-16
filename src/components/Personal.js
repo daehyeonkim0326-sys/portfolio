@@ -4,7 +4,7 @@ import shopping from "../assets/img/Casestudio.jpg";
 import quiz1 from "../assets/img/quiz1.jpg"
 import quiz2 from "../assets/img/quiz2.jpg"
 import shop1 from "../assets/img/Casestudio1.jpg"
-import shop2 from "../assets/img/casestudio2.jpg"
+import shop2 from "../assets/img/Casestudio2.jpg"
 const slides = [
   { img: quiz, 
     title: "Quiz",

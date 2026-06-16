@@ -18,7 +18,7 @@ const slides = [
     techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nFramework: React.js\nStyling: CSS\nData Handling: Custom Mock Data (JSON)\nDesign & Tool: Figma, Git, GitHub, VScode,GSAP,reactbits,photoshop",
     concept:"4.Concept: 사용자 직관성을 고려한 UI/UX 설계 및 와이어프레임 제작",
     directory:"5.디렉토리 구조\nsrc\nassets=이미지, 폰트, JSON 데이터, scss\ncomponents=이미지 카드,팝업 등 재사용 가능한 공통 UI 컴포넌트\npages=라우팅 페이지와 style scss (MainPage, DetailPage, CartPage,ProductPage...)\nlayout=Header,Outlet,Footer 레이아웃",
-    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 정립과 UI설계\n[개발:  기능]\nuseState,useEffect,useNavigete,motion 등을 사용하여 react로 CartPage.js,CartPopup.js 컴포넌트를 만들고 scss를 활용하여 CartPage와 CartPopup style 제작",
+    charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 정립과 UI설계\n[개발:  기능]\nuseState,useEffect,useNavigate,motion 등을 사용하여 react로 CartPage.js,CartPopup.js 컴포넌트를 만들고 scss를 활용하여 CartPage와 CartPopup style 제작",
     major:"7.주요 기능\n상품 데이터 처리: JSON 데이터를 활용한 비동기 통신 모방\n장바구니 관리: 배열을 활용한 장바구니 추가/수정/삭제",
     trouble:"8.트러블 슈팅\n문제 1.수정한 부분이 git에 업로드 되지 않는다.\n상황: Compare & pull request 과정에서 수정된 코드가 git에 올라가지 않는 상황\n해결:git status 로 충돌파일을 확인한 후 충돌한 지점을 수정해서 터미널에 git add src/수정한 파일 입력 후\n다시 커밋하고 git push origin main 한 후에 깃허브 사이트에서 리퀘스트\n과정:git status를 사용하여 오류지점을 확인 -> 오류지점 수정 -> git add src/수정파일 터미널에 입력 -> 커밋하기 git commit -m '' -> 터미널에 git push origin main 입력 -> 깃허브 사이트에서 리퀘스트하기\n문제 2.구입하기 버튼 클릭하면 상품 상세페이지로 넘어가지 않는 문제\n상황: ProductMD로 Products.json에 있는 상품 id가 읽혀지지 않음\n해결:MainPage.js에서 객체로 const item 으로 Products.json에서 id 찾아서 ProductMD로 Props 전달\n과정: const item = products.find((p) => String(p.id) === 'midnight');(MainPage.js) -> Props로 ProductMD.js에 item 전달 -> handleClick 안에 onAdd한테 item 전달 -> button을 감싸고 있는 Link에 handleClick 전달",
     images: [shop],

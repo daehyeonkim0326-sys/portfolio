@@ -24,17 +24,16 @@ src
 ├── pages         # 라우팅 페이지와 style scss (MainPage, DetailPage, CartPage,ProductPage...)
 └── layout        # Header,Main,Footer 레이아웃
 ```
-6.담당 역할
-[기획 및 디자인]
-* Figma를 활용한 전체 와이어프레임 정립과 UI설계
-[개발:  기능]
-*useState,useEffect 등을 사용하여
-react로 각 섹션 별 컴포넌트를 만들고 scss를 활용하여 전체적인 UX 디자인  
+6.담당 역할  
+[기획 및 디자인]  
+*Figma를 활용한 전체 와이어프레임 정립과 UI설계  
+[개발:  기능]  
+*useState,useEffect 등을 사용하여 react로 각 섹션 별 컴포넌트를 만들고 scss를 활용하여 전체적인 UX 디자인  
 
-7.주요 기능
+7.주요 기능  
 각 컴포넌트에 나만의 프로젝트를 팝업으로 띄워서 정보를 제공
 
-8.트러블 슈팅
-문제 1.좌우 버튼을 클릭하여 이미지 슬라이드를 했지만 위치가 맞지않는 문제가 발생
-상황: Project.scss에서 width 설정이 강제되어 있어서 슬라이딩 될 수록 이미지가 틀어짐
-해결: !important를 활용하여 각 컴포넌트 scss 에 width 값을 강제함
+8.트러블 슈팅  
+문제 1.좌우 버튼을 클릭하여 이미지 슬라이드를 했지만 위치가 맞지않는 문제가 발생  
+상황: Project.scss에서 width 설정이 강제되어 있어서 슬라이딩 될 수록 이미지가 틀어짐  
+해결: !important를 활용하여 각 컴포넌트 scss 에 width 값을 강제함  

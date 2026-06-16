@@ -1,18 +1,19 @@
 1. 웹 사이트 소개
-설명: 디자인 부터 기능 개발까지 직접 설계하고 디자인한 포트폴리오 웹사이트 입니다.
+
+2.설명: 디자인 부터 기능 개발까지 직접 설계하고 디자인한 포트폴리오 웹사이트 입니다.
 진행 기간: 2025.12.30 ~ 2026.01.11 (13일)
 개발 인원: FrontEnd 1인 (Solo Project)
 배포 링크: https://daehyeonkim0326-sys.github.io/portfolio/
 피그마 링크:https://www.figma.com/design/8OLpyAMcRPVnAK7Yh5pt3t/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=2238-343&t=rsNWV6vxBWDlcsx4-1
-3. 사용 기술 스택 (Tech Stack)
+4. 사용 기술 스택 (Tech Stack)
 Language: JavaScript (ES6+)
 Framework: React.js
 Styling: SCSS
 Design & Tool: Figma, Git, GitHub, VScode,GSAP,reactbits,photoshop
-4. 기획 및 디자인 (Planning & Design)
+5. 기획 및 디자인 (Planning & Design)
 Tool: Figma,photoshop
 Concept: 나를 표현하기 위한 개성 넘치는 포트폴리오
-5. 디렉토리 구조
+6. 디렉토리 구조
 src
 ├── assets        # 이미지, 폰트, scss
 ├── components    # 이미지 카드,팝업 등 재사용 가능한 공통 UI 컴포넌트

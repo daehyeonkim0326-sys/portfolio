@@ -4,14 +4,11 @@ import one from "../assets/img/grove.jpg";
 import kakao from "../assets/img/ifkakao.jpg";
 import airsound from "../assets/img/airsound.jpg";
 import wave1 from "../assets/img/wave1.jpg";
-import wave2 from "../assets/img/wave2.jpg";
 import one1 from "../assets/img/grove1.jpg"
 import one2 from "../assets/img/grove2.jpg"
 import one3 from "../assets/img/grove3.jpg"
 import ifkakao1 from "../assets/img/ifkakao251.jpg"
-import ifkakao2 from "../assets/img/ifkakao252.jpg"
 import airsound1 from "../assets/img/airsound1.jpg"
-import airsound2 from "../assets/img/airsound2.jpg"
 const slides = [
   {
     img: wave,
@@ -27,7 +24,7 @@ const slides = [
     charge:"6.제작 과정\n[기획 및 디자인]\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\nreact library를 활용하여 각 라우트 페이지 생성\njs에서 ScrollTrigger를 활용하여 스크롤을 내릴때에 맞춰 반응형 페이지 구현",
     major:"7.주요 기능\nScrollTrigger를 활용한 다양한 반응형 페이지",
     trouble:"8.트러블 슈팅\n문제 1.스크롤을 해도 글자가 나오지 않음 \n상황:스크롤을 내려도 ScrollTrigger 설정한 컴포넌트의 텍스트가 나오지 않는 상황\n해결:video-txt에 opacity값을 줌으로써 서서히 글자가 등장하게 함\n과정:스크롤 하는 과정에서 글자가 등장하지 않음 -> scss에서 처음에 글자가 보이지 않게 opacity가 0으로 설정되어 있었음 -> gsap라이브러리의 timeline을 활용하여 스크롤에 맞춰 글자가 서서히 나오게끔 opacity를 설정",
-    images: [wave1,wave2],
+    images: [wave1],
   },
   {
     img: one,
@@ -58,7 +55,7 @@ const slides = [
     directory:"5.디렉토리 구조\nCSS=scss파일과 연결된 css파일\nmedia=영상과 사진을 포함한 미디어 파일\nscript=javascript 파일\nscss=css와 연결된 scss 파일\nindex.html=기본적인 뼈대",
     charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\nquerySelector를 이용한 이미지 슬라이더 구현 \nkeyframes을 활용한 자동으로 움직이는 텍스트 marquee 구현",
     major:"7.주요 기능\n슬라이딩 되는 배너 이미지 \n자동으로 움직이는 txt",
-    images: [ifkakao1,ifkakao2],
+    images: [ifkakao1],
   },
   {
     img: airsound,
@@ -73,7 +70,7 @@ const slides = [
     concept:"4.Concept: 여행을 하는 듯한 음악감상",
     directory:"5.디렉토리 구조\ncss=scss와 연결된 각종 css파일\nimage=이미지 파일\nscss=각종 스타일 처리\nindex.html=기본적인 뼈대",
     charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\ncss hover 기능을 이용한 버튼 hover처리",
-    images:[airsound1,airsound2],
+    images:[airsound1],
   },
 ];
 function useIsTablet(breakpoint = 1030) {

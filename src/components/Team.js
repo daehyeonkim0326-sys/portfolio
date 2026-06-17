@@ -3,7 +3,6 @@ import shopping from "../assets/img/shopping.jpg";
 import map from "../assets/img/map.jpg";
 import shop from "../assets/img/shopping1.jpg";
 import map1 from "../assets/img/map1.jpg"
-import map2 from "../assets/img/map2.jpg"
 import "./components.scss";
 
 const slides = [
@@ -37,7 +36,7 @@ const slides = [
     charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[개발:  기능]\n지도 기반 주차장 검색 및 위치 표시 (필터 적용 가능)\n주차장 상세 정보 출력 ( 유형, 잔여 자리, 내부 이미지)\n좌석/주차면 선택 기능 ( 좌석형 UI)\n예약 및 결제 기능 (회원/비회원 모두 가능)\n마이페이지: 예매 내역, 차량정보, 결제수단 변경 관리\n비회원 예매 확인 기능 (차량번호 + 전화번호)\n반응형 UI (모바일·데스크탑 최적화)\n접근성 고려(컬러 구분, 직관적 아이콘)",
     major:"7.주요 기능\n주차장 데이터 처리: SUPABASE와의 비동기 통신을 통해 실시간 주차장 정보(위치, 요금, 잔여좌석)를 불러오고 화면에 반영\n예약 관리: 상태 배열을 활용해 선택한 주차장/시간/차량 정보를 추가·수정·삭제하며 예약 과정 관리\n검색 및 필터링: 배열 메서드를 활용해 가격순·잔여좌석 기준으로 정렬하고 키워드 지원",
     trouble:"8.트러블 슈팅\n문제 1.marge 후 다른 팀원들 프로젝트에서 지도가 뜨지 않는 현상 발생.\n상황:지도 api 홈페이지에서 api 사용을 켜지 않아서 발생한 문제\n해결:지도 api 사용을 켬\n과정:marge 후 각 컴퓨터 프로젝트에서 지도가 뜨지 않는 것을 확인 -> console을 통해 오류 파악 -> 지도 api 문제로 카카오맵디벨로퍼에서 api 사용 켜줌",
-    images: [map1,map2],
+    images: [map1],
    },
 ];
 

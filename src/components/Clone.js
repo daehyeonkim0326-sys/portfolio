@@ -37,7 +37,7 @@ const slides = [
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
     techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nStyling: CSS\nDesign & Tool: Git, GitHub, photoshop",
     concept:"4.Concept: 사이즈 별로 반응하는 웹사이트",
-    directory:"5.디렉토리 구조\nscssn=font,mixin,variation 같은 variables 파일\nimg=이미지\ncss=scss파일과 연결된 css파일",
+    directory:"5.디렉토리 구조\nscss=font,mixin,variation 같은 variables 파일\nimg=이미지\ncss=scss파일과 연결된 css파일",
     charge:"6.담당 역할\n[기획 및 디자인]\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\nlayout 구조 기획\n[개발:  기능]\n이미지 슬라이더를 활용한 무한 캐러셀",
     images: [one1,one2,one3],
   },

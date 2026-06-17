@@ -33,7 +33,7 @@ const slides = [
     URL:"https://daehyeonkim0326-sys.github.io/glove_clone/",
     figma: "https://www.figma.com/design/8di0v94cM8Oi66uz2UKUQB/one-groveclone?node-id=8-107&t=xYhfgP4B36wIqqSu-1",
     description: "SCSS 미디어쿼리 믹스인을 활용해 Desktop, Tablet, Mobile 환경에 최적화된 반응형 레이아웃을 구현했습니다. ",
-    dday:"1.진행 기간:2025.10.02~ 2025.10.3 (2일)",
+    dday:"1.진행 기간:2025.10.02~ 2025.10.03 (2일)",
     people:"2.개발 인원: FrontEnd 1인 (Solo Project)",
     techstack:"3.사용 기술 스택:\nLanguage: JavaScript (ES6+)\nStyling: CSS\nDesign & Tool: Git, GitHub, photoshop",
     concept:"4.Concept: 사이즈 별로 반응하는 웹사이트",

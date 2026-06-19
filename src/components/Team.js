@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import shopping from "../assets/img/Reste 오전 10.54.38.png";
+import shopping from "../assets/img/Reste.png";
 import map from "../assets/img/map.png";
 import shop from "../assets/img/Reste1.png";
 import map1 from "../assets/img/map1.png"

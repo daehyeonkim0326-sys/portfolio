@@ -1,9 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import quiz from "../assets/img/quiz.jpg";
-import shopping from "../assets/img/Casestudio.jpg";
-import quiz1 from "../assets/img/quiz1.jpg"
-import quiz2 from "../assets/img/quiz2.jpg"
-import shop1 from "../assets/img/Casestudio1.jpg"
+import quiz from "../assets/img/quiz.png";
+import shopping from "../assets/img/casestudio.png";
+import quiz1 from "../assets/img/quiz1.png"
+import shop1 from "../assets/img/casestudio1.png"
 const slides = [
   { img: quiz, 
     title: "Quiz",
@@ -17,7 +16,7 @@ const slides = [
     concept:"4.Concept: 휴대전화를 보는 듯한 퀴즈페이지",
    directory:"5.디렉토리 구조\nsrc\nimg=이미지\ncomponents=재사용 가능한 컴포넌트\ndata=퀴즈 질문이 있는 데이터 JSON 파일\nApp.js=라우터+전체 앱 구조",
     charge:"6.담당 역할\n[기획 및 디자인]\nFigma를 활용한 전체 와이어프레임 및 프로토타입 제작\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\n[구현]\ncss hover 기능을 이용한 버튼 hover처리\n useState로 각종 애니메이션 처리 ",
-    images:[quiz1,quiz2],
+    images:[quiz1],
   },
   { img: shopping, 
     title: "Case studio",

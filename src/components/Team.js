@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import shopping from "../assets/img/shopping.jpg";
-import map from "../assets/img/map.jpg";
-import shop from "../assets/img/shopping1.jpg";
-import map1 from "../assets/img/map1.jpg"
+import shopping from "../assets/img/Reste 오전 10.54.38.png";
+import map from "../assets/img/map.png";
+import shop from "../assets/img/Reste1.png";
+import map1 from "../assets/img/map1.png"
 import "./components.scss";
 
 const slides = [

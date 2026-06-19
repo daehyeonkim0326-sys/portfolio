@@ -1,14 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import wave from "../assets/img/wave.jpg";
-import one from "../assets/img/grove.jpg";
-import kakao from "../assets/img/ifkakao.jpg";
-import airsound from "../assets/img/airsound.jpg";
-import wave1 from "../assets/img/wave1.jpg";
-import one1 from "../assets/img/grove1.jpg"
-import one2 from "../assets/img/grove2.jpg"
-import one3 from "../assets/img/grove3.jpg"
-import ifkakao1 from "../assets/img/ifkakao251.jpg"
-import airsound1 from "../assets/img/airsound1.jpg"
+import wave from "../assets/img/connectwave.png";
+import one from "../assets/img/onegrove.png";
+import kakao from "../assets/img/ifkakao25.png";
+import airsound from "../assets/img/airsound.png";
+import wave1 from "../assets/img/connectwave1.png";
+import one1 from "../assets/img/ongrove1.png"
+import ifkakao1 from "../assets/img/ifkakao25-1.png"
+import airsound1 from "../assets/img/airsound1.png"
 const slides = [
   {
     img: wave,
@@ -39,7 +37,7 @@ const slides = [
     concept:"4.Concept: 사이즈 별로 반응하는 웹사이트",
     directory:"5.디렉토리 구조\nscss=font,mixin,variation 같은 variables 파일\nimg=이미지\ncss=scss파일과 연결된 css파일",
     charge:"6.담당 역할\n[기획 및 디자인]\n공통 컬러 팔레트 및 컴포넌트 스타일 가이드 정립\nlayout 구조 기획\n[개발:  기능]\n이미지 슬라이더를 활용한 무한 캐러셀",
-    images: [one1,one2,one3],
+    images: [one1],
   },
   {
     img: kakao,

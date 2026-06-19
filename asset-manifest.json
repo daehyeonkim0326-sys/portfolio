@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6c36a3c0.css",
-    "main.js": "/portfolio/static/js/main.c450d349.js",
+    "main.js": "/portfolio/static/js/main.ed1ef27f.js",
     "static/media/AritaBuriKR-Medium.ttf": "/portfolio/static/media/AritaBuriKR-Medium.2a9636f150ad224d6c88.ttf",
     "static/media/AritaBuriKR-SemiBold.ttf": "/portfolio/static/media/AritaBuriKR-SemiBold.3993ef1b29c4be2a39fc.ttf",
     "static/media/background.png": "/portfolio/static/media/background.d84d6dd729cbd00541ce.png",
     "static/media/book.gif": "/portfolio/static/media/book.d2211e3d6040d08adc2b.gif",
-    "static/media/Reste 오전 10.54.38.png": "/portfolio/static/media/Reste 오전 10.54.38.a7d6790d837f92345bd3.png",
+    "static/media/Reste.png": "/portfolio/static/media/Reste.a7d6790d837f92345bd3.png",
     "static/media/map.png": "/portfolio/static/media/map.c2ba0bad665737aa195d.png",
     "static/media/map1.png": "/portfolio/static/media/map1.3b80379078b4f7d94abe.png",
     "static/media/casestudio.png": "/portfolio/static/media/casestudio.1b1516c12c93e5154953.png",
@@ -37,10 +37,10 @@
     "static/media/html.svg": "/portfolio/static/media/html.798c0c60dd6acf2c00dc5ac7ae9a8a96.svg",
     "static/media/css.svg": "/portfolio/static/media/css.29ecc85ea27bb5cd2b5a5713e500d095.svg",
     "main.6c36a3c0.css.map": "/portfolio/static/css/main.6c36a3c0.css.map",
-    "main.c450d349.js.map": "/portfolio/static/js/main.c450d349.js.map"
+    "main.ed1ef27f.js.map": "/portfolio/static/js/main.ed1ef27f.js.map"
   },
   "entrypoints": [
     "static/css/main.6c36a3c0.css",
-    "static/js/main.c450d349.js"
+    "static/js/main.ed1ef27f.js"
   ]
 }
